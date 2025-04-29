@@ -1,24 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:hagaar_trend_dashboard/views/auth/login_view.dart';
 
 import 'components/app_colors.dart';
-import 'package:bitsdojo_window/bitsdojo_window.dart';
+
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
-  doWhenWindowReady(() {
-    appWindow.minSize = Size(1300, 900);
-    appWindow.alignment = Alignment.center;
-    appWindow.show();
-  });
+
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: 'Almarai',
         primaryColor: AppColors.black,
@@ -29,6 +26,7 @@ class MyApp extends StatelessWidget {
           elevation: 0,
         ),
       ),
+      home: LoginView(),
 
     );
   }
