@@ -34,7 +34,13 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
-
+  bitsdojo_window: ^0.1.6
+  pinput: ^5.0.1
+  syncfusion_flutter_charts: ^28.2.9
+  flutter_svg: ^2.0.17
+  confetti: ^0.8.0
+  image_picker: ^1.1.2
+  syncfusion_flutter_datepicker: ^28.2.11+1
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -87,3 +93,55 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+  assets:
+    - assets/
+    - assets/fonts/
+    - assets/images/
+
+  fonts:
+    - family: Noto Kufi Arabic
+      fonts:
+         - asset: assets/fonts/NotoKufiArabic-Bold.ttf
+           weight: 700
+         - asset: assets/fonts/NotoKufiArabic-SemiBold.ttf
+           weight: 600
+         - asset: assets/fonts/NotoKufiArabic-Medium.ttf
+           weight: 500
+         - asset: assets/fonts/NotoKufiArabic-Regular.ttf
+           weight: 400
+    - family: Almarai
+      fonts:
+        - asset: assets/fonts/Almarai-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Almarai-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/Almarai-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Almarai-Regular.ttf
+          weight: 400
+#    - family: Cairo
+#      fonts:
+#        - asset: assets/fonts/Cairo-Bold.ttf
+#          weight: 700
+#        - asset: assets/fonts/Cairo-SemiBold.ttf
+#          weight: 600
+#        - asset: assets/fonts/Cairo-Medium.ttf
+#          weight: 500
+#        - asset: assets/fonts/Cairo-Regular.ttf
+#          weight: 400
+#    - family: VEXA
+#      fonts:
+#        - asset: assets/fonts/VEXA.ttf
+#    - family: VEXA L
+#      fonts:
+#        - asset: assets/fonts/VEXA-light.ttf
+#    - family: Lemonada
+#      fonts:
+#        - asset: assets/fonts/Lemonada-Bold.ttf
+#          weight: 700
+#        - asset: assets/fonts/Lemonada-SemiBold.ttf
+#          weight: 600
+#        - asset: assets/fonts/Lemonada-Medium.ttf
+#          weight: 500
+#        - asset: assets/fonts/Lemonada-Regular.ttf
+#          weight: 400
