@@ -28,6 +28,7 @@ class Assets {
   static const String imagesHouse = 'assets/images/House.svg';
   static const String imagesImportReports = 'assets/images/ImportReports.png';
   static const String imagesLogo = 'assets/images/logo.png';
+  static const String imagesLogoBackground = 'assets/images/logoBackground.png';
   static const String imagesOrders = 'assets/images/orders.png';
   static const String imagesPaintBrush = 'assets/images/PaintBrush.svg';
   static const String imagesPress = 'assets/images/press.png';
