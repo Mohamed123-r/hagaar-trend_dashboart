@@ -55,16 +55,11 @@ class _ForgetPasswordViewState extends State<ForgetPasswordView> {
                   ),
                 ),
                 Spacer(),
-                Transform(
-                  alignment: Alignment.center,
-                  transform: Matrix4.rotationY(
-                      direction == TextDirection.rtl ? 3.1416 : 0),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(32),
-                    child: Image.asset(
-                      width: MediaQuery.of(context).size.width / 4.5,
-                      Assets.imagesAuthShap,
-                    ),
+                Padding(
+                  padding: const EdgeInsets.all(24.0),
+                  child: Image.asset(
+                    width: MediaQuery.of(context).size.width / 15.5,
+                    Assets.imagesLogo,
                   ),
                 ),
               ],

@@ -12,7 +12,6 @@ class Assets {
   static const String fontsNotoKufiArabicRegular = 'assets/fonts/NotoKufiArabic-Regular.ttf';
   static const String fontsNotoKufiArabicSemiBold = 'assets/fonts/NotoKufiArabic-SemiBold.ttf';
   static const String imagesAddLocation = 'assets/images/addLocation.png';
-  static const String imagesAuthShap = 'assets/images/authShap.png';
   static const String imagesBellSimple = 'assets/images/BellSimple.svg';
   static const String imagesBox2 = 'assets/images/box2.svg';
   static const String imagesCamera = 'assets/images/Camera.svg';

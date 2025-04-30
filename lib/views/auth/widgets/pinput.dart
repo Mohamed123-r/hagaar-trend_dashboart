@@ -11,7 +11,7 @@ class PinInputStyles {
       fontWeight: FontWeight.w600,
     ),
     decoration: BoxDecoration(
-      border: Border.all(color: const Color.fromRGBO(234, 239, 243, 1)),
+      border: Border.all(color: const Color.fromRGBO(148, 157, 152, 1.0)),
       borderRadius: BorderRadius.circular(20),
     ),
   );
@@ -23,7 +23,7 @@ class PinInputStyles {
 
   static final PinTheme submittedPinTheme = defaultPinTheme.copyWith(
     decoration: defaultPinTheme.decoration?.copyWith(
-      color: const Color.fromRGBO(234, 239, 243, 1),
+      color: const Color.fromRGBO(151, 162, 166, 1.0),
     ),
   );
 
