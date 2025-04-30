@@ -12,8 +12,10 @@ class Assets {
   static const String fontsNotoKufiArabicRegular = 'assets/fonts/NotoKufiArabic-Regular.ttf';
   static const String fontsNotoKufiArabicSemiBold = 'assets/fonts/NotoKufiArabic-SemiBold.ttf';
   static const String imagesAddLocation = 'assets/images/addLocation.png';
+  static const String imagesArmchair = 'assets/images/Armchair.svg';
   static const String imagesBellSimple = 'assets/images/BellSimple.svg';
   static const String imagesBox2 = 'assets/images/box2.svg';
+  static const String imagesBuildings = 'assets/images/Buildings.svg';
   static const String imagesCamera = 'assets/images/Camera.svg';
   static const String imagesCurrencyDollar = 'assets/images/CurrencyDollar.svg';
   static const String imagesDriver = 'assets/images/driver.png';

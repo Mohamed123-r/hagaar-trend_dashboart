@@ -6,6 +6,7 @@ import '../../components/app_form_filed.dart';
 import '../../components/app_text_styles.dart';
 import '../../constant.dart';
 import '../../generated/assets.dart';
+import '../main/main_view.dart';
 import 'forget_password_view.dart';
 
 class LoginView extends StatelessWidget {
@@ -94,12 +95,12 @@ class LoginView extends StatelessWidget {
                         AppButton(
                           text: "تسجيل الدخول",
                           onPressed: () {
-                            // Navigator.push(
-                            //   context,
-                            //   MaterialPageRoute(
-                            //     builder: (context) => MainView(),
-                            //   ),
-                            // );
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => MainView(),
+                              ),
+                            );
                           },
                         ),
                       ],
