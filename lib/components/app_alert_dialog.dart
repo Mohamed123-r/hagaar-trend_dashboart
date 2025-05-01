@@ -33,21 +33,14 @@ class AppAlertDialog extends StatelessWidget {
         title: Stack(
           alignment: Alignment.center,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Image.asset(
-                  Assets.imagesShapesDialog,
-                  width: 200,
+            Align(
+              alignment:  Alignment.topLeft,
+              child: IconButton(
+                onPressed: () => Navigator.pop(context),
+                icon: const Icon(
+                  Icons.close,
                 ),
-                IconButton(
-                  onPressed: () => Navigator.pop(context),
-                  icon: const Icon(
-                    Icons.close,
-                  ),
-                ),
-              ],
+              ),
             ),
             isDelete ?? Container(),
             Padding(

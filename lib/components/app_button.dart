@@ -23,13 +23,46 @@ class AppButton extends StatelessWidget {
       color: color ?? AppColors.black,
       minWidth: 400,
       height: 56,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      child: Text(
+        text,
+        style: AppTextStyles.style18W700(
+          context,
+        ).copyWith(color: AppColors.white),
       ),
-      child: Text(text,
-          style: AppTextStyles.style18W700(context)
-              .copyWith(color: AppColors.white)),
     );
   }
 }
 
+class AppButton2 extends StatelessWidget {
+  const AppButton2({
+    super.key,
+    required this.text,
+    required this.onPressed,
+    this.color,
+  });
+
+  final String text;
+
+  final VoidCallback onPressed;
+
+  final Color? color;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialButton(
+      onPressed: onPressed,
+      color: color ?? AppColors.black,
+      padding: EdgeInsets.symmetric(horizontal: 32),
+      height: 56,
+      minWidth: 200,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      child: Text(
+        text,
+        style: AppTextStyles.style18W700(
+          context,
+        ).copyWith(color: AppColors.white),
+      ),
+    );
+  }
+}
