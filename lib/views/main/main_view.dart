@@ -60,46 +60,46 @@ class _MainViewState extends State<MainView> {
               child: Column(
                 children: [
                   CustomAppbar(
-                      widget: activeIndex == 1.2 ||
-                              activeIndex == 1.31 ||
-                              activeIndex == 1.32 ||
-                              activeIndex == 1.5
-                          ? Row(
-                              children: [
-                                Image.asset(Assets.imagesPress,
-                                    width: 48, height: 48),
-                                SizedBox(
-                                  width: 12,
-                                ),
-                                AppSearchTextFormField(
-                                  labelText: activeIndex == 1.2
-                                      ? "البحث عن عميل"
-                                      : activeIndex == 1.31 ||
-                                              activeIndex == 1.32
-                                          ? "البحث عن مندوب"
-                                          : activeIndex == 1.5
-                                              ? "البحث عن طلب بال id"
-                                              : "",
-                                )
-                              ],
-                            )
-                          : activeIndex == 5.12 || activeIndex == 5.11
-                              ? Row(
-                                  children: [
-                                    Image.asset(Assets.imagesPress,
-                                        width: 32, height: 32),
-                                    SizedBox(
-                                      width: 16,
-                                    ),
-                                    Text(
-                                      "المملكة العربية السعودية",
-                                      style: AppTextStyles.style18W700(context),
-                                    )
-                                  ],
-                                )
-                              : null,
+                      // widget: activeIndex == 1.2 ||
+                      //         activeIndex == 1.31 ||
+                      //         activeIndex == 1.32 ||
+                      //         activeIndex == 1.5
+                      //     ? Row(
+                      //         children: [
+                      //           Image.asset(Assets.imagesPress,
+                      //               width: 48, height: 48),
+                      //           SizedBox(
+                      //             width: 12,
+                      //           ),
+                      //           AppSearchTextFormField(
+                      //             labelText: activeIndex == 1.2
+                      //                 ? "البحث عن عميل"
+                      //                 : activeIndex == 1.31 ||
+                      //                         activeIndex == 1.32
+                      //                     ? "البحث عن مندوب"
+                      //                     : activeIndex == 1.5
+                      //                         ? "البحث عن طلب بال id"
+                      //                         : "",
+                      //           )
+                      //         ],
+                      //       )
+                      //     : activeIndex == 5.12 || activeIndex == 5.11
+                      //         ? Row(
+                      //             children: [
+                      //               Image.asset(Assets.imagesPress,
+                      //                   width: 32, height: 32),
+                      //               SizedBox(
+                      //                 width: 16,
+                      //               ),
+                      //               Text(
+                      //                 "المملكة العربية السعودية",
+                      //                 style: AppTextStyles.style18W700(context),
+                      //               )
+                      //             ],
+                      //           )
+                      //         : null,
                       title: activeIndex == 0
-                          ? 'صباح الخير : أحمد عادل'
+                          ? 'الصفحة الرئيسية'
                           : activeIndex == 1 || activeIndex == 1.1
                               ? 'إدارة سير العمل :'
                               : activeIndex == 1.2

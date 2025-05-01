@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:hagaar_trend_dashboard/views/main/widgets/show_profile_data.dart';
 
+import '../../../components/app_alert_dialog.dart';
 import '../../../components/app_colors.dart';
 import '../../../components/app_text_styles.dart';
 import '../../../constant.dart';
 import '../../../generated/assets.dart';
+import 'edit_profile.dart';
 
 class CustomAppbar extends StatefulWidget {
   const CustomAppbar({
@@ -106,263 +109,159 @@ class _CustomAppbarState extends State<CustomAppbar> {
             Spacer(),
             widget.widget ?? SizedBox(),
             Spacer(),
-            InkWell(
-              borderRadius: BorderRadius.circular(1200),
-              onTap: () {
-                _overlayEntry = OverlayEntry(
-                  builder: (context) => Directionality(
-                    textDirection: direction,
-                    child: Stack(
-                      children: [
-                        GestureDetector(
-                          onTap: _removeOverlay,
-                          child: Container(
-                            width: double.infinity,
-                            height: double.infinity,
-                            color: AppColors.black.withAlpha(100),
-                          ),
-                        ),
-                        Positioned(
-                          top: 100,
-                          left: direction == TextDirection.ltr ? null : 40,
-                          right: direction == TextDirection.rtl ? null : 40,
-                          child: Material(
-                            color: Colors.transparent,
+            Container(
+             padding: EdgeInsets.zero,
+                height: 64,
+                decoration: BoxDecoration(
+                  color: AppColors.greenWhite.withAlpha(130),
+                  borderRadius: BorderRadius.circular(32),
+                  border: Border.all(width: 1, color: AppColors.border),
+                ),
+                child: Row(
+                  children: [
+                    InkWell(
+                      borderRadius: BorderRadius.circular(1200),
+                      onTap: () {
+                        _overlayEntry = OverlayEntry(
+                          builder: (context) => Directionality(
+                            textDirection: direction,
                             child: Stack(
-                              clipBehavior: Clip.none,
                               children: [
-                                Container(
-                                  width: 300,
-                                  height: 200,
-                                  decoration: BoxDecoration(
-                                    color: AppColors.white,
-                                    borderRadius: BorderRadius.circular(16),
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: Colors.black26,
-                                        blurRadius: 10,
-                                        offset: Offset(0, 5),
-                                      ),
-                                    ],
-                                  ),
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.all(16.0),
-                                        child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Text(
-                                              "اللغات",
-                                              style: AppTextStyles.style18W700(
-                                                  context),
-                                            ),
-                                            GestureDetector(
-                                              onTap: _removeOverlay,
-                                              child: Icon(Icons.close),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                      Divider(),
-                                      Padding(
-                                        padding: const EdgeInsets.all(16.0),
-                                        child: Text(
-                                          "اللغة العربية",
-                                          style: AppTextStyles.style18W700(
-                                              context),
-                                        ),
-                                      ),
-                                      Divider(
-                                        color:AppColors.border ,
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.all(16.0),
-                                        child: Text(
-                                          "اللغة الانجليزية",
-                                          style: AppTextStyles.style18W700(
-                                              context),
-                                        ),
-                                      ),
-                                    ],
+                                GestureDetector(
+                                  onTap: _removeOverlay,
+                                  child: Container(
+                                    width: double.infinity,
+                                    height: double.infinity,
+                                    color: AppColors.black.withAlpha(100),
                                   ),
                                 ),
                                 Positioned(
-                                  top: -20,
-                                  left: direction == TextDirection.ltr
-                                      ? null
-                                      : 120,
-                                  right: direction == TextDirection.rtl
-                                      ? null
-                                      : 120,
-                                  child: CustomPaint(
-                                    size: Size(40, 40),
-                                    painter: TrianglePainter(),
+                                  top: 100,
+                                  left: direction == TextDirection.ltr ? null : 15,
+                                  right: direction == TextDirection.rtl ? null : 15,
+                                  child: Material(
+                                    color: Colors.transparent,
+                                    child: Stack(
+                                      clipBehavior: Clip.none,
+                                      children: [
+                                        Container(
+                                          width: 540,
+                                          height: 580,
+                                          decoration: BoxDecoration(
+                                            color: AppColors.white,
+                                            borderRadius: BorderRadius.circular(16),
+                                            boxShadow: [
+                                              BoxShadow(
+                                                color: Colors.black26,
+                                                blurRadius: 10,
+                                                offset: Offset(0, 5),
+                                              ),
+                                            ],
+                                          ),
+                                          child: Column(
+                                            mainAxisSize: MainAxisSize.min,
+                                            children: [
+                                              Padding(
+                                                padding: const EdgeInsets.all(16.0),
+                                                child: Row(
+                                                  mainAxisAlignment:
+                                                  MainAxisAlignment.spaceBetween,
+                                                  children: [
+                                                    Text(
+                                                      "الإشعارات (2):",
+                                                      style: AppTextStyles.style18W700(
+                                                          context),
+                                                    ),
+                                                    GestureDetector(
+                                                      onTap: _removeOverlay,
+                                                      child: Icon(Icons.close),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                              Divider(),
+                                              Expanded(
+                                                child: ListView.separated(
+                                                  itemBuilder: (context, index) =>
+                                                      NotificationTile(
+                                                          name: notifications[index]
+                                                          ["name"]!,
+                                                          phone: notifications[index]
+                                                          ["phone"]!,
+                                                          imageUrl: notifications[index]
+                                                          ["image"]!,
+                                                          date: notifications[index]
+                                                          ["date"]!),
+                                                  separatorBuilder: (context, index) =>
+                                                      Divider(
+                                                        color: AppColors.border,
+                                                      ),
+                                                  itemCount: notifications.length,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                        Positioned(
+                                          top: -20,
+                                          left: direction == TextDirection.ltr
+                                              ? null
+                                              : 95,
+                                          right: direction == TextDirection.rtl
+                                              ? null
+                                              : 95,
+                                          child: CustomPaint(
+                                            size: Size(40, 40),
+                                            painter: TrianglePainter(),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ],
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                  ),
-                );
+                        );
 
-                Overlay.of(context).insert(_overlayEntry!);
-              },
-              child: Container(
-                  width: 200,
-                  height: 56,
-                  decoration: BoxDecoration(
-                    color: AppColors.white,
-                    borderRadius: BorderRadius.circular(32),
-                    border: Border.all(width: 1, color: AppColors.border),
-                  ),
-                  child: Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Icon(
-                          Icons.keyboard_arrow_down_outlined,
+                        Overlay.of(context).insert(_overlayEntry!);
+                      },
+                      child: Container(
+                        width: 64,
+                        height: 64,
+                        decoration: BoxDecoration(
+                          color: AppColors.greenWhite.withAlpha(0),
+                          shape: BoxShape.circle,
+                      ),
+                        child: SvgPicture.asset(
+                          Assets.imagesBellSimple,
+                          fit: BoxFit.scaleDown,
                         ),
                       ),
-                      SizedBox(
-                        width: 24,
+                    ),
+
+                    InkWell(
+                      borderRadius: BorderRadius.circular(1200),
+                      onTap: () {  showDialog(
+                          context: context,
+                          builder: (context) => AppAlertDialog(
+                        title: "بيانات الحساب",
+                        body: ShowProfileData(),
+                      ));
+                      },
+                      child: CircleAvatar(
+                        radius: 32,
+                        backgroundColor: Colors.transparent,
+                        backgroundImage: NetworkImage(
+                            "https://www.w3schools.com/w3images/avatar2.png"),
                       ),
-                      Text(
-                        "اللغة العربية",
-                        style: AppTextStyles.style18W400(context),
-                      ),
-                    ],
-                  )),
-            ),
+                    ),
+                  ],
+                )),
             SizedBox(
               width: 16,
             ),
-            InkWell(
-              borderRadius: BorderRadius.circular(1200),
-              onTap: () {
-                _overlayEntry = OverlayEntry(
-                  builder: (context) => Directionality(
-                    textDirection: direction,
-                    child: Stack(
-                      children: [
-                        GestureDetector(
-                          onTap: _removeOverlay,
-                          child: Container(
-                            width: double.infinity,
-                            height: double.infinity,
-                            color: AppColors.black.withAlpha(100),
-                          ),
-                        ),
-                        Positioned(
-                          top: 100,
-                          left: direction == TextDirection.ltr ? null : 15,
-                          right: direction == TextDirection.rtl ? null : 15,
-                          child: Material(
-                            color: Colors.transparent,
-                            child: Stack(
-                              clipBehavior: Clip.none,
-                              children: [
-                                Container(
-                                  width: 540,
-                                  height: 580,
-                                  decoration: BoxDecoration(
-                                    color: AppColors.white,
-                                    borderRadius: BorderRadius.circular(16),
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: Colors.black26,
-                                        blurRadius: 10,
-                                        offset: Offset(0, 5),
-                                      ),
-                                    ],
-                                  ),
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.all(16.0),
-                                        child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Text(
-                                              "الإشعارات (2):",
-                                              style: AppTextStyles.style18W700(
-                                                  context),
-                                            ),
-                                            GestureDetector(
-                                              onTap: _removeOverlay,
-                                              child: Icon(Icons.close),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                      Divider(),
-                                      Expanded(
-                                        child: ListView.separated(
-                                          itemBuilder: (context, index) =>
-                                              NotificationTile(
-                                                  name: notifications[index]
-                                                      ["name"]!,
-                                                  phone: notifications[index]
-                                                      ["phone"]!,
-                                                  imageUrl: notifications[index]
-                                                      ["image"]!,
-                                                  date: notifications[index]
-                                                      ["date"]!),
-                                          separatorBuilder: (context, index) =>
-                                              Divider(
-                                            color: AppColors.border,
-                                          ),
-                                          itemCount: notifications.length,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Positioned(
-                                  top: -20,
-                                  left: direction == TextDirection.ltr
-                                      ? null
-                                      : 10,
-                                  right: direction == TextDirection.rtl
-                                      ? null
-                                      : 10,
-                                  child: CustomPaint(
-                                    size: Size(40, 40),
-                                    painter: TrianglePainter(),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                );
 
-                Overlay.of(context).insert(_overlayEntry!);
-              },
-              child: Container(
-                width: 56,
-                height: 56,
-                decoration: BoxDecoration(
-                  color: AppColors.white,
-                  shape: BoxShape.circle,
-                  border: Border.all(width: 1, color: AppColors.border),
-                ),
-                child: SvgPicture.asset(
-                  Assets.imagesBellSimple,
-                  fit: BoxFit.scaleDown,
-                ),
-              ),
-            ),
           ],
         ),
       ),
