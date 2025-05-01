@@ -17,12 +17,14 @@ class Assets {
   static const String imagesBox2 = 'assets/images/box2.svg';
   static const String imagesBuildings = 'assets/images/Buildings.svg';
   static const String imagesCamera = 'assets/images/Camera.svg';
+  static const String imagesChartLine = 'assets/images/ChartLine.svg';
   static const String imagesCurrencyDollar = 'assets/images/CurrencyDollar.svg';
   static const String imagesDriver = 'assets/images/driver.png';
   static const String imagesDriverBlock = 'assets/images/driverBlock.png';
   static const String imagesDrivers = 'assets/images/drivers.png';
   static const String imagesEllipse = 'assets/images/Ellipse.png';
   static const String imagesEurope = 'assets/images/europe.png';
+  static const String imagesFarm = 'assets/images/Farm.svg';
   static const String imagesFinancialReceivablesReports = 'assets/images/FinancialReceivablesReports.png';
   static const String imagesHaweeTawseelBanner = 'assets/images/HaweeTawseelBanner.png';
   static const String imagesHeadset = 'assets/images/Headset.svg';
