@@ -79,45 +79,43 @@ class CustomDrawer extends StatelessWidget {
             drawerItems: drawerItems,
             itemBuilder: itemBuilder,
           ),
-          // SliverFillRemaining(
-          //   hasScrollBody: false,
-          //   child: Column(
-          //     children: [
-          //       Expanded(child: SizedBox()),
-          //       InkWell(
-          //         borderRadius: BorderRadius.circular(32),
-          //         onTap: () {
-          //           showDialog(
-          //             context: context,
-          //             builder: (context) => AppAlertDialog(
-          //               title: "تعديل بيانات الحساب",
-          //               body: EditProfile(),
-          //             ),
-          //           );
-          //         },
-          //         child: ListTile(
-          //           leading: CircleAvatar(
-          //             radius: 32,
-          //             backgroundColor: Colors.transparent,
-          //             backgroundImage: NetworkImage(
-          //                 "https://www.w3schools.com/w3images/avatar2.png"),
-          //           ),
-          //           title: Text(
-          //             "مرحبا",
-          //             style: AppTextStyles.style16W400(context),
-          //           ),
-          //           subtitle: Text(
-          //             "أحمد عادل",
-          //             style: AppTextStyles.style18W700(context),
-          //           ),
-          //         ),
-          //       ),
-          //       SizedBox(
-          //         height: 24,
-          //       ),
-          //     ],
-          //   ),
-          // ),
+
+          SliverFillRemaining(
+            hasScrollBody: false,
+            child: Column(
+              children: [
+                Expanded(child: SizedBox()),
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Container(
+                    height: 1,
+                    width: double.infinity,
+                    color: AppColors.border,
+                  ),
+                ),
+                InkWell(
+                  borderRadius: BorderRadius.circular(32),
+
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.logout_outlined),
+                      SizedBox(
+                        width: 16,
+                      ),
+                      Text(
+                        "تسجيل الخروج",
+                        style: AppTextStyles.style18W400(context),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 24,
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
