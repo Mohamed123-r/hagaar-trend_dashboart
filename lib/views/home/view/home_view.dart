@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:hagaar_trend_dashboard/views/home/view/widgets/marketers_section.dart';
-import 'package:hagaar_trend_dashboard/views/home/view/widgets/show_data_of_customers_section.dart';
-import 'package:hagaar_trend_dashboard/views/home/view/widgets/show_data_of_orders_section.dart';
-
+import 'package:hagaar_trend_dashboard/views/home/view/widgets/show_data_of_land_purchase_requests.dart';
+import 'package:hagaar_trend_dashboard/views/home/view/widgets/show_data_of_serious_purchase_requests.dart';
 import '../../../components/app_colors.dart';
 import 'widgets/customer_section.dart';
 import 'widgets/customer_service_section.dart';
 import 'widgets/owner_section.dart';
-import 'widgets/show_data_of_delegates_section.dart';
+
 
 
 class HomeView extends StatelessWidget {
@@ -18,92 +17,118 @@ class HomeView extends StatelessWidget {
     return Container(
       margin: EdgeInsets.all(16),
       color: AppColors.white,
-      child: Row(
+      child: Column(
         spacing: 16,
         children: [
           Expanded(
             flex: 2,
-            child: CustomerSection(),
+            child: Row(
+              spacing: 16,
+              children: [
+                Expanded(
+                  flex: 2,
+                  child: CustomerSection(),
+                ),
+                Expanded(
+                  flex: 2,
+                  child: MarketersSection(),
+                ),
+                Expanded(
+                  flex: 2,
+                  child: OwnerSection(),
+                ),
+                Expanded(
+                  flex: 2,
+                  child: CustomerServiceSection(),
+                ),
+                // Expanded(
+                //   child: Column(
+                //     spacing: 16,
+                //     children: [
+                //       Expanded(
+                //         flex: 2,
+                //         child: CustomerSection(),
+                //       ),
+                //
+                //       Expanded(
+                //         flex: 5,
+                //         child: ShowDataOfDelegatesSection(),
+                //       ),
+                //     ],
+                //   ),
+                // ),
+                // Expanded(
+                //   child: Column(
+                //     children: [
+                //       Expanded(
+                //         flex: 2,
+                //         child: MarketersSection(),
+                //       ),
+                //       SizedBox(
+                //         height: 16,
+                //       ),
+                //       Expanded(
+                //         flex: 5,
+                //         child: ShowDataOfCustomersSection(),
+                //       ),
+                //     ],
+                //   ),
+                // ),
+                // Expanded(
+                //   child: Column(
+                //     children: [
+                //       Expanded(
+                //         flex: 2,
+                //         child: OwnerSection(),
+                //       ),
+                //       SizedBox(
+                //         height: 16,
+                //       ),
+                //       Expanded(
+                //         flex: 5,
+                //         child: ShowDataOfCustomersSection(),
+                //       ),
+                //     ],
+                //   ),
+                // ),
+                // Expanded(
+                //   child: Column(
+                //     children: [
+                //       Expanded(
+                //         flex: 2,
+                //         child: ComplaintsSection(),
+                //       ),
+                //       SizedBox(
+                //         height: 16,
+                //       ),
+                //       Expanded(
+                //         flex: 5,
+                //         child: ShowDataOfOrdersSection(),
+                //       ),
+                //     ],
+                //   ),
+                // ),
+              ],
+            ),
           ),
           Expanded(
-            flex: 2,
-            child: MarketersSection(),
+            flex: 5,
+            child: Row(
+              spacing: 16,
+              children: [
+                Expanded(
+                  flex: 5,
+                  child: ShowDataOfSeriousPurchaseRequests(),
+                ),
+                Expanded(
+                  flex:3,
+                  child: ShowDataOfLandPurchaseRequests(),
+                ),
+
+
+              ],
+            ),
           ),
-          Expanded(
-            flex: 2,
-            child: OwnerSection(),
-          ),
-          Expanded(
-            flex: 2,
-            child: CustomerServiceSection(),
-          ),
-          // Expanded(
-          //   child: Column(
-          //     spacing: 16,
-          //     children: [
-          //       Expanded(
-          //         flex: 2,
-          //         child: CustomerSection(),
-          //       ),
-          //
-          //       Expanded(
-          //         flex: 5,
-          //         child: ShowDataOfDelegatesSection(),
-          //       ),
-          //     ],
-          //   ),
-          // ),
-          // Expanded(
-          //   child: Column(
-          //     children: [
-          //       Expanded(
-          //         flex: 2,
-          //         child: MarketersSection(),
-          //       ),
-          //       SizedBox(
-          //         height: 16,
-          //       ),
-          //       Expanded(
-          //         flex: 5,
-          //         child: ShowDataOfCustomersSection(),
-          //       ),
-          //     ],
-          //   ),
-          // ),
-          // Expanded(
-          //   child: Column(
-          //     children: [
-          //       Expanded(
-          //         flex: 2,
-          //         child: OwnerSection(),
-          //       ),
-          //       SizedBox(
-          //         height: 16,
-          //       ),
-          //       Expanded(
-          //         flex: 5,
-          //         child: ShowDataOfCustomersSection(),
-          //       ),
-          //     ],
-          //   ),
-          // ),
-          // Expanded(
-          //   child: Column(
-          //     children: [
-          //       Expanded(
-          //         flex: 2,
-          //         child: ComplaintsSection(),
-          //       ),
-          //       SizedBox(
-          //         height: 16,
-          //       ),
-          //       Expanded(
-          //         flex: 5,
-          //         child: ShowDataOfOrdersSection(),
-          //       ),
-          //     ],
-          //   ),
-          // ),
         ],
       ),
     );
