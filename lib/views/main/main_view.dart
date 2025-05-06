@@ -13,7 +13,6 @@ import '../customer/customer_details_view.dart';
 import '../customer/customers_view.dart';
 import '../home/view/home_view.dart';
 
-
 class MainView extends StatefulWidget {
   const MainView({super.key});
 
@@ -25,12 +24,10 @@ class _MainViewState extends State<MainView> {
   num activeIndex = 0.0;
   final List<DrawerItemModel> drawerItems = [
     DrawerItemModel(title: 'الصفحة الرئيسية', image: Assets.imagesHouse),
-    DrawerItemModel(title: 'العملاء', image: Assets.imagesUser),
-    DrawerItemModel(title: 'مالك  /  مكتب عقارات', image: Assets.imagesArmchair),
-    DrawerItemModel(
-        title: 'المسوقيين العقاريين', image: Assets.imagesBuildings),
+    DrawerItemModel(title: 'عملاء النظام', image: Assets.imagesUser),
+    DrawerItemModel(title: 'طلبات الشراء الجاد', image: Assets.imagesKey),
+    DrawerItemModel(title: 'طلبات شراء أرض', image: Assets.imagesTreePalm),
     DrawerItemModel(title: 'خدمة العملاء', image: Assets.imagesHeadset),
-
   ];
 
   @override
@@ -62,219 +59,221 @@ class _MainViewState extends State<MainView> {
               child: Column(
                 children: [
                   CustomAppbar(
-
-                     onCleckBack:(){
-                       activeIndex == 1.1 ? activeIndex = activeIndex -0.1 : activeIndex =activeIndex ;
-                       setState(() {
-
-                       });
-                     } ,
-                      showBack:activeIndex == 1.1 ,
-                      title: activeIndex == 0
-                          ? 'الصفحة الرئيسية'
-                          : activeIndex == 1
-                              ? 'العملاء :'
-                              : activeIndex == 1.1
-                                  ? 'بيانات العميل :'
-                                  // : activeIndex == 1.3 || activeIndex == 1.31
-                                  //     ? 'المندوبين :'
-                                  //     : activeIndex == 1.32
-                                  //         ? 'المندوبين المحظورين :'
-                                  //         : activeIndex == 1.4
-                                  //             ? 'طلبات إنضمام المندوبين :'
-                                  //             : activeIndex == 1.5 ||
-                                  //                     activeIndex == 1.51
-                                  //                 ? 'الطلبات :'
-                                  //                 : activeIndex == 2 ||
-                                  //                         activeIndex == 2.1
-                                  //                     ? 'الشكاوي :'
-                                  //                     : activeIndex == 3 ||
-                                  //                             activeIndex == 3.1
-                                  //                         ? 'لتسويات المالية :'
-                                  //                         : activeIndex == 4
-                                  //                             ? 'الإعلانات :'
-                                  //                             : activeIndex ==
-                                  //                                         5 ||
-                                  //                                     activeIndex ==
-                                  //                                         5.1 ||
-                                  //                                     activeIndex ==
-                                  //                                         5.11 ||
-                                  //                                     activeIndex ==
-                                  //                                         5.12
-                                  //                                 ? 'التقارير :'
-                                                                  : 'Opps something went wrong'),
+                    onCleckBack: () {
+                      activeIndex == 1.1
+                          ? activeIndex = activeIndex - 0.1
+                          : activeIndex = activeIndex;
+                      setState(() {});
+                    },
+                    showBack: activeIndex == 1.1,
+                    title:
+                        activeIndex == 0
+                            ? 'الصفحة الرئيسية'
+                            : activeIndex == 1
+                            ? 'العملاء :'
+                            : activeIndex == 1.1
+                            ? 'بيانات العميل :'
+                            // : activeIndex == 1.3 || activeIndex == 1.31
+                            //     ? 'المندوبين :'
+                            //     : activeIndex == 1.32
+                            //         ? 'المندوبين المحظورين :'
+                            //         : activeIndex == 1.4
+                            //             ? 'طلبات إنضمام المندوبين :'
+                            //             : activeIndex == 1.5 ||
+                            //                     activeIndex == 1.51
+                            //                 ? 'الطلبات :'
+                            //                 : activeIndex == 2 ||
+                            //                         activeIndex == 2.1
+                            //                     ? 'الشكاوي :'
+                            //                     : activeIndex == 3 ||
+                            //                             activeIndex == 3.1
+                            //                         ? 'لتسويات المالية :'
+                            //                         : activeIndex == 4
+                            //                             ? 'الإعلانات :'
+                            //                             : activeIndex ==
+                            //                                         5 ||
+                            //                                     activeIndex ==
+                            //                                         5.1 ||
+                            //                                     activeIndex ==
+                            //                                         5.11 ||
+                            //                                     activeIndex ==
+                            //                                         5.12
+                            //                                 ? 'التقارير :'
+                            : 'Opps something went wrong',
+                  ),
                   Expanded(
-                      child: activeIndex == 0
-                          ? HomeView()
-                          : activeIndex == 1
+                    child:
+                        activeIndex == 0
+                            ? HomeView()
+                            : activeIndex == 1
                             ? CustomersView(
-                                  onTapItem: () {
-                                    activeIndex = activeIndex + 0.1;
-                                  setState(() {});
-                                 },
-                               )
-                              : activeIndex == 1.1
-                                  ? CustomerDetailsView(
-                                    )
-                              //     : activeIndex == 1.2
-                              //         ? ClientsView(
-                              //             onPressedBack: () {
-                              //               activeIndex = 1.1;
-                              //               setState(() {});
-                              //             },
-                              //           )
-                              //         : activeIndex == 1.3
-                              //             ? ManageDriversView(
-                              //                 onPressedBack: () {
-                              //                   activeIndex = 1.1;
-                              //                   setState(() {});
-                              //                 },
-                              //                 onTapItem1: () {
-                              //                   activeIndex = 1.31;
-                              //                   setState(() {});
-                              //                 },
-                              //                 onTapItem2: () {
-                              //                   activeIndex = 1.32;
-                              //                   setState(() {});
-                              //                 },
-                              //               )
-                              //             : activeIndex == 1.31
-                              //                 ? DriversView(
-                              //                     onPressedBack: () {
-                              //                       activeIndex = 1.3;
-                              //                       setState(() {});
-                              //                     },
-                              //                   )
-                              //                 : activeIndex == 1.32
-                              //                     ? DriversBlockedView(
-                              //                         onPressedBack: () {
-                              //                           activeIndex = 1.3;
-                              //                           setState(() {});
-                              //                         },
-                              //                       )
-                              //                     : activeIndex == 1.4
-                              //                         ? DriversRequestsView(
-                              //                             onPressedBack: () {
-                              //                               activeIndex = 1.1;
-                              //                               setState(() {});
-                              //                             },
-                              //                           )
-                              //                         : activeIndex == 1.5
-                              //                             ? OrderView(
-                              //                                 onPressedBack:
-                              //                                     () {
-                              //                                   activeIndex =
-                              //                                       1.1;
-                              //                                   setState(() {});
-                              //                                 },
-                              //                                 onTapItem: () {
-                              //                                   activeIndex =
-                              //                                       1.51;
-                              //                                   setState(() {});
-                              //                                 },
-                              //                               )
-                              //                             : activeIndex == 1.51
-                              //                                 ? OrderDetailsView(
-                              //                                     onPressedBack:
-                              //                                         () {
-                              //                                       activeIndex =
-                              //                                           1.5;
-                              //                                       setState(
-                              //                                           () {});
-                              //                                     },
-                              //                                   )
-                              //                                 : activeIndex ==
-                              //                                         1.6
-                              //                                     ? ShowExsistedAreasView(
-                              //                                         onPressedBack:
-                              //                                             () {
-                              //                                           activeIndex =
-                              //                                               1.1;
-                              //                                           setState(
-                              //                                               () {});
-                              //                                         },
-                              //                                       )
-                              //                                     : activeIndex ==
-                              //                                             1.7
-                              //                                         ? AddNewAreaView(
-                              //                                             onPressedBack:
-                              //                                                 () {
-                              //                                               activeIndex =
-                              //                                                   1.1;
-                              //                                               setState(() {});
-                              //                                             },
-                              //                                           )
-                              //                                         : activeIndex ==
-                              //                                                 2
-                              //                                             ? ManageWorkProcessFromComplaintsView(
-                              //                                                 onTapCountry: () {
-                              //                                                   activeIndex = 2.1;
-                              //                                                   setState(() {});
-                              //                                                 },
-                              //                                               )
-                              //                                             : activeIndex == 2.1
-                              //                                                 ? ComplaintsView(
-                              //                                                     onPressedBack: () {
-                              //                                                       activeIndex = 2;
-                              //                                                       setState(() {});
-                              //                                                     },
-                              //                                                   )
-                              //                                                 : activeIndex == 3
-                              //                                                     ? ManageWorkProcessFromFinancialView(
-                              //                                                         onTapCountry: () {
-                              //                                                           activeIndex = 3.1;
-                              //                                                           setState(() {});
-                              //                                                         },
-                              //                                                       )
-                              //                                                     : activeIndex == 3.1
-                              //                                                         ? FinancialView(
-                              //                                                             onPressedBack: () {
-                              //                                                               activeIndex = 3;
-                              //                                                               setState(() {});
-                              //                                                             },
-                              //                                                           )
-                              //                                                         : activeIndex == 4
-                              //                                                             ? AdvertisingView()
-                              //                                                             : activeIndex == 5
-                              //                                                                 ? ManageWorkProcessFromReportsView(
-                              //                                                                     onTapCountry: () {
-                              //                                                                       activeIndex = 5.1;
-                              //                                                                       setState(() {});
-                              //                                                                     },
-                              //                                                                   )
-                              //                                                                 : activeIndex == 5.1
-                              //                                                                     ? ManageReportsView(
-                              //                                                                         onTapItem1: () {
-                              //                                                                           activeIndex = 5.11;
-                              //                                                                           setState(() {});
-                              //                                                                         },
-                              //                                                                         onTapItem2: () {
-                              //                                                                           activeIndex = 5.12;
-                              //                                                                           setState(() {});
-                              //                                                                         },
-                              //                                                                         onPressedBack: () {
-                              //                                                                           activeIndex = 5;
-                              //                                                                           setState(() {});
-                              //                                                                         },
-                              //                                                                       )
-                              //                                                                     : activeIndex == 5.11
-                              //                                                                         ? ReportsView(
-                              //                                                                             onPressedBack: () {
-                              //                                                                               activeIndex = 5.1;
-                              //                                                                               setState(() {});
-                              //                                                                             },
-                              //                                                                           )
-                              //                                                                         : activeIndex == 5.12
-                              //                                                                             ? ReportsFinancialView(
-                              //                                                                                 onPressedBack: () {
-                              //                                                                                   activeIndex = 5.1;
-                              //                                                                                   setState(() {});
-                              //                                                                                 },
-                              //                                                                               )
-                                                                                                         : Container()),
+                              onTapItem: () {
+                                activeIndex = activeIndex + 0.1;
+                                setState(() {});
+                              },
+                            )
+                            : activeIndex == 1.1
+                            ? CustomerDetailsView()
+                            //     : activeIndex == 1.2
+                            //         ? ClientsView(
+                            //             onPressedBack: () {
+                            //               activeIndex = 1.1;
+                            //               setState(() {});
+                            //             },
+                            //           )
+                            //         : activeIndex == 1.3
+                            //             ? ManageDriversView(
+                            //                 onPressedBack: () {
+                            //                   activeIndex = 1.1;
+                            //                   setState(() {});
+                            //                 },
+                            //                 onTapItem1: () {
+                            //                   activeIndex = 1.31;
+                            //                   setState(() {});
+                            //                 },
+                            //                 onTapItem2: () {
+                            //                   activeIndex = 1.32;
+                            //                   setState(() {});
+                            //                 },
+                            //               )
+                            //             : activeIndex == 1.31
+                            //                 ? DriversView(
+                            //                     onPressedBack: () {
+                            //                       activeIndex = 1.3;
+                            //                       setState(() {});
+                            //                     },
+                            //                   )
+                            //                 : activeIndex == 1.32
+                            //                     ? DriversBlockedView(
+                            //                         onPressedBack: () {
+                            //                           activeIndex = 1.3;
+                            //                           setState(() {});
+                            //                         },
+                            //                       )
+                            //                     : activeIndex == 1.4
+                            //                         ? DriversRequestsView(
+                            //                             onPressedBack: () {
+                            //                               activeIndex = 1.1;
+                            //                               setState(() {});
+                            //                             },
+                            //                           )
+                            //                         : activeIndex == 1.5
+                            //                             ? OrderView(
+                            //                                 onPressedBack:
+                            //                                     () {
+                            //                                   activeIndex =
+                            //                                       1.1;
+                            //                                   setState(() {});
+                            //                                 },
+                            //                                 onTapItem: () {
+                            //                                   activeIndex =
+                            //                                       1.51;
+                            //                                   setState(() {});
+                            //                                 },
+                            //                               )
+                            //                             : activeIndex == 1.51
+                            //                                 ? OrderDetailsView(
+                            //                                     onPressedBack:
+                            //                                         () {
+                            //                                       activeIndex =
+                            //                                           1.5;
+                            //                                       setState(
+                            //                                           () {});
+                            //                                     },
+                            //                                   )
+                            //                                 : activeIndex ==
+                            //                                         1.6
+                            //                                     ? ShowExsistedAreasView(
+                            //                                         onPressedBack:
+                            //                                             () {
+                            //                                           activeIndex =
+                            //                                               1.1;
+                            //                                           setState(
+                            //                                               () {});
+                            //                                         },
+                            //                                       )
+                            //                                     : activeIndex ==
+                            //                                             1.7
+                            //                                         ? AddNewAreaView(
+                            //                                             onPressedBack:
+                            //                                                 () {
+                            //                                               activeIndex =
+                            //                                                   1.1;
+                            //                                               setState(() {});
+                            //                                             },
+                            //                                           )
+                            //                                         : activeIndex ==
+                            //                                                 2
+                            //                                             ? ManageWorkProcessFromComplaintsView(
+                            //                                                 onTapCountry: () {
+                            //                                                   activeIndex = 2.1;
+                            //                                                   setState(() {});
+                            //                                                 },
+                            //                                               )
+                            //                                             : activeIndex == 2.1
+                            //                                                 ? ComplaintsView(
+                            //                                                     onPressedBack: () {
+                            //                                                       activeIndex = 2;
+                            //                                                       setState(() {});
+                            //                                                     },
+                            //                                                   )
+                            //                                                 : activeIndex == 3
+                            //                                                     ? ManageWorkProcessFromFinancialView(
+                            //                                                         onTapCountry: () {
+                            //                                                           activeIndex = 3.1;
+                            //                                                           setState(() {});
+                            //                                                         },
+                            //                                                       )
+                            //                                                     : activeIndex == 3.1
+                            //                                                         ? FinancialView(
+                            //                                                             onPressedBack: () {
+                            //                                                               activeIndex = 3;
+                            //                                                               setState(() {});
+                            //                                                             },
+                            //                                                           )
+                            //                                                         : activeIndex == 4
+                            //                                                             ? AdvertisingView()
+                            //                                                             : activeIndex == 5
+                            //                                                                 ? ManageWorkProcessFromReportsView(
+                            //                                                                     onTapCountry: () {
+                            //                                                                       activeIndex = 5.1;
+                            //                                                                       setState(() {});
+                            //                                                                     },
+                            //                                                                   )
+                            //                                                                 : activeIndex == 5.1
+                            //                                                                     ? ManageReportsView(
+                            //                                                                         onTapItem1: () {
+                            //                                                                           activeIndex = 5.11;
+                            //                                                                           setState(() {});
+                            //                                                                         },
+                            //                                                                         onTapItem2: () {
+                            //                                                                           activeIndex = 5.12;
+                            //                                                                           setState(() {});
+                            //                                                                         },
+                            //                                                                         onPressedBack: () {
+                            //                                                                           activeIndex = 5;
+                            //                                                                           setState(() {});
+                            //                                                                         },
+                            //                                                                       )
+                            //                                                                     : activeIndex == 5.11
+                            //                                                                         ? ReportsView(
+                            //                                                                             onPressedBack: () {
+                            //                                                                               activeIndex = 5.1;
+                            //                                                                               setState(() {});
+                            //                                                                             },
+                            //                                                                           )
+                            //                                                                         : activeIndex == 5.12
+                            //                                                                             ? ReportsFinancialView(
+                            //                                                                                 onPressedBack: () {
+                            //                                                                                   activeIndex = 5.1;
+                            //                                                                                   setState(() {});
+                            //                                                                                 },
+                            //                                                                               )
+                            : Container(),
+                  ),
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),

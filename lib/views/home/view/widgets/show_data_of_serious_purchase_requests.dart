@@ -5,155 +5,149 @@ import '../../../../components/app_colors.dart';
 import '../../../../components/app_text_styles.dart';
 import '../../../../components/list_item.dart';
 import '../../../../generated/assets.dart';
-
+import '../../../customer/widgets/customer_deals_section.dart';
+import '../../../customer/widgets/deal_details_dialog.dart';
 
 class ShowDataOfSeriousPurchaseRequests extends StatelessWidget {
-   ShowDataOfSeriousPurchaseRequests({
-    super.key,
-  });
+  ShowDataOfSeriousPurchaseRequests({super.key});
+
   final List<Map<String, String>> users = [
     {
       "name": "Mohammed Hassan",
       "phone": "+966 3245678129",
-      "image": "https://randomuser.me/api/portraits/men/1.jpg"
+      "image": "https://randomuser.me/api/portraits/men/1.jpg",
     },
     {
       "name": "Ahmed Saleh",
       "phone": "+966 567123456",
-      "image": "https://randomuser.me/api/portraits/men/2.jpg"
+      "image": "https://randomuser.me/api/portraits/men/2.jpg",
     },
     {
       "name": "Omar Khaled",
       "phone": "+966 789345678",
-      "image": "https://randomuser.me/api/portraits/men/3.jpg"
+      "image": "https://randomuser.me/api/portraits/men/3.jpg",
     },
     {
       "name": "Hassan Mohammed",
       "phone": "+966 901567890",
-      "image": "https://randomuser.me/api/portraits/men/4.jpg"
+      "image": "https://randomuser.me/api/portraits/men/4.jpg",
     },
     {
       "name": "Yousef Ali",
       "phone": "+966 234789012",
-      "image": "https://randomuser.me/api/portraits/men/5.jpg"
+      "image": "https://randomuser.me/api/portraits/men/5.jpg",
     },
     {
       "name": "Khalid Noor",
       "phone": "+966 456901234",
-      "image": "https://randomuser.me/api/portraits/men/6.jpg"
+      "image": "https://randomuser.me/api/portraits/men/6.jpg",
     },
     {
       "name": "Nasser Ibrahim",
       "phone": "+966 678123456",
-      "image": "https://randomuser.me/api/portraits/men/7.jpg"
+      "image": "https://randomuser.me/api/portraits/men/7.jpg",
     },
     {
       "name": "Mohammed Hassan",
       "phone": "+966 3245678129",
-      "image": "https://randomuser.me/api/portraits/men/1.jpg"
+      "image": "https://randomuser.me/api/portraits/men/1.jpg",
     },
     {
       "name": "Ahmed Saleh",
       "phone": "+966 567123456",
-      "image": "https://randomuser.me/api/portraits/men/2.jpg"
+      "image": "https://randomuser.me/api/portraits/men/2.jpg",
     },
     {
       "name": "Omar Khaled",
       "phone": "+966 789345678",
-      "image": "https://randomuser.me/api/portraits/men/3.jpg"
+      "image": "https://randomuser.me/api/portraits/men/3.jpg",
     },
     {
       "name": "Hassan Mohammed",
       "phone": "+966 901567890",
-      "image": "https://randomuser.me/api/portraits/men/4.jpg"
+      "image": "https://randomuser.me/api/portraits/men/4.jpg",
     },
     {
       "name": "Yousef Ali",
       "phone": "+966 234789012",
-      "image": "https://randomuser.me/api/portraits/men/5.jpg"
+      "image": "https://randomuser.me/api/portraits/men/5.jpg",
     },
     {
       "name": "Khalid Noor",
       "phone": "+966 456901234",
-      "image": "https://randomuser.me/api/portraits/men/6.jpg"
+      "image": "https://randomuser.me/api/portraits/men/6.jpg",
     },
     {
       "name": "Nasser Ibrahim",
       "phone": "+966 678123456",
-      "image": "https://randomuser.me/api/portraits/men/7.jpg"
+      "image": "https://randomuser.me/api/portraits/men/7.jpg",
     },
     {
       "name": "Mohammed Hassan",
       "phone": "+966 3245678129",
-      "image": "https://randomuser.me/api/portraits/men/1.jpg"
+      "image": "https://randomuser.me/api/portraits/men/1.jpg",
     },
     {
       "name": "Ahmed Saleh",
       "phone": "+966 567123456",
-      "image": "https://randomuser.me/api/portraits/men/2.jpg"
+      "image": "https://randomuser.me/api/portraits/men/2.jpg",
     },
     {
       "name": "Omar Khaled",
       "phone": "+966 789345678",
-      "image": "https://randomuser.me/api/portraits/men/3.jpg"
+      "image": "https://randomuser.me/api/portraits/men/3.jpg",
     },
     {
       "name": "Hassan Mohammed",
       "phone": "+966 901567890",
-      "image": "https://randomuser.me/api/portraits/men/4.jpg"
+      "image": "https://randomuser.me/api/portraits/men/4.jpg",
     },
     {
       "name": "Yousef Ali",
       "phone": "+966 234789012",
-      "image": "https://randomuser.me/api/portraits/men/5.jpg"
+      "image": "https://randomuser.me/api/portraits/men/5.jpg",
     },
     {
       "name": "Khalid Noor",
       "phone": "+966 456901234",
-      "image": "https://randomuser.me/api/portraits/men/6.jpg"
+      "image": "https://randomuser.me/api/portraits/men/6.jpg",
     },
     {
       "name": "Nasser Ibrahim",
       "phone": "+966 678123456",
-      "image": "https://randomuser.me/api/portraits/men/7.jpg"
+      "image": "https://randomuser.me/api/portraits/men/7.jpg",
     },
     {
       "name": "Tariq Salman",
       "phone": "+966 890345678",
-      "image": "https://randomuser.me/api/portraits/men/8.jpg"
+      "image": "https://randomuser.me/api/portraits/men/8.jpg",
     },
     {
       "name": "Adel Hussein",
       "phone": "+966 123567890",
-      "image": "https://randomuser.me/api/portraits/men/9.jpg"
+      "image": "https://randomuser.me/api/portraits/men/9.jpg",
     },
     {
       "name": "Bashar Zaid",
       "phone": "+966 345789012",
-      "image": "https://randomuser.me/api/portraits/men/10.jpg"
+      "image": "https://randomuser.me/api/portraits/men/10.jpg",
     },
     {
       "name": "Othman Sami",
       "phone": "+966 567901234",
-      "image": "https://randomuser.me/api/portraits/men/11.jpg"
-    }
+      "image": "https://randomuser.me/api/portraits/men/11.jpg",
+    },
   ];
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(
-        horizontal: 16,
-
-      ),
+      padding: EdgeInsets.symmetric(horizontal: 16),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(32),
-        border: Border.all(
-          width: 1,
-          color: AppColors.border,
-        ),
+        border: Border.all(width: 1, color: AppColors.border),
       ),
       child: Column(
-
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
@@ -168,10 +162,7 @@ class ShowDataOfSeriousPurchaseRequests extends StatelessWidget {
                     color: AppColors.greenDark,
                   ),
                   child: Center(
-                    child: SvgPicture.asset(
-                      Assets.imagesChartLine,
-                      width: 20,
-                    ),
+                    child: SvgPicture.asset(Assets.imagesChartLine, width: 20),
                   ),
                 ),
                 SizedBox(width: 12),
@@ -179,7 +170,6 @@ class ShowDataOfSeriousPurchaseRequests extends StatelessWidget {
                   'طلبات الشراء الجادة',
                   style: AppTextStyles.style20W400(context),
                 ),
-
               ],
             ),
           ),
@@ -189,13 +179,50 @@ class ShowDataOfSeriousPurchaseRequests extends StatelessWidget {
               crossAxisCount: 4,
               crossAxisSpacing: 8,
               mainAxisSpacing: 8,
+              childAspectRatio: 1 / 2,
 
               children: List.generate(users.length, (index) {
                 return GestureDetector(
                   onTap: () {
-
+                    showDialog(
+                      context: context,
+                      builder:
+                          (context) => DealDetailsDialog(),
+                    );
                   },
-                  child: ListViewItem(users: users[index]),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(width: 1, color: AppColors.border),
+                    ),
+                    child: Column(
+                      spacing: 8,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(12),
+                            topRight: Radius.circular(12),
+                          ),
+                          child: Image.asset(
+                            Assets.imagesTest,
+                            height: 220,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        Text(
+                          "شقة للبيع",
+                          style: AppTextStyles.style14W400(context),
+                        ),
+                        Text(
+                          "الرياض - منطقة الزهور",
+                          style: AppTextStyles.style14W400(
+                            context,
+                          ).copyWith(color: AppColors.grey),
+                        ),
+                      ],
+                    ),
+                  ),
                 );
               }),
             ),

@@ -33,8 +33,10 @@ class Assets {
   static const String imagesHeadset = 'assets/images/Headset.svg';
   static const String imagesHouse = 'assets/images/House.svg';
   static const String imagesImportReports = 'assets/images/ImportReports.png';
+  static const String imagesKey = 'assets/images/Key.svg';
   static const String imagesLogo = 'assets/images/logo.png';
   static const String imagesLogoBackground = 'assets/images/logoBackground.png';
+  static const String imagesOfficeChair = 'assets/images/OfficeChair.svg';
   static const String imagesOrders = 'assets/images/orders.png';
   static const String imagesPaintBrush = 'assets/images/PaintBrush.svg';
   static const String imagesPress = 'assets/images/press.png';
@@ -46,8 +48,11 @@ class Assets {
   static const String imagesShapes = 'assets/images/shapes.png';
   static const String imagesShapesDialog = 'assets/images/shapesDialog.png';
   static const String imagesShowLocation = 'assets/images/showLocation.png';
+  static const String imagesSidebar = 'assets/images/Sidebar.svg';
+  static const String imagesSticker = 'assets/images/Sticker.svg';
   static const String imagesTest = 'assets/images/test.png';
   static const String imagesTrash = 'assets/images/Trash.svg';
+  static const String imagesTreePalm = 'assets/images/TreePalm.svg';
   static const String imagesUser = 'assets/images/User.svg';
   static const String imagesUsers = 'assets/images/users.png';
   static const String imagesVectorTwo = 'assets/images/VectorTwo.svg';
