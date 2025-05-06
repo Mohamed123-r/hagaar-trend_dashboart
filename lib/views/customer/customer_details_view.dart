@@ -5,6 +5,7 @@ import 'package:hagaar_trend_dashboard/constant.dart';
 import 'package:hagaar_trend_dashboard/views/customer/widgets/customer_data_section.dart';
 import 'package:hagaar_trend_dashboard/views/customer/widgets/customer_deals_item.dart';
 import 'package:hagaar_trend_dashboard/views/customer/widgets/customer_deals_section.dart';
+import 'package:hagaar_trend_dashboard/views/customer/widgets/office_data_section.dart';
 
 import '../../components/app_colors.dart';
 import '../../components/app_text_styles.dart';
@@ -24,7 +25,7 @@ class CustomerDetailsView extends StatelessWidget {
           children: [
             Expanded(
               flex: 1,
-              child: CustomerDataSection(),
+              child: userType=="office" || userType=="company"? OfficeDataSection():CustomerDataSection(),
             ),
             // Left: Deals
             const SizedBox(width: 24),

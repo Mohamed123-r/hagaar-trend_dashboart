@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:hagaar_trend_dashboard/constant.dart';
 
 import '../../../components/app_colors.dart';
 import '../../../components/app_text_styles.dart';
 import '../../../components/show_data_widget.dart';
 
 class CustomerDataSection extends StatelessWidget {
-  const CustomerDataSection({
-    super.key,
-  });
+  const CustomerDataSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -34,19 +33,32 @@ class CustomerDataSection extends StatelessWidget {
           ),
         ),
         const SizedBox(),
+        Text("Mohammed Hassan Ali", style: AppTextStyles.style24W400(context)),
         Text(
-          "Mohammed Hassan Ali",
-          style: AppTextStyles.style24W400(context),
-        ),
-        Text(
-          "مستخدم للتطبيق",
+          userType == 'customer'
+              ? "مستخدم للتطبيق"
+              : userType == 'owner'
+              ? "مالك عقارات"
+              : userType == 'agent'
+              ? "مسوق عقاري"
+              : "",
           style: AppTextStyles.style20W400(
             context,
           ).copyWith(color: AppColors.grey),
         ),
         const SizedBox(height: 8),
         ShowData(title: "رقم الهاتف", value: "+20 010837654322"),
-        ShowData(title: "نوع العضوية", value: "مستخدم للتطبيق"),
+        ShowData(
+          title: "نوع العضوية",
+          value:
+              userType == 'customer'
+                  ? "مستخدم للتطبيق"
+                  : userType == 'owner'
+                  ? "مالك عقارات"
+                  : userType == 'agent'
+                  ? "مسوق عقاري"
+                  : "",
+        ),
         ShowData(title: "المدينة", value: "الرياض"),
         ShowData(title: "المنطقة", value: "الرياض"),
       ],

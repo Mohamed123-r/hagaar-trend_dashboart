@@ -70,35 +70,21 @@ class _MainViewState extends State<MainView> {
                         activeIndex == 0
                             ? 'الصفحة الرئيسية'
                             : activeIndex == 1
-                            ? 'العملاء :'
+                            ? 'عملاء النظام :'
                             : activeIndex == 1.1
-                            ? 'بيانات العميل :'
-                            // : activeIndex == 1.3 || activeIndex == 1.31
-                            //     ? 'المندوبين :'
-                            //     : activeIndex == 1.32
-                            //         ? 'المندوبين المحظورين :'
-                            //         : activeIndex == 1.4
-                            //             ? 'طلبات إنضمام المندوبين :'
-                            //             : activeIndex == 1.5 ||
-                            //                     activeIndex == 1.51
-                            //                 ? 'الطلبات :'
-                            //                 : activeIndex == 2 ||
-                            //                         activeIndex == 2.1
-                            //                     ? 'الشكاوي :'
-                            //                     : activeIndex == 3 ||
-                            //                             activeIndex == 3.1
-                            //                         ? 'لتسويات المالية :'
-                            //                         : activeIndex == 4
-                            //                             ? 'الإعلانات :'
-                            //                             : activeIndex ==
-                            //                                         5 ||
-                            //                                     activeIndex ==
-                            //                                         5.1 ||
-                            //                                     activeIndex ==
-                            //                                         5.11 ||
-                            //                                     activeIndex ==
-                            //                                         5.12
-                            //                                 ? 'التقارير :'
+                            ? userType == 'customer'
+                                ? 'بيانات العميل :'
+                                : userType == 'owner'
+                                ? 'بيانات مالك العقارات :'
+                                : userType == 'office'
+                                ? 'بيانات مكتب العقارات :'
+                                : userType == 'company'
+                                ? 'بيانات شركة العقارات :'
+                                : userType == 'agent'
+                                ? 'بيانات المسوق :'
+                                : userType == 'bank'
+                                ? 'بيانات المسوق :'
+                                : ""
                             : 'Opps something went wrong',
                   ),
                   Expanded(

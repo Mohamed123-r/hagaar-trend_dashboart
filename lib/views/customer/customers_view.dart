@@ -1,10 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:hagaar_trend_dashboard/components/app_colors.dart';
+import '../../components/app_text_styles.dart';
 import '../../components/list_item.dart';
+import '../../constant.dart';
 
+class CustomersView extends StatefulWidget {
+  CustomersView({super.key, required this.onTapItem});
 
-class CustomersView extends StatelessWidget {
-   CustomersView({super.key, required this.onTapItem});
-  final Function() onTapItem ;
+  final Function() onTapItem;
+
+  @override
+  State<CustomersView> createState() => _CustomersViewState();
+}
+
+class _CustomersViewState extends State<CustomersView> {
   final List<Map<String, String>> users = [
     {
       "name": "Mohammed Hassan",
@@ -130,7 +139,8 @@ class CustomersView extends StatelessWidget {
       "name": "Othman Sami",
       "phone": "+966 567901234",
       "image": "https://randomuser.me/api/portraits/men/11.jpg",
-    },  {
+    },
+    {
       "name": "Hassan Mohammed",
       "phone": "+966 901567890",
       "image": "https://randomuser.me/api/portraits/men/4.jpg",
@@ -211,28 +221,146 @@ class CustomersView extends StatelessWidget {
       "image": "https://randomuser.me/api/portraits/men/11.jpg",
     },
   ];
-
-
+  String type = 'customer';
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.only(top: 16, right: 16, left: 16),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          spacing: 24,
+          children: [
+            TextButton(
+              onPressed: () {
+                userType = 'customer';
+                type = 'customer';
+                setState(() {});
+              },
+              child: Text(
+                'العملاء',
+                style: AppTextStyles.style18W400(
+                  context,
+                ).copyWith(color: AppColors.black),
+              ),
+            ),
+            Container(width: 1, height: 20, color: AppColors.grey),
+            TextButton(
+              onPressed: () {
+                userType = 'owner';
+                type = 'owner';
+                setState(() {});
+              },
+              child: Text(
+                'مالك عقارات',
+                style: AppTextStyles.style18W400(
+                  context,
+                ).copyWith(color: AppColors.black),
+              ),
+            ),
+            Container(width: 1, height: 20, color: AppColors.grey),
+            TextButton(
+              onPressed: () {
+                userType = 'office';
+                type = 'office';
+                setState(() {});
+              },
+              child: Text(
+                'مكتب عقارات',
+                style: AppTextStyles.style18W400(
+                  context,
+                ).copyWith(color: AppColors.black),
+              ),
+            ),
+            Container(width: 1, height: 20, color: AppColors.grey),
+            TextButton(
+              onPressed: () {
+                userType = 'company';
+                type = 'company';
+                setState(() {});
+              },
+              child: Text(
+                'شركة عقارات',
+                style: AppTextStyles.style18W400(
+                  context,
+                ).copyWith(color: AppColors.black),
+              ),
+            ),
+            Container(width: 1, height: 20, color: AppColors.grey),
+            TextButton(
+              onPressed: () {
+                userType = 'agent';
+                type = 'agent';
+                setState(() {});
+              },
+              child: Text(
+                'مسوق عقاري',
+                style: AppTextStyles.style18W400(
+                  context,
+                ).copyWith(color: AppColors.black),
+              ),
+            ),
+            Container(width: 1, height: 20, color: AppColors.grey),
+            TextButton(
+              onPressed: () {
+                userType = 'bank';
+                type = 'bank';
+                setState(() {});
+              },
+              child: Text(
+                'موظف بنكي',
+                style: AppTextStyles.style18W400(
+                  context,
+                ).copyWith(color: AppColors.black),
+              ),
+            ),
+          ],
+        ),
+        Padding(
+          padding: EdgeInsets.only(
+            right:
+                type == 'owner'
+                    ? 145.0
+                    : type == 'office'
+                    ? 300.0
+                    : type == 'company'
+                    ? 458.0
+                    : type == 'agent'
+                    ? 615.0
+                    : type == 'bank'
+                    ? 770.0
+                    : 15,
+          ),
+          child: Container(
+            width: 40,
+            height: 4,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(32),
+              color: Color(0xff00BD06),
+            ),
+          ),
+        ),
+        Divider(height: 0),
+        Expanded(
+          child: Padding(
+            padding: EdgeInsets.only(top: 16, right: 16, left: 16),
+            child: GridView.count(
+              padding: EdgeInsets.zero,
+              crossAxisCount: 7,
+              crossAxisSpacing: 8,
+              mainAxisSpacing: 8,
 
-      child: GridView.count(
-        padding: EdgeInsets.zero,
-        crossAxisCount: 7,
-        crossAxisSpacing: 8,
-        mainAxisSpacing: 8,
-
-        children: List.generate(users.length, (index) {
-          return InkWell(
-            borderRadius: BorderRadius.circular(32) ,
-            onTap: onTapItem,
-            child: ListViewItem(users: users[index]),
-          );
-        }),
-      ),
+              children: List.generate(users.length, (index) {
+                return InkWell(
+                  borderRadius: BorderRadius.circular(32),
+                  onTap: widget.onTapItem,
+                  child: ListViewItem(users: users[index]),
+                );
+              }),
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
