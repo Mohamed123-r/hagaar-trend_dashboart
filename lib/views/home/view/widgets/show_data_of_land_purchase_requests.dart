@@ -169,7 +169,7 @@ class ShowDataOfLandPurchaseRequests extends StatelessWidget {
                 ),
                 SizedBox(width: 12),
                 Text(
-                  'طلبات الشراء الجادة',
+                  'طلبات شراء أرض',
                   style: AppTextStyles.style20W400(context),
                 ),
               ],

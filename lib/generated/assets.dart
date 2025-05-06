@@ -43,6 +43,7 @@ class Assets {
   static const String imagesShapes = 'assets/images/shapes.png';
   static const String imagesShapesDialog = 'assets/images/shapesDialog.png';
   static const String imagesShowLocation = 'assets/images/showLocation.png';
+  static const String imagesTest = 'assets/images/test.png';
   static const String imagesTrash = 'assets/images/Trash.svg';
   static const String imagesUser = 'assets/images/User.svg';
   static const String imagesUsers = 'assets/images/users.png';

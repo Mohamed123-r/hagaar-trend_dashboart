@@ -13,11 +13,13 @@ class CustomAppbar extends StatefulWidget {
   const CustomAppbar({
     super.key,
     this.widget,
-    required this.title,
+    required this.title, this.onCleckBack,  this.showBack =false,
   });
 
   final Widget? widget;
   final String title;
+  final VoidCallback? onCleckBack;
+  final    bool showBack  ;
 
   @override
   State<CustomAppbar> createState() => _CustomAppbarState();
@@ -102,6 +104,30 @@ class _CustomAppbarState extends State<CustomAppbar> {
         padding: const EdgeInsets.only(left: 16, right: 16, top: 16),
         child: Row(
           children: [
+            widget.showBack  ==true ?    InkWell(
+              borderRadius: BorderRadius.circular(80),
+              onTap:widget.onCleckBack ?? () {
+                Navigator.pop(context);
+              },
+              child: Container(
+                width: 50,
+                height: 50,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(120),
+                  border: Border.all(width: 1, color: AppColors.border),
+                ),
+                child: GestureDetector(
+                  child: Icon(
+                    Icons.arrow_back_ios_new,
+
+                    size: 16,
+                  ),
+                ),
+              ),
+            ) : SizedBox(),
+            widget.showBack  ==true ?   SizedBox(
+              width: 24,
+            ): SizedBox(),
             Text(
               widget.title,
               style: AppTextStyles.style28W700(context),
@@ -258,9 +284,7 @@ class _CustomAppbarState extends State<CustomAppbar> {
                     ),
                   ],
                 )),
-            SizedBox(
-              width: 16,
-            ),
+
 
           ],
         ),

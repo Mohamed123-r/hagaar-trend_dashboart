@@ -9,6 +9,8 @@ import '../../components/app_form_filed.dart';
 import '../../components/app_text_styles.dart';
 import '../../constant.dart';
 import '../../generated/assets.dart';
+import '../customer/customer_details_view.dart';
+import '../customer/customers_view.dart';
 import '../home/view/home_view.dart';
 
 
@@ -60,118 +62,60 @@ class _MainViewState extends State<MainView> {
               child: Column(
                 children: [
                   CustomAppbar(
-                      // widget: activeIndex == 1.2 ||
-                      //         activeIndex == 1.31 ||
-                      //         activeIndex == 1.32 ||
-                      //         activeIndex == 1.5
-                      //     ? Row(
-                      //         children: [
-                      //           Image.asset(Assets.imagesPress,
-                      //               width: 48, height: 48),
-                      //           SizedBox(
-                      //             width: 12,
-                      //           ),
-                      //           AppSearchTextFormField(
-                      //             labelText: activeIndex == 1.2
-                      //                 ? "البحث عن عميل"
-                      //                 : activeIndex == 1.31 ||
-                      //                         activeIndex == 1.32
-                      //                     ? "البحث عن مندوب"
-                      //                     : activeIndex == 1.5
-                      //                         ? "البحث عن طلب بال id"
-                      //                         : "",
-                      //           )
-                      //         ],
-                      //       )
-                      //     : activeIndex == 5.12 || activeIndex == 5.11
-                      //         ? Row(
-                      //             children: [
-                      //               Image.asset(Assets.imagesPress,
-                      //                   width: 32, height: 32),
-                      //               SizedBox(
-                      //                 width: 16,
-                      //               ),
-                      //               Text(
-                      //                 "المملكة العربية السعودية",
-                      //                 style: AppTextStyles.style18W700(context),
-                      //               )
-                      //             ],
-                      //           )
-                      //         : null,
+
+                     onCleckBack:(){
+                       activeIndex == 1.1 ? activeIndex = activeIndex -0.1 : activeIndex =activeIndex ;
+                       setState(() {
+
+                       });
+                     } ,
+                      showBack:activeIndex == 1.1 ,
                       title: activeIndex == 0
                           ? 'الصفحة الرئيسية'
-                          : activeIndex == 1 || activeIndex == 1.1
-                              ? 'إدارة سير العمل :'
-                              : activeIndex == 1.2
-                                  ? 'العملاء :'
-                                  : activeIndex == 1.3 || activeIndex == 1.31
-                                      ? 'المندوبين :'
-                                      : activeIndex == 1.32
-                                          ? 'المندوبين المحظورين :'
-                                          : activeIndex == 1.4
-                                              ? 'طلبات إنضمام المندوبين :'
-                                              : activeIndex == 1.5 ||
-                                                      activeIndex == 1.51
-                                                  ? 'الطلبات :'
-                                                  : activeIndex == 2 ||
-                                                          activeIndex == 2.1
-                                                      ? 'الشكاوي :'
-                                                      : activeIndex == 3 ||
-                                                              activeIndex == 3.1
-                                                          ? 'لتسويات المالية :'
-                                                          : activeIndex == 4
-                                                              ? 'الإعلانات :'
-                                                              : activeIndex ==
-                                                                          5 ||
-                                                                      activeIndex ==
-                                                                          5.1 ||
-                                                                      activeIndex ==
-                                                                          5.11 ||
-                                                                      activeIndex ==
-                                                                          5.12
-                                                                  ? 'التقارير :'
+                          : activeIndex == 1
+                              ? 'العملاء :'
+                              : activeIndex == 1.1
+                                  ? 'بيانات العميل :'
+                                  // : activeIndex == 1.3 || activeIndex == 1.31
+                                  //     ? 'المندوبين :'
+                                  //     : activeIndex == 1.32
+                                  //         ? 'المندوبين المحظورين :'
+                                  //         : activeIndex == 1.4
+                                  //             ? 'طلبات إنضمام المندوبين :'
+                                  //             : activeIndex == 1.5 ||
+                                  //                     activeIndex == 1.51
+                                  //                 ? 'الطلبات :'
+                                  //                 : activeIndex == 2 ||
+                                  //                         activeIndex == 2.1
+                                  //                     ? 'الشكاوي :'
+                                  //                     : activeIndex == 3 ||
+                                  //                             activeIndex == 3.1
+                                  //                         ? 'لتسويات المالية :'
+                                  //                         : activeIndex == 4
+                                  //                             ? 'الإعلانات :'
+                                  //                             : activeIndex ==
+                                  //                                         5 ||
+                                  //                                     activeIndex ==
+                                  //                                         5.1 ||
+                                  //                                     activeIndex ==
+                                  //                                         5.11 ||
+                                  //                                     activeIndex ==
+                                  //                                         5.12
+                                  //                                 ? 'التقارير :'
                                                                   : 'Opps something went wrong'),
                   Expanded(
                       child: activeIndex == 0
                           ? HomeView()
-                         // : activeIndex == 1
-                              // ? ManageWorkProcessFromWorkflowView(
-                              //     onTapCountry: () {
-                              //       activeIndex = activeIndex + 0.1;
-                              //       setState(() {});
-                              //     },
-                              //   )
-                              // : activeIndex == 1.1
-                              //     ? ManageWorkProcessDetailsFromWorkflowView(
-                              //         onPressedBack: () {
-                              //           activeIndex = activeIndex - 0.1;
-                              //           setState(() {});
-                              //         },
-                              //         onTapItem1: () {
-                              //           activeIndex = 1.2;
-                              //           setState(() {});
-                              //         },
-                              //         onTapItem2: () {
-                              //           activeIndex = 1.3;
-                              //           setState(() {});
-                              //         },
-                              //         onTapItem3: () {
-                              //           activeIndex = 1.4;
-                              //           setState(() {});
-                              //         },
-                              //         onTapItem4: () {
-                              //           activeIndex = 1.5;
-                              //           setState(() {});
-                              //         },
-                              //         onTapItem5: () {
-                              //           activeIndex = 1.6;
-                              //           setState(() {});
-                              //         },
-                              //         onTapItem6: () {
-                              //           activeIndex = 1.7;
-                              //           setState(() {});
-                              //         },
-                              //       )
+                          : activeIndex == 1
+                            ? CustomersView(
+                                  onTapItem: () {
+                                    activeIndex = activeIndex + 0.1;
+                                  setState(() {});
+                                 },
+                               )
+                              : activeIndex == 1.1
+                                  ? CustomerDetailsView(
+                                    )
                               //     : activeIndex == 1.2
                               //         ? ClientsView(
                               //             onPressedBack: () {
