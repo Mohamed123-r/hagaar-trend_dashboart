@@ -18,7 +18,10 @@ class Assets {
   static const String imagesBuildings = 'assets/images/Buildings.svg';
   static const String imagesCamera = 'assets/images/Camera.svg';
   static const String imagesChartLine = 'assets/images/ChartLine.svg';
+  static const String imagesChartPie = 'assets/images/ChartPie.svg';
+  static const String imagesCheckCircle = 'assets/images/CheckCircle.svg';
   static const String imagesCurrencyDollar = 'assets/images/CurrencyDollar.svg';
+  static const String imagesDoorOpen = 'assets/images/DoorOpen.svg';
   static const String imagesDriver = 'assets/images/driver.png';
   static const String imagesDriverBlock = 'assets/images/driverBlock.png';
   static const String imagesDrivers = 'assets/images/drivers.png';
@@ -47,5 +50,6 @@ class Assets {
   static const String imagesTrash = 'assets/images/Trash.svg';
   static const String imagesUser = 'assets/images/User.svg';
   static const String imagesUsers = 'assets/images/users.png';
+  static const String imagesVectorTwo = 'assets/images/VectorTwo.svg';
 
 }
