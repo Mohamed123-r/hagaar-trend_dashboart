@@ -197,27 +197,28 @@ class DealDetailsDialog extends StatelessWidget {
                       flex: 1,
                       child: Row(
                         children: [
-                          buildMiniImage(),
+                          Expanded(child: buildMiniImage()),
                           const SizedBox(width: 8),
-                          Stack(
-                            children: [
-                              buildMiniImage(),
-                              Container(
-                                width: 123,
-                                decoration: BoxDecoration(
-                                  color: Colors.black.withOpacity(0.4),
-                                  borderRadius: BorderRadius.circular(32),
-                                ),
-                                child: Center(
-                                  child: Text(
-                                    " 3 +",
-                                    style: AppTextStyles.style40W700(
-                                      context,
-                                    ).copyWith(color: AppColors.white),
+                          Expanded(
+                            child: Stack(
+                              children: [
+                                Expanded(child: buildMiniImage()),
+                                Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.black.withOpacity(0.4),
+                                    borderRadius: BorderRadius.circular(32),
+                                  ),
+                                  child: Center(
+                                    child: Text(
+                                      " 3 +",
+                                      style: AppTextStyles.style40W700(
+                                        context,
+                                      ).copyWith(color: AppColors.white),
+                                    ),
                                   ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ],
                       ),
@@ -233,13 +234,11 @@ class DealDetailsDialog extends StatelessWidget {
   }
 
   static Widget buildMiniImage() {
-    return Expanded(
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(32),
-        child: Image.asset(
-          Assets.imagesTest, // Replace as needed
-          fit: BoxFit.cover,
-        ),
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(32),
+      child: Image.asset(
+        Assets.imagesTest, // Replace as needed
+        fit: BoxFit.cover,
       ),
     );
   }
