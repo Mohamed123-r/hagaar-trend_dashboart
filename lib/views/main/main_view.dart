@@ -11,6 +11,7 @@ import '../../constant.dart';
 import '../../generated/assets.dart';
 import '../customer/customer_details_view.dart';
 import '../customer/customers_view.dart';
+import '../customer_service/customer_service_view.dart';
 import '../home/view/home_view.dart';
 import '../land_purchase_requests/land_purchase_requests_view.dart';
 import '../serious_purchase_requests/serious_purchase_requests_details_view.dart';
@@ -91,6 +92,8 @@ class _MainViewState extends State<MainView> {
                             ? 'طلبات الشراء الجادة :'
                             : activeIndex == 3
                             ? 'طلبات شراء أرض :'
+                            : activeIndex == 4
+                            ? 'خدمة العملاء :'
                             : 'Opps something went wrong',
                   ),
                   Expanded(
@@ -116,9 +119,9 @@ class _MainViewState extends State<MainView> {
                             : activeIndex == 2.1
                             ? SeriousPurchaseRequestsDetailsView()
                             : activeIndex == 3
-                            ? LandPurchaseRequestsView(
-
-                            )
+                            ? LandPurchaseRequestsView()
+                            : activeIndex == 4
+                            ? CustomerServiceView()
                             : Container(),
                   ),
                 ],

@@ -14,7 +14,7 @@ class AppInputTextFormField extends StatelessWidget {
       this.obscureText,
       this.validator,
       this.keyboardType,
-      this.controller});
+      this.controller, this.maxLines});
 
   final String labelText;
   final Widget? prefixIcon;
@@ -24,41 +24,39 @@ class AppInputTextFormField extends StatelessWidget {
   final String? Function(String?)? validator;
   final TextInputType? keyboardType;
   final TextEditingController? controller;
+  final int? maxLines;
 
   @override
   Widget build(BuildContext context) {
     return Directionality(
       textDirection: direction,
-      child: SizedBox(
-        width: 500,
-        height: 64,
-        child: Center(
-          child: TextFormField(
-            cursorColor: AppColors.black,
-            controller: controller,
-            obscureText: obscureText ?? false,
-            keyboardType: keyboardType ?? TextInputType.text,
-            onChanged: onChanged,
-            validator: validator,
-            decoration: InputDecoration(
-              contentPadding:
-                  const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
-              filled: true,
-              fillColor: AppColors.white,
-              labelText: labelText,
-              labelStyle: AppTextStyles.style18W400(context).copyWith(
-                color: AppColors.grey,
-              ),
-              prefixIcon: prefixIcon,
-              prefixIconColor: AppColors.grey,
-              suffixIcon: suffixIcon,
-              suffixIconColor: AppColors.grey,
-              enabledBorder: buildOutlineInputBorder(),
-              focusedBorder: buildOutlineInputBorder(),
-              disabledBorder: buildOutlineInputBorder(),
-              errorBorder: buildOutlineInputBorder(),
-              border: buildOutlineInputBorder(),
+      child: Center(
+        child: TextFormField(
+          maxLines: maxLines,
+          cursorColor: AppColors.black,
+          controller: controller,
+          obscureText: obscureText ?? false,
+          keyboardType: keyboardType ?? TextInputType.text,
+          onChanged: onChanged,
+          validator: validator,
+          decoration: InputDecoration(
+            contentPadding:
+                const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+            filled: true,
+            fillColor: AppColors.white,
+            labelText: labelText,
+            labelStyle: AppTextStyles.style18W400(context).copyWith(
+              color: AppColors.grey,
             ),
+            prefixIcon: prefixIcon,
+            prefixIconColor: AppColors.grey,
+            suffixIcon: suffixIcon,
+            suffixIconColor: AppColors.grey,
+            enabledBorder: buildOutlineInputBorder(),
+            focusedBorder: buildOutlineInputBorder(),
+            disabledBorder: buildOutlineInputBorder(),
+            errorBorder: buildOutlineInputBorder(),
+            border: buildOutlineInputBorder(),
           ),
         ),
       ),
