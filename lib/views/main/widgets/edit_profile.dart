@@ -40,8 +40,8 @@ class _EditProfileState extends State<EditProfile> {
           Stack(
             children: [
               Container(
-                width: 260,
-                height: 260,
+                width: 250,
+                height: 250,
                 decoration: BoxDecoration(
                   color: Colors.red,
                   image: DecorationImage(

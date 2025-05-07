@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:hagaar_trend_dashboard/components/app_alert_dialog.dart';
 
+import '../../components/app_button.dart';
 import '../../components/app_colors.dart';
 import '../../components/app_text_styles.dart';
 import '../../components/list_item.dart';
+import '../../components/show_data_widget.dart';
 import '../../constant.dart';
 import '../../generated/assets.dart';
 import '../customer/widgets/customer_deals_item.dart';
 import '../customer/widgets/data_from_item_details_view.dart';
 import '../customer/widgets/deal_details_dialog.dart';
 import '../customer/widgets/features_from_item_details_view.dart';
+import '../main/widgets/edit_profile.dart';
 
 class SeriousPurchaseRequestsDetailsView extends StatelessWidget {
   SeriousPurchaseRequestsDetailsView({super.key});
@@ -248,14 +252,27 @@ class SeriousPurchaseRequestsDetailsView extends StatelessWidget {
                       height: 170,
                       child: Row(
                         children: [
-                          Expanded(child: buildMiniImage()),
+                          Expanded(
+                            child: buildMiniImage(
+                              image: Assets.imagesTest,
+                              context: context,
+                            ),
+                          ),
                           const SizedBox(width: 8),
-                          Expanded(child: buildMiniImage()),
+                          Expanded(
+                            child: buildMiniImage(
+                              image: Assets.imagesTest,
+                              context: context,
+                            ),
+                          ),
                           const SizedBox(width: 8),
                           Expanded(
                             child: Stack(
                               children: [
-                                buildMiniImage(),
+                                buildMiniImage(
+                                  image: Assets.imagesTest,
+                                  context: context,
+                                ),
                                 Container(
                                   decoration: BoxDecoration(
                                     color: Colors.black.withOpacity(0.4),
@@ -436,7 +453,72 @@ class SeriousPurchaseRequestsDetailsView extends StatelessWidget {
                       children: List.generate(users.length, (index) {
                         return InkWell(
                           borderRadius: BorderRadius.circular(32),
-                          onTap: () {},
+                          onTap: () {
+                            showDialog(
+                              context: context,
+                              builder:
+                                  (context) => Directionality(
+                                    textDirection: direction,
+                                    child: AppAlertDialog(
+                                      title: "",
+                                      body: Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                          horizontal: 16,
+                                          vertical: 32,
+                                        ),
+                                        child: Column(
+                                          spacing: 16,
+                                          children: [
+                                            Container(
+                                              width: 230,
+                                              height: 230,
+                                              decoration: BoxDecoration(
+                                                color: Colors.red,
+                                                image: DecorationImage(
+                                                  image: NetworkImage(
+                                                    users[index]["image"]
+                                                        .toString(),
+                                                  ),
+                                                  fit: BoxFit.cover,
+                                                ),
+                                                borderRadius:
+                                                    BorderRadius.circular(200),
+                                              ),
+                                            ),
+
+                                            Text(
+                                              users[index]["name"].toString(),
+                                              style: AppTextStyles.style24W400(
+                                                context,
+                                              ),
+                                            ),
+                                            Text(
+                                              "مستخدم للتطبيق",
+                                              //ال case هنا بتتغير بناء علي مين اللي طلب هنا من العضويات
+                                              style: AppTextStyles.style20W400(
+                                                context,
+                                              ).copyWith(color: AppColors.grey),
+                                            ),
+                                            ShowData(
+                                              title: "رقم الهاتف :",
+                                              value: "+20 0108376543222",
+                                            ),
+                                            ShowData(
+                                              title: "المدينة :",
+                                              value: "الرياض",
+                                            ),
+                                            ShowData(
+                                              title: "المنطقة :",
+                                              value: "الرياض",
+                                            ),
+                                            Spacer(),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                            );
+                          },
                           child: ListViewItem(users: users[index]),
                         );
                       }),
@@ -451,12 +533,40 @@ class SeriousPurchaseRequestsDetailsView extends StatelessWidget {
     );
   }
 
-  static Widget buildMiniImage() {
+  static Widget buildMiniImage({
+    required String image,
+    required BuildContext context,
+  }) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(32),
-      child: Image.asset(
-        Assets.imagesTest, // Replace as needed
-        fit: BoxFit.cover,
+      child: InkWell(
+        onTap: () {
+          showDialog(
+            context: context,
+            builder:
+                (context) => Directionality(
+                  textDirection: direction,
+                  child: AppAlertDialog(
+                    title: "صور للعقار",
+                    body: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(32),
+                        child: Image.asset(
+                          image, // Replace as needed
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+          );
+        },
+        borderRadius: BorderRadius.circular(32),
+        child: Image.asset(
+          image, // Replace as needed
+          fit: BoxFit.cover,
+        ),
       ),
     );
   }
