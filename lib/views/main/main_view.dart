@@ -16,6 +16,7 @@ import '../home/view/home_view.dart';
 import '../land_purchase_requests/land_purchase_requests_view.dart';
 import '../serious_purchase_requests/serious_purchase_requests_details_view.dart';
 import '../serious_purchase_requests/serious_purchase_requests_view.dart';
+import '../system_administration/system_administration_view.dart';
 
 class MainView extends StatefulWidget {
   const MainView({super.key});
@@ -32,6 +33,7 @@ class _MainViewState extends State<MainView> {
     DrawerItemModel(title: 'طلبات الشراء الجاد', image: Assets.imagesKey),
     DrawerItemModel(title: 'طلبات شراء أرض', image: Assets.imagesTreePalm),
     DrawerItemModel(title: 'خدمة العملاء', image: Assets.imagesHeadset),
+    DrawerItemModel(title: 'إدارة النظام', image: Assets.imagesGear),
   ];
 
   @override
@@ -94,6 +96,8 @@ class _MainViewState extends State<MainView> {
                             ? 'طلبات شراء أرض :'
                             : activeIndex == 4
                             ? 'خدمة العملاء :'
+                            : activeIndex == 5
+                            ? "إدارة النظام :"
                             : 'Opps something went wrong',
                   ),
                   Expanded(
@@ -122,6 +126,8 @@ class _MainViewState extends State<MainView> {
                             ? LandPurchaseRequestsView()
                             : activeIndex == 4
                             ? CustomerServiceView()
+                            : activeIndex == 5
+                            ? SystemAdministrationView()
                             : Container(),
                   ),
                 ],

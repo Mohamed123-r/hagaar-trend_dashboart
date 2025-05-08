@@ -29,6 +29,7 @@ class Assets {
   static const String imagesEurope = 'assets/images/europe.png';
   static const String imagesFarm = 'assets/images/Farm.svg';
   static const String imagesFinancialReceivablesReports = 'assets/images/FinancialReceivablesReports.png';
+  static const String imagesGear = 'assets/images/Gear.svg';
   static const String imagesHaweeTawseelBanner = 'assets/images/HaweeTawseelBanner.png';
   static const String imagesHeadset = 'assets/images/Headset.svg';
   static const String imagesHouse = 'assets/images/House.svg';

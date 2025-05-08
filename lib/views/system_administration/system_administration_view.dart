@@ -1,21 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:hagaar_trend_dashboard/components/app_colors.dart';
-import 'package:hagaar_trend_dashboard/components/app_form_filed.dart';
-import '../../components/app_alert_dialog.dart';
-import '../../components/app_button.dart';
 import '../../components/app_text_styles.dart';
 import '../../components/list_item.dart';
-import '../../components/show_data_widget.dart';
 import '../../constant.dart';
 
-class CustomerServiceView extends StatefulWidget {
-  CustomerServiceView({super.key});
+class SystemAdministrationView extends StatefulWidget {
+  SystemAdministrationView({super.key});
 
   @override
-  State<CustomerServiceView> createState() => _CustomerServiceViewState();
+  State<SystemAdministrationView> createState() =>
+      _SystemAdministrationViewState();
 }
 
-class _CustomerServiceViewState extends State<CustomerServiceView> {
+class _SystemAdministrationViewState extends State<SystemAdministrationView> {
   final List<Map<String, String>> users = [
     {
       "name": "Mohammed Hassan",
@@ -223,8 +220,8 @@ class _CustomerServiceViewState extends State<CustomerServiceView> {
       "image": "https://randomuser.me/api/portraits/men/11.jpg",
     },
   ];
-  String type = 'all';
-
+  String type = 'agreements';
+  String subType = 'owners';
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -235,12 +232,12 @@ class _CustomerServiceViewState extends State<CustomerServiceView> {
           children: [
             TextButton(
               onPressed: () {
-                customerType = 'all';
-                type = 'all';
+                systemType = 'agreements';
+                type = 'agreements';
                 setState(() {});
               },
               child: Text(
-                'جميع الشكاوي',
+                'الإتفاقات',
                 style: AppTextStyles.style18W400(
                   context,
                 ).copyWith(color: AppColors.black),
@@ -249,12 +246,12 @@ class _CustomerServiceViewState extends State<CustomerServiceView> {
             Container(width: 1, height: 20, color: AppColors.grey),
             TextButton(
               onPressed: () {
-                customerType = 'owner';
-                type = 'owner';
+                systemType = 'subscriptions';
+                type = 'subscriptions';
                 setState(() {});
               },
               child: Text(
-                'مالك عقارات',
+                'الإشتراكات',
                 style: AppTextStyles.style18W400(
                   context,
                 ).copyWith(color: AppColors.black),
@@ -263,68 +260,12 @@ class _CustomerServiceViewState extends State<CustomerServiceView> {
             Container(width: 1, height: 20, color: AppColors.grey),
             TextButton(
               onPressed: () {
-                customerType = 'office';
-                type = 'office';
+                systemType = 'financial';
+                type = 'financial';
                 setState(() {});
               },
               child: Text(
-                'مكتب عقارات',
-                style: AppTextStyles.style18W400(
-                  context,
-                ).copyWith(color: AppColors.black),
-              ),
-            ),
-            Container(width: 1, height: 20, color: AppColors.grey),
-            TextButton(
-              onPressed: () {
-                customerType = 'company';
-                type = 'company';
-                setState(() {});
-              },
-              child: Text(
-                'شركة عقارات',
-                style: AppTextStyles.style18W400(
-                  context,
-                ).copyWith(color: AppColors.black),
-              ),
-            ),
-            Container(width: 1, height: 20, color: AppColors.grey),
-            TextButton(
-              onPressed: () {
-                customerType = 'agent';
-                type = 'agent';
-                setState(() {});
-              },
-              child: Text(
-                'مسوق عقاري',
-                style: AppTextStyles.style18W400(
-                  context,
-                ).copyWith(color: AppColors.black),
-              ),
-            ),
-            Container(width: 1, height: 20, color: AppColors.grey),
-            TextButton(
-              onPressed: () {
-                customerType = 'bank';
-                type = 'bank';
-                setState(() {});
-              },
-              child: Text(
-                'موظف بنكي',
-                style: AppTextStyles.style18W400(
-                  context,
-                ).copyWith(color: AppColors.black),
-              ),
-            ),
-            Container(width: 1, height: 20, color: AppColors.grey),
-            TextButton(
-              onPressed: () {
-                customerType = 'customer';
-                type = 'customer';
-                setState(() {});
-              },
-              child: Text(
-                'مستخدم التطبيق',
+                'المعاملات المالية',
                 style: AppTextStyles.style18W400(
                   context,
                 ).copyWith(color: AppColors.black),
@@ -335,19 +276,11 @@ class _CustomerServiceViewState extends State<CustomerServiceView> {
         Padding(
           padding: EdgeInsets.only(
             right:
-                type == 'owner'
-                    ? 190.0
-                    : type == 'office'
-                    ? 345.0
-                    : type == 'company'
-                    ? 503.0
-                    : type == 'agent'
-                    ? 660.0
-                    : type == 'bank'
-                    ? 815.0
-                    : type == 'customer'
-                    ? 980.0
-                    : 30,
+                type == 'subscriptions'
+                    ? 150.0
+                    : type == 'financial'
+                    ? 310.0
+                    : 18,
           ),
           child: Container(
             width: 40,
@@ -359,6 +292,71 @@ class _CustomerServiceViewState extends State<CustomerServiceView> {
           ),
         ),
         Divider(height: 0),
+        SizedBox(
+          height: 16,
+        ),
+        Row(
+          spacing: 20,
+          children: [
+            MaterialButton(
+              minWidth: 200,
+              height: 56,
+              color:subType == 'owners' ? AppColors.greenDark : AppColors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(1600),
+                side:  BorderSide(color: subType == 'owners' ? AppColors.greenDark : AppColors.border),
+              ),
+              onPressed: () {
+                subType = 'owners';
+                setState(() {});
+              },
+              child: Text(
+                'إتفاقات ملاك العقارات',
+                style: AppTextStyles.style16W400(
+                  context,
+                ).copyWith(color:subType == 'owners' ? AppColors.white : AppColors.black),
+              ),
+            ),
+            MaterialButton(
+              minWidth: 200,
+              height: 56,
+              color: subType == 'companies' ? AppColors.greenDark : AppColors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(1600),
+                side:  BorderSide(color: subType == 'companies' ? AppColors.greenDark : AppColors.border),
+              ),
+              onPressed: () {
+                subType = 'companies';
+                setState(() {});
+              },
+              child: Text(
+                'إتفاقات الشركات العقارية',
+                style: AppTextStyles.style16W400(
+                  context,
+                ).copyWith(color: subType == 'companies' ? AppColors.white : AppColors.black),
+              ),
+            ),
+            MaterialButton(
+              minWidth: 200,
+              height: 56,
+              color: subType == 'catagories' ? AppColors.greenDark : AppColors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(1600),
+                side:  BorderSide(color:subType == 'catagories' ? AppColors.greenDark : AppColors.border),
+              ),
+              onPressed: () {
+                subType = 'catagories';
+                setState(() {});
+              },
+              child: Text(
+                'أقسام الإتفاقات',
+                style: AppTextStyles.style16W400(
+                  context,
+                ).copyWith(color: subType == 'catagories' ? AppColors.white : AppColors.black),
+              ),
+            ),
+          ],
+        ),
         Expanded(
           child: Padding(
             padding: EdgeInsets.only(top: 16, right: 16, left: 16),
@@ -371,85 +369,7 @@ class _CustomerServiceViewState extends State<CustomerServiceView> {
               children: List.generate(users.length, (index) {
                 return InkWell(
                   borderRadius: BorderRadius.circular(32),
-                  onTap: () {
-                    showDialog(
-                      context: context,
-                      builder:
-                          (context) => Directionality(
-                            textDirection: direction,
-                            child: AppAlertDialog(
-                              title: "",
-                              body: Padding(
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 16,
-                                  vertical: 32,
-                                ),
-                                child: SizedBox(
-                                  height: 800,
-                                  child: SingleChildScrollView(
-                                    child: Column(
-                                      spacing: 8,
-                                      children: [
-                                        Container(
-                                          width: 230,
-                                          height: 230,
-                                          decoration: BoxDecoration(
-                                            color: Colors.red,
-                                            image: DecorationImage(
-                                              image: NetworkImage(
-                                                users[index]["image"]
-                                                    .toString(),
-                                              ),
-                                              fit: BoxFit.cover,
-                                            ),
-                                            borderRadius: BorderRadius.circular(
-                                              200,
-                                            ),
-                                          ),
-                                        ),
-                                        Text(
-                                          users[index]["name"].toString(),
-                                          style: AppTextStyles.style24W400(
-                                            context,
-                                          ),
-                                        ),
-                                        Text(
-                                          "+20 0108765434567",
-                                          style: AppTextStyles.style20W400(
-                                            context,
-                                          ).copyWith(color: AppColors.grey),
-                                        ),
-                                        Text(
-                                          "مستخدم للتطبيق",
-                                          //ال case هنا بتتغير بناء علي مين اللي طلب هنا من العضويات
-                                          style: AppTextStyles.style20W400(
-                                            context,
-                                          ).copyWith(color: AppColors.grey),
-                                        ),
-
-                                        ShowData2(
-                                          title: "الشكوي :",
-                                          value:
-                                              "أواجه مشكلة في إضافة العقار نظرا لعدم حصولي علي رخصة نفاذ",
-                                        ),
-                                        AppInputTextFormField(
-                                          maxLines: 5,
-                                          labelText: "أرسل ردا :",
-                                        ),
-                                        SizedBox(),
-                                        AppButton2(
-                                          text: "إرسال الرد",
-                                          onPressed: () {},
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                    );
-                  },
+                  onTap: () {},
                   child: ListViewItem(users: users[index]),
                 );
               }),
