@@ -14,9 +14,10 @@ class AppInputTextFormField extends StatelessWidget {
       this.obscureText,
       this.validator,
       this.keyboardType,
-      this.controller, this.maxLines});
+      this.controller, this.maxLines, this.initialValue});
 
   final String labelText;
+  final String? initialValue;
   final Widget? prefixIcon;
   final Widget? suffixIcon;
   final void Function(String?)? onChanged;
@@ -30,8 +31,10 @@ class AppInputTextFormField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Directionality(
       textDirection: direction,
+
       child: Center(
         child: TextFormField(
+          initialValue : initialValue,
           maxLines: maxLines,
           cursorColor: AppColors.black,
           controller: controller,

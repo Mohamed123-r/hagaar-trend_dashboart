@@ -132,7 +132,6 @@ class _MainViewState extends State<MainView> {
                             : activeIndex == 5
                             ? SystemAdministrationView(
                               onTapItem: () {
-                                userType = 'owner';
                                 activeIndex = activeIndex + 0.1;
                                 setState(() {});
                               },

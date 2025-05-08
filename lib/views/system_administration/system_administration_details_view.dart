@@ -97,139 +97,206 @@ class _SystemAdministrationDetailsViewState
             ),
             Divider(height: 0),
             SizedBox(height: 16),
-            Expanded(
-              child: Row(
-                children: [
-                  Expanded(
-                    flex: 1,
-                    child:
-                        userType == 'company'
-                            ? OfficeDataSection()
-                            : CustomerDataSection(),
-                  ),
-                  // Left: Deals
-                  const SizedBox(width: 24),
-                  Expanded(
-                    flex: 2,
-                    child: Container(
-                      padding: EdgeInsets.all(16),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(32),
-                        border: Border.all(width: 1, color: AppColors.border),
+            type == 'subscriptions'
+                ? Expanded(
+                  child: Stack(
+                    alignment: Alignment.bottomRight,
+                    children: [
+                      GridView.builder(
+                        padding: EdgeInsets.zero,
+                        gridDelegate:
+                            const SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 3,
+                              childAspectRatio: 4 / 1.6,
+                              crossAxisSpacing: 12,
+                              mainAxisSpacing: 12,
+                            ),
+                        itemCount: 40,
+                        itemBuilder: (context, index) {
+                          return InkWell(
+                            onTap: () {
+                              showDialog(
+                                context: context,
+                                builder: (context) => DealDetailsDialog(),
+                              );
+                            },
+                            borderRadius: BorderRadius.circular(32),
+                            child: CustomerDealsItem(),
+                          );
+                        },
                       ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "صلاحيات الإتفاق :",
-                            style: AppTextStyles.style24W700(context),
+                      MaterialButton(
+                        minWidth: 200,
+                        height: 56,
+                        color: AppColors.greenDark,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(
+                            1600,
                           ),
-                          const SizedBox(height: 24),
-                          Expanded(
-                            child: Stack(
-                              alignment: Alignment.bottomCenter,
-                              children: [
-                                GridView.builder(
-                                  padding: EdgeInsets.zero,
-                                  gridDelegate:
-                                      const SliverGridDelegateWithFixedCrossAxisCount(
-                                        crossAxisCount: 5,
-                                        childAspectRatio: 4 / 5,
-                                        crossAxisSpacing: 12,
-                                        mainAxisSpacing: 12,
-                                      ),
-                                  itemCount: items.length,
-                                  itemBuilder: (context, index) {
-                                    return Container(
-                                      decoration: BoxDecoration(
-                                        color: Colors.white,
-                                        borderRadius: BorderRadius.circular(10),
-                                        border: Border.all(
-                                          width: 1,
-                                          color: AppColors.border,
-                                        ),
-                                        boxShadow: [
-                                          BoxShadow(
-                                            color: Colors.grey.withOpacity(0.3),
-                                            spreadRadius: 1,
-                                            blurRadius: 3,
-                                            offset: Offset(0, 2),
+                        ),
+                        onPressed: () {
+                          showDialog(
+                            context: context,
+                            builder:
+                                (context) =>
+                               AppSuccessAlertDialog(title: "تم دفع قيمة الإتفاق للنظام"),
+                          );
+                        },
+                        child: Text(
+                          'تحديث حالة الدفع للنظام',
+                          style: AppTextStyles.style16W400(
+                            context,
+                          ).copyWith(color: AppColors.white),
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+                : Expanded(
+                  child: Row(
+                    children: [
+                      Expanded(
+                        flex: 1,
+                        child:
+                            userType == 'company'
+                                ? OfficeDataSection()
+                                : CustomerDataSection(),
+                      ),
+                      // Left: Deals
+                      const SizedBox(width: 24),
+                      Expanded(
+                        flex: 2,
+                        child: Container(
+                          padding: EdgeInsets.all(16),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(32),
+                            border: Border.all(
+                              width: 1,
+                              color: AppColors.border,
+                            ),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "صلاحيات الإتفاق :",
+                                style: AppTextStyles.style24W700(context),
+                              ),
+                              const SizedBox(height: 24),
+                              Expanded(
+                                child: Stack(
+                                  alignment: Alignment.bottomCenter,
+                                  children: [
+                                    GridView.builder(
+                                      padding: EdgeInsets.zero,
+                                      gridDelegate:
+                                          const SliverGridDelegateWithFixedCrossAxisCount(
+                                            crossAxisCount: 5,
+                                            childAspectRatio: 4 / 5,
+                                            crossAxisSpacing: 12,
+                                            mainAxisSpacing: 12,
                                           ),
-                                        ],
-                                      ),
-                                      child: Column(
-                                        children: [
-                                          Row(
-                                            children: [
-                                              Padding(
-                                                padding: const EdgeInsets.all(
-                                                  8.0,
+                                      itemCount: items.length,
+                                      itemBuilder: (context, index) {
+                                        return Container(
+                                          decoration: BoxDecoration(
+                                            color: Colors.white,
+                                            borderRadius: BorderRadius.circular(
+                                              10,
+                                            ),
+                                            border: Border.all(
+                                              width: 1,
+                                              color: AppColors.border,
+                                            ),
+                                            boxShadow: [
+                                              BoxShadow(
+                                                color: Colors.grey.withOpacity(
+                                                  0.3,
                                                 ),
-                                                child: SvgPicture.asset(
-                                                  Assets.imagesTrash,
-                                                ),
+                                                spreadRadius: 1,
+                                                blurRadius: 3,
+                                                offset: Offset(0, 2),
                                               ),
                                             ],
                                           ),
-                                          SizedBox(height: 16),
-                                          Text(
-                                            items[index]['name']!,
-                                            style: AppTextStyles.style16W400(
-                                              context,
-                                            ),
+                                          child: Column(
+                                            children: [
+                                              Row(
+                                                children: [
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets.all(
+                                                          8.0,
+                                                        ),
+                                                    child: SvgPicture.asset(
+                                                      Assets.imagesTrash,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                              SizedBox(height: 16),
+                                              Text(
+                                                items[index]['name']!,
+                                                style:
+                                                    AppTextStyles.style16W400(
+                                                      context,
+                                                    ),
+                                              ),
+                                              SizedBox(height: 8),
+                                              Text(
+                                                items[index]['amount']!,
+                                                style:
+                                                    AppTextStyles.style16W400(
+                                                      context,
+                                                    ).copyWith(
+                                                      color:
+                                                          AppColors.greenDark,
+                                                    ),
+                                              ),
+                                            ],
                                           ),
-                                          SizedBox(height: 8),
-                                          Text(
-                                            items[index]['amount']!,
-                                            style: AppTextStyles.style16W400(
-                                              context,
-                                            ).copyWith(
-                                              color: AppColors.greenDark,
-                                            ),
-                                          ),
-                                        ],
+                                        );
+                                      },
+                                    ),
+                                    MaterialButton(
+                                      minWidth: 200,
+                                      height: 56,
+                                      color: AppColors.greenDark,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(
+                                          1600,
+                                        ),
                                       ),
-                                    );
-                                  },
+                                      onPressed: () {
+                                        showDialog(
+                                          context: context,
+                                          builder:
+                                              (context) =>
+                                                  PowersOfTheAgreementDialog(),
+                                        );
+                                      },
+                                      child: Text(
+                                        'اضافة صلاحية',
+                                        style: AppTextStyles.style16W400(
+                                          context,
+                                        ).copyWith(color: AppColors.white),
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                                MaterialButton(
-                                  minWidth: 200,
-                                  height: 56,
-                                  color: AppColors.greenDark,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(1600),
-                                  ),
-                                  onPressed: () {
-                                    showDialog(
-                                      context: context,
-                                      builder:
-                                          (context) =>
-                                              PowersOfTheAgreementDialog(),
-                                    );
-                                  },
-                                  child: Text(
-                                    'اضافة صلاحية',
-                                    style: AppTextStyles.style16W400(
-                                      context,
-                                    ).copyWith(color: AppColors.white),
-                                  ),
-                                ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
-                        ],
+                        ),
                       ),
-                    ),
-                  ),
 
-                  // Right: Customer Info
-                ],
-              ),
-            ),
+                      // Right: Customer Info
+                    ],
+                  ),
+                ),
           ],
         ),
       ),
     );
   }
 }
-
