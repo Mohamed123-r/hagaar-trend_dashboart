@@ -16,6 +16,7 @@ import '../home/view/home_view.dart';
 import '../land_purchase_requests/land_purchase_requests_view.dart';
 import '../serious_purchase_requests/serious_purchase_requests_details_view.dart';
 import '../serious_purchase_requests/serious_purchase_requests_view.dart';
+import '../system_administration/system_administration_details_view.dart';
 import '../system_administration/system_administration_view.dart';
 
 class MainView extends StatefulWidget {
@@ -70,7 +71,7 @@ class _MainViewState extends State<MainView> {
 
                       setState(() {});
                     },
-                    showBack: activeIndex == 1.1 || activeIndex == 2.1,
+                    showBack: activeIndex == 1.1 || activeIndex == 2.1 || activeIndex == 5.1,
                     title:
                         activeIndex == 0
                             ? 'الصفحة الرئيسية'
@@ -98,6 +99,8 @@ class _MainViewState extends State<MainView> {
                             ? 'خدمة العملاء :'
                             : activeIndex == 5
                             ? "إدارة النظام :"
+                            : activeIndex == 5.1
+                            ? "تفاصيل الإتفاق :"
                             : 'Opps something went wrong',
                   ),
                   Expanded(
@@ -127,7 +130,15 @@ class _MainViewState extends State<MainView> {
                             : activeIndex == 4
                             ? CustomerServiceView()
                             : activeIndex == 5
-                            ? SystemAdministrationView()
+                            ? SystemAdministrationView(
+                              onTapItem: () {
+                                userType = 'owner';
+                                activeIndex = activeIndex + 0.1;
+                                setState(() {});
+                              },
+                            )
+                            : activeIndex == 5.1
+                            ? SystemAdministrationDetailsView()
                             : Container(),
                   ),
                 ],

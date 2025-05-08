@@ -5,8 +5,8 @@ import '../../components/list_item.dart';
 import '../../constant.dart';
 
 class SystemAdministrationView extends StatefulWidget {
-  SystemAdministrationView({super.key});
-
+  SystemAdministrationView({super.key, required this.onTapItem});
+  final Function() onTapItem;
   @override
   State<SystemAdministrationView> createState() =>
       _SystemAdministrationViewState();
@@ -257,20 +257,7 @@ class _SystemAdministrationViewState extends State<SystemAdministrationView> {
                 ).copyWith(color: AppColors.black),
               ),
             ),
-            Container(width: 1, height: 20, color: AppColors.grey),
-            TextButton(
-              onPressed: () {
-                systemType = 'financial';
-                type = 'financial';
-                setState(() {});
-              },
-              child: Text(
-                'المعاملات المالية',
-                style: AppTextStyles.style18W400(
-                  context,
-                ).copyWith(color: AppColors.black),
-              ),
-            ),
+
           ],
         ),
         Padding(
@@ -278,8 +265,6 @@ class _SystemAdministrationViewState extends State<SystemAdministrationView> {
             right:
                 type == 'subscriptions'
                     ? 150.0
-                    : type == 'financial'
-                    ? 310.0
                     : 18,
           ),
           child: Container(
@@ -308,6 +293,7 @@ class _SystemAdministrationViewState extends State<SystemAdministrationView> {
               ),
               onPressed: () {
                 subType = 'owners';
+                userType = 'owner';
                 setState(() {});
               },
               child: Text(
@@ -327,6 +313,7 @@ class _SystemAdministrationViewState extends State<SystemAdministrationView> {
               ),
               onPressed: () {
                 subType = 'companies';
+                userType = 'company';
                 setState(() {});
               },
               child: Text(
@@ -369,7 +356,7 @@ class _SystemAdministrationViewState extends State<SystemAdministrationView> {
               children: List.generate(users.length, (index) {
                 return InkWell(
                   borderRadius: BorderRadius.circular(32),
-                  onTap: () {},
+                  onTap: widget.onTapItem,
                   child: ListViewItem(users: users[index]),
                 );
               }),
