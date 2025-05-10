@@ -57,9 +57,9 @@ class OfficeDataSection extends StatelessWidget {
           ),
           ShowData(title: "المدينة", value: "الرياض"),
           ShowData(title: "المنطقة", value: "الرياض"),
-          ShowData(title: "1324567890-2", value: "رقم السجل التجاري :"),
-          ShowData(title: "1324567890-2", value: "رقم رخصة نفاذ :"),
-          ShowData(title: "1324567890-2", value: "رقم رخصة فال :"),
+          ShowData(title: "رقم السجل التجاري :", value: "1324567890-2"),
+          ShowData(title: "رقم رخصة نفاذ :", value: "1324567890-2"),
+          ShowData(title: "رقم رخصة فال :", value: "1324567890-2"),
         ],
       ),
     );

@@ -52,6 +52,8 @@ class _MainViewState extends State<MainView> {
                   onTap: () {
                     if (activeIndex != index) {
                       activeIndex = index;
+
+                      index == 5 ? userType = 'owner' : userType = 'customer';
                       setState(() {});
                     }
                   },
@@ -67,11 +69,15 @@ class _MainViewState extends State<MainView> {
                 children: [
                   CustomAppbar(
                     onCleckBack: () {
+                      userType = 'customer';
                       activeIndex = activeIndex - 0.1;
 
                       setState(() {});
                     },
-                    showBack: activeIndex == 1.1 || activeIndex == 2.1 || activeIndex == 5.1,
+                    showBack:
+                        activeIndex == 1.1 ||
+                        activeIndex == 2.1 ||
+                        activeIndex == 5.1,
                     title:
                         activeIndex == 0
                             ? 'الصفحة الرئيسية'

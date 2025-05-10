@@ -14,7 +14,7 @@ class AppInputTextFormField extends StatelessWidget {
       this.obscureText,
       this.validator,
       this.keyboardType,
-      this.controller, this.maxLines, this.initialValue});
+      this.controller, this.maxLines=1, this.initialValue});
 
   final String labelText;
   final String? initialValue;
@@ -33,33 +33,36 @@ class AppInputTextFormField extends StatelessWidget {
       textDirection: direction,
 
       child: Center(
-        child: TextFormField(
-          initialValue : initialValue,
-          maxLines: maxLines,
-          cursorColor: AppColors.black,
-          controller: controller,
-          obscureText: obscureText ?? false,
-          keyboardType: keyboardType ?? TextInputType.text,
-          onChanged: onChanged,
-          validator: validator,
-          decoration: InputDecoration(
-            contentPadding:
-                const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
-            filled: true,
-            fillColor: AppColors.white,
-            labelText: labelText,
-            labelStyle: AppTextStyles.style18W400(context).copyWith(
-              color: AppColors.grey,
+        child: SizedBox(
+          width: 500,
+          child: TextFormField(
+            initialValue : initialValue,
+            maxLines: maxLines,
+            cursorColor: AppColors.black,
+            controller: controller,
+            obscureText: obscureText ?? false,
+            keyboardType: keyboardType ?? TextInputType.text,
+            onChanged: onChanged,
+            validator: validator,
+            decoration: InputDecoration(
+              contentPadding:
+                  const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+              filled: true,
+              fillColor: AppColors.white,
+              labelText: labelText,
+              labelStyle: AppTextStyles.style18W400(context).copyWith(
+                color: AppColors.grey,
+              ),
+              prefixIcon: prefixIcon,
+              prefixIconColor: AppColors.grey,
+              suffixIcon: suffixIcon,
+              suffixIconColor: AppColors.grey,
+              enabledBorder: buildOutlineInputBorder(),
+              focusedBorder: buildOutlineInputBorder(),
+              disabledBorder: buildOutlineInputBorder(),
+              errorBorder: buildOutlineInputBorder(),
+              border: buildOutlineInputBorder(),
             ),
-            prefixIcon: prefixIcon,
-            prefixIconColor: AppColors.grey,
-            suffixIcon: suffixIcon,
-            suffixIconColor: AppColors.grey,
-            enabledBorder: buildOutlineInputBorder(),
-            focusedBorder: buildOutlineInputBorder(),
-            disabledBorder: buildOutlineInputBorder(),
-            errorBorder: buildOutlineInputBorder(),
-            border: buildOutlineInputBorder(),
           ),
         ),
       ),

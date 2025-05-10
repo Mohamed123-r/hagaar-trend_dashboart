@@ -22,7 +22,230 @@ class SystemAdministrationView extends StatefulWidget {
 
 class _SystemAdministrationViewState extends State<SystemAdministrationView> {
   String? selectedValue;
-
+  final List<Map<String, String>> office = [
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+  ];
+  final List<Map<String, String>> company = [
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+  ];
   final List<Map<String, String>> users = [
     {
       "name": "Mohammed Hassan",
@@ -262,6 +485,7 @@ class _SystemAdministrationViewState extends State<SystemAdministrationView> {
               onPressed: () {
                 systemType = 'agreements';
                 subType = 'owners';
+                userType = 'owners';
                 type = 'agreements';
                 setState(() {});
               },
@@ -277,6 +501,7 @@ class _SystemAdministrationViewState extends State<SystemAdministrationView> {
               onPressed: () {
                 systemType = 'subscriptions';
                 subType = 'offices';
+                userType = "office";
                 type = 'subscriptions';
                 setState(() {});
               },
@@ -590,140 +815,150 @@ class _SystemAdministrationViewState extends State<SystemAdministrationView> {
                                                       SizedBox(height: 20),
                                                       Directionality(
                                                         textDirection:
-                                                            TextDirection.rtl,
-                                                        child: DropdownButtonFormField<
-                                                          String
-                                                        >(
-                                                          decoration: InputDecoration(
-                                                            disabledBorder: OutlineInputBorder(
-                                                              borderRadius:
-                                                                  BorderRadius.circular(
-                                                                    16,
-                                                                  ),
-                                                              borderSide: BorderSide(
-                                                                width: 1,
-                                                                color:
-                                                                    AppColors
-                                                                        .border,
+                                                            direction,
+                                                        child: Padding(
+                                                          padding:
+                                                              const EdgeInsets.symmetric(
+                                                                horizontal:
+                                                                    32.0,
                                                               ),
-                                                            ),
-                                                            enabledBorder: OutlineInputBorder(
-                                                              borderRadius:
-                                                                  BorderRadius.circular(
-                                                                    16,
-                                                                  ),
-                                                              borderSide: BorderSide(
-                                                                width: 1,
-                                                                color:
-                                                                    AppColors
-                                                                        .border,
-                                                              ),
-                                                            ),
-                                                            border: OutlineInputBorder(
-                                                              borderRadius:
-                                                                  BorderRadius.circular(
-                                                                    16,
-                                                                  ),
-                                                              borderSide: BorderSide(
-                                                                width: 1,
-                                                                color:
-                                                                    AppColors
-                                                                        .border,
-                                                              ),
-                                                            ),
-                                                            contentPadding:
-                                                                EdgeInsets.symmetric(
-                                                                  horizontal:
+                                                          child: DropdownButtonFormField<
+                                                            String
+                                                          >(
+                                                            decoration: InputDecoration(
+                                                              disabledBorder: OutlineInputBorder(
+                                                                borderRadius:
+                                                                    BorderRadius.circular(
                                                                       16,
-                                                                  vertical: 18,
+                                                                    ),
+                                                                borderSide: BorderSide(
+                                                                  width: 1,
+                                                                  color:
+                                                                      AppColors
+                                                                          .border,
                                                                 ),
-                                                            label: Text(
-                                                              "نوع القسم :",
-                                                              textAlign:
-                                                                  TextAlign
-                                                                      .right,
-                                                              style: AppTextStyles.style16W400(
-                                                                context,
-                                                              ).copyWith(
-                                                                color:
-                                                                    AppColors
-                                                                        .grey,
                                                               ),
+                                                              enabledBorder: OutlineInputBorder(
+                                                                borderRadius:
+                                                                    BorderRadius.circular(
+                                                                      16,
+                                                                    ),
+                                                                borderSide: BorderSide(
+                                                                  width: 1,
+                                                                  color:
+                                                                      AppColors
+                                                                          .border,
+                                                                ),
+                                                              ),
+                                                              border: OutlineInputBorder(
+                                                                borderRadius:
+                                                                    BorderRadius.circular(
+                                                                      16,
+                                                                    ),
+                                                                borderSide: BorderSide(
+                                                                  width: 1,
+                                                                  color:
+                                                                      AppColors
+                                                                          .border,
+                                                                ),
+                                                              ),
+                                                              contentPadding:
+                                                                  EdgeInsets.symmetric(
+                                                                    horizontal:
+                                                                        16,
+                                                                    vertical:
+                                                                        18,
+                                                                  ),
+                                                              label: Text(
+                                                                "نوع القسم :",
+                                                                textAlign:
+                                                                    TextAlign
+                                                                        .right,
+                                                                style: AppTextStyles.style16W400(
+                                                                  context,
+                                                                ).copyWith(
+                                                                  color:
+                                                                      AppColors
+                                                                          .grey,
+                                                                ),
+                                                              ),
+                                                              alignLabelWithHint:
+                                                                  true,
                                                             ),
-                                                            alignLabelWithHint:
-                                                                true,
-                                                          ),
-                                                          value:
-                                                              items[index]['name']!,
-                                                          items:
-                                                              items
-                                                                  .map(
-                                                                    (
-                                                                      e,
-                                                                    ) => DropdownMenuItem<
-                                                                      String
-                                                                    >(
-                                                                      value:
-                                                                          e['name'],
-                                                                      child: Align(
-                                                                        alignment:
-                                                                            Alignment.centerRight,
-                                                                        child: Text(
-                                                                          e['name']!,
-                                                                          textAlign:
-                                                                              TextAlign.right,
-                                                                          style: TextStyle(
-                                                                            fontSize:
-                                                                                14,
+                                                            value:
+                                                                items[index]['name']!,
+                                                            items:
+                                                                items
+                                                                    .map(
+                                                                      (
+                                                                        e,
+                                                                      ) => DropdownMenuItem<
+                                                                        String
+                                                                      >(
+                                                                        value:
+                                                                            e['name'],
+                                                                        child: Align(
+                                                                          alignment:
+                                                                              Alignment.centerRight,
+                                                                          child: Text(
+                                                                            e['name']!,
+                                                                            textAlign:
+                                                                                TextAlign.right,
+                                                                            style: TextStyle(
+                                                                              fontSize:
+                                                                                  14,
+                                                                            ),
                                                                           ),
                                                                         ),
                                                                       ),
-                                                                    ),
-                                                                  )
-                                                                  .toList(),
-                                                          onChanged: (
-                                                            String? newValue,
-                                                          ) {
-                                                            setState(() {
-                                                              selectedValue =
-                                                                  newValue;
-                                                            });
-                                                          },
-                                                          hint: Align(
+                                                                    )
+                                                                    .toList(),
+                                                            onChanged: (
+                                                              String? newValue,
+                                                            ) {
+                                                              setState(() {
+                                                                selectedValue =
+                                                                    newValue;
+                                                              });
+                                                            },
+                                                            hint: Align(
+                                                              alignment:
+                                                                  Alignment
+                                                                      .centerRight,
+                                                              child: Text(
+                                                                "نوع القسم :",
+                                                                textAlign:
+                                                                    TextAlign
+                                                                        .right,
+                                                                style: AppTextStyles.style16W400(
+                                                                  context,
+                                                                ).copyWith(
+                                                                  color:
+                                                                      AppColors
+                                                                          .grey,
+                                                                ),
+                                                              ),
+                                                            ),
+                                                            isExpanded: true,
+                                                            dropdownColor:
+                                                                Colors.white,
+                                                            icon: Icon(
+                                                              Icons
+                                                                  .arrow_drop_down,
+                                                              size: 24,
+                                                            ),
+                                                            iconEnabledColor:
+                                                                AppColors
+                                                                    .border,
+                                                            style: TextStyle(
+                                                              fontSize: 14,
+                                                              color:
+                                                                  Colors.black,
+                                                            ),
                                                             alignment:
                                                                 Alignment
                                                                     .centerRight,
-                                                            child: Text(
-                                                              "نوع القسم :",
-                                                              textAlign:
-                                                                  TextAlign
-                                                                      .right,
-                                                              style: AppTextStyles.style16W400(
-                                                                context,
-                                                              ).copyWith(
-                                                                color:
-                                                                    AppColors
-                                                                        .grey,
-                                                              ),
-                                                            ),
                                                           ),
-                                                          isExpanded: true,
-                                                          dropdownColor:
-                                                              Colors.white,
-                                                          icon: Icon(
-                                                            Icons
-                                                                .arrow_drop_down,
-                                                            size: 24,
-                                                          ),
-                                                          iconEnabledColor:
-                                                              AppColors.border,
-                                                          style: TextStyle(
-                                                            fontSize: 14,
-                                                            color: Colors.black,
-                                                          ),
-                                                          alignment:
-                                                              Alignment
-                                                                  .centerRight,
                                                         ),
                                                       ),
                                                       SizedBox(height: 20),
@@ -811,91 +1046,104 @@ class _SystemAdministrationViewState extends State<SystemAdministrationView> {
                                     children: [
                                       SizedBox(height: 20),
                                       Directionality(
-                                        textDirection: TextDirection.rtl,
-                                        child: DropdownButtonFormField<String>(
-                                          decoration: InputDecoration(
-                                            disabledBorder: OutlineInputBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(16),
-                                              borderSide: BorderSide(
-                                                width: 1,
-                                                color: AppColors.border,
-                                              ),
-                                            ),
-                                            enabledBorder: OutlineInputBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(16),
-                                              borderSide: BorderSide(
-                                                width: 1,
-                                                color: AppColors.border,
-                                              ),
-                                            ),
-                                            border: OutlineInputBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(16),
-                                              borderSide: BorderSide(
-                                                width: 1,
-                                                color: AppColors.border,
-                                              ),
-                                            ),
-                                            contentPadding:
-                                                EdgeInsets.symmetric(
-                                                  horizontal: 16,
-                                                  vertical: 18,
-                                                ),
-                                            alignLabelWithHint: true,
+                                        textDirection: direction,
+                                        child: Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                            horizontal: 32.0,
                                           ),
-                                          value: selectedValue,
-                                          items:
-                                              items
-                                                  .map(
-                                                    (e) => DropdownMenuItem<
-                                                      String
-                                                    >(
-                                                      value: e['name'],
-                                                      child: Align(
-                                                        alignment:
-                                                            Alignment
-                                                                .centerRight,
-                                                        child: Text(
-                                                          e['name']!,
-                                                          textAlign:
-                                                              TextAlign.right,
-                                                          style: TextStyle(
-                                                            fontSize: 14,
+                                          child: DropdownButtonFormField<
+                                            String
+                                          >(
+                                            decoration: InputDecoration(
+                                              disabledBorder:
+                                                  OutlineInputBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                          16,
+                                                        ),
+                                                    borderSide: BorderSide(
+                                                      width: 1,
+                                                      color: AppColors.border,
+                                                    ),
+                                                  ),
+                                              enabledBorder: OutlineInputBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(16),
+                                                borderSide: BorderSide(
+                                                  width: 1,
+                                                  color: AppColors.border,
+                                                ),
+                                              ),
+                                              border: OutlineInputBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(16),
+                                                borderSide: BorderSide(
+                                                  width: 1,
+                                                  color: AppColors.border,
+                                                ),
+                                              ),
+                                              contentPadding:
+                                                  EdgeInsets.symmetric(
+                                                    horizontal: 16,
+                                                    vertical: 18,
+                                                  ),
+                                              alignLabelWithHint: true,
+                                            ),
+                                            value: selectedValue,
+                                            items:
+                                                items
+                                                    .map(
+                                                      (e) => DropdownMenuItem<
+                                                        String
+                                                      >(
+                                                        value: e['name'],
+                                                        child: Align(
+                                                          alignment:
+                                                              Alignment
+                                                                  .centerRight,
+                                                          child: Text(
+                                                            e['name']!,
+                                                            textAlign:
+                                                                TextAlign.right,
+                                                            style: TextStyle(
+                                                              fontSize: 14,
+                                                            ),
                                                           ),
                                                         ),
                                                       ),
+                                                    )
+                                                    .toList(),
+                                            onChanged: (String? newValue) {
+                                              setState(() {
+                                                selectedValue = newValue;
+                                              });
+                                            },
+                                            hint: Align(
+                                              alignment: Alignment.centerRight,
+                                              child: Text(
+                                                "نوع القسم :",
+                                                textAlign: TextAlign.right,
+                                                style:
+                                                    AppTextStyles.style16W400(
+                                                      context,
+                                                    ).copyWith(
+                                                      color: AppColors.grey,
                                                     ),
-                                                  )
-                                                  .toList(),
-                                          onChanged: (String? newValue) {
-                                            setState(() {
-                                              selectedValue = newValue;
-                                            });
-                                          },
-                                          hint: Align(
-                                            alignment: Alignment.centerRight,
-                                            child: Text(
-                                              "نوع القسم :",
-                                              textAlign: TextAlign.right,
-                                              style: AppTextStyles.style16W400(
-                                                context,
-                                              ).copyWith(color: AppColors.grey),
+                                              ),
                                             ),
+                                            isExpanded: true,
+                                            dropdownColor: Colors.white,
+                                            icon: Icon(
+                                              Icons.arrow_drop_down,
+                                              size: 24,
+                                            ),
+                                            iconEnabledColor: AppColors.border,
+                                            style: TextStyle(
+                                              fontSize: 14,
+                                              color: Colors.black,
+                                            ),
+                                            alignment: Alignment.centerRight,
                                           ),
-                                          isExpanded: true,
-                                          dropdownColor: Colors.white,
-                                          icon: Icon(
-                                            Icons.arrow_drop_down,
-                                            size: 24,
-                                          ),
-                                          iconEnabledColor: AppColors.border,
-                                          style: TextStyle(
-                                            fontSize: 14,
-                                            color: Colors.black,
-                                          ),
-                                          alignment: Alignment.centerRight,
                                         ),
                                       ),
                                       SizedBox(height: 20),
@@ -964,9 +1212,12 @@ class _SystemAdministrationViewState extends State<SystemAdministrationView> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(
-                            "الإشتراك الشهري :",
-                            style: AppTextStyles.style16W400(context),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 12.0),
+                            child: Text(
+                              "الإشتراك الشهري :",
+                              style: AppTextStyles.style16W400(context),
+                            ),
                           ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
@@ -1047,332 +1298,350 @@ class _SystemAdministrationViewState extends State<SystemAdministrationView> {
                     crossAxisSpacing: 8,
                     mainAxisSpacing: 8,
 
-                    children: List.generate(users.length, (index) {
-                      return InkWell(
-                        borderRadius: BorderRadius.circular(32),
-                        onTap:
-                            systemType == 'subscriptions'
-                                ? () {
-                                  showDialog(
-                                    context: context,
-                                    builder:
-                                        (context) => AppAlertDialog(
-                                          title: "",
-                                          body:
-                                              subType == 'offices'
-                                                  ? SingleChildScrollView(
-                                                    child: Padding(
-                                                      padding:
-                                                          const EdgeInsets.all(
-                                                            16.0,
-                                                          ),
-                                                      child: Column(
-                                                        spacing: 12,
-                                                        crossAxisAlignment:
-                                                            CrossAxisAlignment
-                                                                .center,
-                                                        children: [
-                                                          Container(
-                                                            width: 230,
-                                                            height: 230,
-                                                            decoration: BoxDecoration(
-                                                              shape:
-                                                                  BoxShape
-                                                                      .circle,
-                                                              color:
-                                                                  Colors.white,
-                                                              border: Border.all(
-                                                                width: 1,
+                    children: List.generate(
+                      userType == "office"
+                          ? office.length
+                          : userType == "company"
+                          ? company.length
+                          : users.length,
+                      (index) {
+                        return InkWell(
+                          borderRadius: BorderRadius.circular(32),
+                          onTap:
+                              systemType == 'subscriptions'
+                                  ? () {
+                                    showDialog(
+                                      context: context,
+                                      builder:
+                                          (context) => AppAlertDialog(
+                                            title: "",
+                                            body:
+                                                subType == 'offices'
+                                                    ? SingleChildScrollView(
+                                                      child: Padding(
+                                                        padding:
+                                                            const EdgeInsets.all(
+                                                              16.0,
+                                                            ),
+                                                        child: Column(
+                                                          spacing: 12,
+                                                          crossAxisAlignment:
+                                                              CrossAxisAlignment
+                                                                  .center,
+                                                          children: [
+                                                            Container(
+                                                              width: 230,
+                                                              height: 230,
+                                                              decoration: BoxDecoration(
+                                                                shape:
+                                                                    BoxShape
+                                                                        .circle,
                                                                 color:
-                                                                    AppColors
-                                                                        .border,
-                                                              ),
-                                                            ),
-                                                            child: ClipRRect(
-                                                              borderRadius:
-                                                                  BorderRadius.circular(
-                                                                    320,
-                                                                  ),
-                                                              child: Image.network(
-                                                                width: 230,
-                                                                height: 230,
-                                                                fit:
-                                                                    BoxFit
-                                                                        .cover,
-                                                                "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-                                                              ),
-                                                            ),
-                                                          ),
-                                                          const SizedBox(),
-                                                          Text(
-                                                            userType ==
-                                                                    "company"
-                                                                ? "شركة : الريال للعقارات"
-                                                                : "مكتب : عقارك الامن",
-                                                            style:
-                                                                AppTextStyles.style24W400(
-                                                                  context,
-                                                                ),
-                                                          ),
-                                                          Text(
-                                                            "الرياض - م: الزهور",
-                                                            style:
-                                                                AppTextStyles.style20W400(
-                                                                  context,
-                                                                ).copyWith(
+                                                                    Colors
+                                                                        .white,
+                                                                border: Border.all(
+                                                                  width: 1,
                                                                   color:
                                                                       AppColors
-                                                                          .grey,
+                                                                          .border,
                                                                 ),
-                                                          ),
-                                                          const SizedBox(
-                                                            height: 8,
-                                                          ),
-                                                          ShowData(
-                                                            title:
-                                                                "إسم مالك المكتب :",
-                                                            value:
-                                                                "محمد علي عبد القادر",
-                                                          ),
-                                                          ShowData(
-                                                            title:
-                                                                userType ==
-                                                                        "company"
-                                                                    ? "اسم الشركة :"
-                                                                    : "إسم المكتب :",
-                                                            value:
-                                                                "عقارك الامن",
-                                                          ),
-                                                          ShowData(
-                                                            title: "رقم الهاتف",
-                                                            value:
-                                                                "+20 010837654322",
-                                                          ),
-                                                          ShowData(
-                                                            title:
-                                                                "نوع العضوية",
-                                                            value:
-                                                                userType ==
-                                                                        'company'
-                                                                    ? "شركة عقارات"
-                                                                    : userType ==
-                                                                        'owner'
-                                                                    ? "مكتب عقارات"
-                                                                    : "",
-                                                          ),
-                                                          ShowData(
-                                                            title: "المدينة",
-                                                            value: "الرياض",
-                                                          ),
-                                                          ShowData(
-                                                            title: "المنطقة",
-                                                            value: "الرياض",
-                                                          ),
-                                                          ShowData(
-                                                            title:
-                                                                "1324567890-2",
-                                                            value:
-                                                                "رقم السجل التجاري :",
-                                                          ),
-                                                          ShowData(
-                                                            title:
-                                                                "1324567890-2",
-                                                            value:
-                                                                "رقم رخصة نفاذ :",
-                                                          ),
-                                                          ShowData(
-                                                            title:
-                                                                "1324567890-2",
-                                                            value:
-                                                                "رقم رخصة فال :",
-                                                          ),
-                                                          MaterialButton(
-                                                            minWidth: 160,
-                                                            height: 56,
-                                                            color:
-                                                                AppColors.black,
-                                                            shape: RoundedRectangleBorder(
-                                                              borderRadius:
-                                                                  BorderRadius.circular(
-                                                                    16,
+                                                              ),
+                                                              child: ClipRRect(
+                                                                borderRadius:
+                                                                    BorderRadius.circular(
+                                                                      320,
+                                                                    ),
+                                                                child: Image.asset(
+                                                                  width: 230,
+                                                                  height: 230,
+                                                                  fit:
+                                                                      BoxFit
+                                                                          .cover,
+                                                           Assets.imagesTest2  ),
+                                                              ),
+                                                            ),
+                                                            const SizedBox(),
+                                                            Text(
+                                                              userType ==
+                                                                      "company"
+                                                                  ? "شركة : الريال للعقارات"
+                                                                  : "مكتب : عقارك الامن",
+                                                              style:
+                                                                  AppTextStyles.style24W400(
+                                                                    context,
                                                                   ),
                                                             ),
-                                                            onPressed: () {
-                                                              showDialog(
-                                                                context:
-                                                                    context,
-                                                                builder:
-                                                                    (
-                                                                      context,
-                                                                    ) => AppSuccessAlertDialog(
-                                                                      title:
-                                                                          "تم دفع قيمة الإشتراك للنظام",
-                                                                    ),
-                                                              );
-                                                            },
-                                                            child: Text(
-                                                              'تجديد الإشتراك',
-                                                              style: AppTextStyles.style16W400(
+                                                            Text(
+                                                              "الرياض - م: الزهور",
+                                                              style: AppTextStyles.style20W400(
                                                                 context,
                                                               ).copyWith(
                                                                 color:
                                                                     AppColors
-                                                                        .white,
+                                                                        .grey,
                                                               ),
                                                             ),
-                                                          ),
-                                                        ],
-                                                      ),
-                                                    ),
-                                                  )
-                                                  : SingleChildScrollView(
-                                                    child: Padding(
-                                                      padding:
-                                                          const EdgeInsets.all(
-                                                            16.0,
-                                                          ),
-                                                      child: Column(
-                                                        spacing: 12,
-                                                        crossAxisAlignment:
-                                                            CrossAxisAlignment
-                                                                .center,
-                                                        children: [
-                                                          Container(
-                                                            width: 230,
-                                                            height: 230,
-                                                            decoration: BoxDecoration(
-                                                              shape:
-                                                                  BoxShape
-                                                                      .circle,
+                                                            const SizedBox(
+                                                              height: 8,
+                                                            ),
+                                                            ShowData(
+                                                              title:
+                                                                  "إسم مالك المكتب :",
+                                                              value:
+                                                                  "محمد علي عبد القادر",
+                                                            ),
+                                                            ShowData(
+                                                              title:
+                                                                  userType ==
+                                                                          "company"
+                                                                      ? "اسم الشركة :"
+                                                                      : "إسم المكتب :",
+                                                              value:
+                                                                  "عقارك الامن",
+                                                            ),
+                                                            ShowData(
+                                                              title:
+                                                                  "رقم الهاتف",
+                                                              value:
+                                                                  "+20 010837654322",
+                                                            ),
+                                                            ShowData(
+                                                              title:
+                                                                  "نوع العضوية",
+                                                              value:
+                                                                  userType ==
+                                                                          'company'
+                                                                      ? "شركة عقارات"
+                                                                      : userType ==
+                                                                          'office'
+                                                                      ? "مكتب عقارات"
+                                                                      : "",
+                                                            ),
+                                                            ShowData(
+                                                              title: "المدينة",
+                                                              value: "الرياض",
+                                                            ),
+                                                            ShowData(
+                                                              title: "المنطقة",
+                                                              value: "الرياض",
+                                                            ),
+                                                            ShowData(
+                                                              title:
+                                                                  "رقم السجل التجاري :",
+                                                              value:
+                                                                  "1324567890-2",
+                                                            ),
+                                                            ShowData(
+                                                              title:
+                                                                  "رقم رخصة نفاذ :",
+
+                                                              value:
+                                                                  "1324567890-2",
+                                                            ),
+                                                            ShowData(
+                                                              title:
+                                                                  "رقم رخصة فال :",
+                                                              value:
+                                                                  "1324567890-2",
+                                                            ),
+                                                            MaterialButton(
+                                                              minWidth: 160,
+                                                              height: 56,
                                                               color:
-                                                                  Colors.white,
-                                                              border: Border.all(
-                                                                width: 1,
-                                                                color:
-                                                                    AppColors
-                                                                        .border,
+                                                                  AppColors
+                                                                      .black,
+                                                              shape: RoundedRectangleBorder(
+                                                                borderRadius:
+                                                                    BorderRadius.circular(
+                                                                      16,
+                                                                    ),
                                                               ),
-                                                            ),
-                                                            child: ClipRRect(
-                                                              borderRadius:
-                                                                  BorderRadius.circular(
-                                                                    320,
-                                                                  ),
-                                                              child: Image.network(
-                                                                width: 230,
-                                                                height: 230,
-                                                                fit:
-                                                                    BoxFit
-                                                                        .cover,
-                                                                "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-                                                              ),
-                                                            ),
-                                                          ),
-                                                          const SizedBox(),
-                                                          Text(
-                                                            "Mohammed Hassan Ali",
-                                                            style:
-                                                                AppTextStyles.style24W400(
-                                                                  context,
-                                                                ),
-                                                          ),
-                                                          Text(
-                                                            userType ==
-                                                                    'customer'
-                                                                ? "مستخدم للتطبيق"
-                                                                : userType ==
-                                                                    'owner'
-                                                                ? "مالك عقارات"
-                                                                : userType ==
-                                                                    'agent'
-                                                                ? "مسوق عقاري"
-                                                                : "",
-                                                            style:
-                                                                AppTextStyles.style20W400(
+                                                              onPressed: () {
+                                                                showDialog(
+                                                                  context:
+                                                                      context,
+                                                                  builder:
+                                                                      (
+                                                                        context,
+                                                                      ) => AppSuccessAlertDialog(
+                                                                        title:
+                                                                            "تم دفع قيمة الإشتراك للنظام",
+                                                                      ),
+                                                                );
+                                                              },
+                                                              child: Text(
+                                                                'تجديد الإشتراك',
+                                                                style: AppTextStyles.style16W400(
                                                                   context,
                                                                 ).copyWith(
                                                                   color:
                                                                       AppColors
-                                                                          .grey,
+                                                                          .white,
                                                                 ),
-                                                          ),
-                                                          const SizedBox(
-                                                            height: 8,
-                                                          ),
-                                                          ShowData(
-                                                            title: "رقم الهاتف",
-                                                            value:
-                                                                "+20 010837654322",
-                                                          ),
-                                                          ShowData(
-                                                            title:
-                                                                "نوع العضوية",
-                                                            value:
-                                                                userType ==
-                                                                        'customer'
-                                                                    ? "مستخدم للتطبيق"
-                                                                    : userType ==
-                                                                        'owner'
-                                                                    ? "مالك عقارات"
-                                                                    : userType ==
-                                                                        'agent'
-                                                                    ? "مسوق عقاري"
-                                                                    : "",
-                                                          ),
-                                                          ShowData(
-                                                            title: "المدينة",
-                                                            value: "الرياض",
-                                                          ),
-                                                          ShowData(
-                                                            title: "المنطقة",
-                                                            value: "الرياض",
-                                                          ),
-                                                          MaterialButton(
-                                                            minWidth: 160,
-                                                            height: 56,
-                                                            color:
-                                                                AppColors.black,
-                                                            shape: RoundedRectangleBorder(
-                                                              borderRadius:
-                                                                  BorderRadius.circular(
-                                                                    16,
+                                                              ),
+                                                            ),
+                                                          ],
+                                                        ),
+                                                      ),
+                                                    )
+                                                    : SingleChildScrollView(
+                                                      child: Padding(
+                                                        padding:
+                                                            const EdgeInsets.all(
+                                                              16.0,
+                                                            ),
+                                                        child: Column(
+                                                          spacing: 12,
+                                                          crossAxisAlignment:
+                                                              CrossAxisAlignment
+                                                                  .center,
+                                                          children: [
+                                                            Container(
+                                                              width: 230,
+                                                              height: 230,
+                                                              decoration: BoxDecoration(
+                                                                shape:
+                                                                    BoxShape
+                                                                        .circle,
+                                                                color:
+                                                                    Colors
+                                                                        .white,
+                                                                border: Border.all(
+                                                                  width: 1,
+                                                                  color:
+                                                                      AppColors
+                                                                          .border,
+                                                                ),
+                                                              ),
+                                                              child: ClipRRect(
+                                                                borderRadius:
+                                                                    BorderRadius.circular(
+                                                                      320,
+                                                                    ),
+                                                                child: Image.network(
+                                                                  width: 230,
+                                                                  height: 230,
+                                                                  fit:
+                                                                      BoxFit
+                                                                          .cover,
+                                                                  "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                                                                ),
+                                                              ),
+                                                            ),
+                                                            const SizedBox(),
+                                                            Text(
+                                                              "Mohammed Hassan Ali",
+                                                              style:
+                                                                  AppTextStyles.style24W400(
+                                                                    context,
                                                                   ),
                                                             ),
-                                                            onPressed: () {
-                                                              showDialog(
-                                                                context:
-                                                                    context,
-                                                                builder:
-                                                                    (
-                                                                      context,
-                                                                    ) => AppSuccessAlertDialog(
-                                                                      title:
-                                                                          "تم دفع قيمة الإشتراك للنظام",
-                                                                    ),
-                                                              );
-                                                            },
-                                                            child: Text(
-                                                              'تجديد الإشتراك',
-                                                              style: AppTextStyles.style16W400(
+                                                            Text(
+                                                              userType ==
+                                                                      'customer'
+                                                                  ? "مستخدم للتطبيق"
+                                                                  : userType ==
+                                                                      'office'
+                                                                  ? "مالك عقارات"
+                                                                  : userType ==
+                                                                      'agent'
+                                                                  ? "مسوق عقاري"
+                                                                  : "",
+                                                              style: AppTextStyles.style20W400(
                                                                 context,
                                                               ).copyWith(
                                                                 color:
                                                                     AppColors
-                                                                        .white,
+                                                                        .grey,
                                                               ),
                                                             ),
-                                                          ),
-                                                        ],
+                                                            const SizedBox(
+                                                              height: 8,
+                                                            ),
+                                                            ShowData(
+                                                              title:
+                                                                  "رقم الهاتف",
+                                                              value:
+                                                                  "+20 010837654322",
+                                                            ),
+                                                            ShowData(
+                                                              title:
+                                                                  "نوع العضوية",
+                                                              value:
+                                                                  userType ==
+                                                                          'customer'
+                                                                      ? "مستخدم للتطبيق"
+                                                                      : userType ==
+                                                                          'office'
+                                                                      ? "مالك عقارات"
+                                                                      : userType ==
+                                                                          'agent'
+                                                                      ? "مسوق عقاري"
+                                                                      : "",
+                                                            ),
+                                                            ShowData(
+                                                              title: "المدينة",
+                                                              value: "الرياض",
+                                                            ),
+                                                            ShowData(
+                                                              title: "المنطقة",
+                                                              value: "الرياض",
+                                                            ),
+                                                            MaterialButton(
+                                                              minWidth: 160,
+                                                              height: 56,
+                                                              color:
+                                                                  AppColors
+                                                                      .black,
+                                                              shape: RoundedRectangleBorder(
+                                                                borderRadius:
+                                                                    BorderRadius.circular(
+                                                                      16,
+                                                                    ),
+                                                              ),
+                                                              onPressed: () {
+                                                                showDialog(
+                                                                  context:
+                                                                      context,
+                                                                  builder:
+                                                                      (
+                                                                        context,
+                                                                      ) => AppSuccessAlertDialog(
+                                                                        title:
+                                                                            "تم دفع قيمة الإشتراك للنظام",
+                                                                      ),
+                                                                );
+                                                              },
+                                                              child: Text(
+                                                                'تجديد الإشتراك',
+                                                                style: AppTextStyles.style16W400(
+                                                                  context,
+                                                                ).copyWith(
+                                                                  color:
+                                                                      AppColors
+                                                                          .white,
+                                                                ),
+                                                              ),
+                                                            ),
+                                                          ],
+                                                        ),
                                                       ),
                                                     ),
-                                                  ),
-                                        ),
-                                  );
-                                }
-                                : widget.onTapItem,
-                        child: ListViewItem(users: users[index]),
-                      );
-                    }),
+                                          ),
+                                    );
+                                  }
+                                  : widget.onTapItem,
+                          child: ListViewItem(
+                            users:
+                                userType == "office"
+                                    ? office[index]
+                                    : userType == "company"
+                                    ? company[index]
+                                    : users[index],
+                          ),
+                        );
+                      },
+                    ),
                   ),
                 ),
               ),
