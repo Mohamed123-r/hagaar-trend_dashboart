@@ -547,13 +547,13 @@ class _CustomersViewState extends State<CustomersView> {
                 type == 'owner'
                     ? 145.0
                     : type == 'office'
-                    ? 300.0
+                    ? 310.0
                     : type == 'company'
-                    ? 458.0
+                    ? 470.0
                     : type == 'agent'
-                    ? 615.0
+                    ? 635.0
                     : type == 'bank'
-                    ? 770.0
+                    ? 790.0
                     : 15,
           ),
           child: Container(

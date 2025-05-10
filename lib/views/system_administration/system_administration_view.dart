@@ -515,7 +515,7 @@ class _SystemAdministrationViewState extends State<SystemAdministrationView> {
           ],
         ),
         Padding(
-          padding: EdgeInsets.only(right: type == 'subscriptions' ? 150.0 : 18),
+          padding: EdgeInsets.only(right: type == 'subscriptions' ? 160.0 : 20),
           child: Container(
             width: 40,
             height: 4,

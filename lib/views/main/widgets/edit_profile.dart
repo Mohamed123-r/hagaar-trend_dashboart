@@ -28,6 +28,7 @@ class _EditProfileState extends State<EditProfile> {
   void dispose() {
     nameController.dispose();
     phoneController.dispose();
+    super.dispose(); // ✅
   }
 
   @override

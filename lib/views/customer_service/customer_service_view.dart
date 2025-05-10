@@ -567,17 +567,17 @@ class _CustomerServiceViewState extends State<CustomerServiceView> {
           padding: EdgeInsets.only(
             right:
                 type == 'owner'
-                    ? 190.0
+                    ? 195.0
                     : type == 'office'
-                    ? 345.0
+                    ? 355.0
                     : type == 'company'
-                    ? 503.0
+                    ? 518.0
                     : type == 'agent'
-                    ? 660.0
+                    ? 680.0
                     : type == 'bank'
-                    ? 815.0
+                    ? 840.0
                     : type == 'customer'
-                    ? 980.0
+                    ? 1010.0
                     : 30,
           ),
           child: Container(

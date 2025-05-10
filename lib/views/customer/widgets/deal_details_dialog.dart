@@ -202,7 +202,7 @@ class DealDetailsDialog extends StatelessWidget {
                           Expanded(
                             child: Stack(
                               children: [
-                                Expanded(child: buildMiniImage()),
+                                buildMiniImage(),
                                 Container(
                                   decoration: BoxDecoration(
                                     color: Colors.black.withOpacity(0.4),
