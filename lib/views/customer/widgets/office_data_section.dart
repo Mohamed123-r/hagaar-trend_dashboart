@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hagaar_trend_dashboard/constant.dart';
+import 'package:hagaar_trend_dashboard/generated/assets.dart';
 
 import '../../../components/app_colors.dart';
 import '../../../components/app_text_styles.dart';
@@ -25,12 +26,12 @@ class OfficeDataSection extends StatelessWidget {
             ),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(320),
-              child: Image.network(
+              child: Image.asset(
                 width: 230,
                 height: 230,
                 fit: BoxFit.cover,
-                "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-              ),
+                  userType=="company"? Assets.imagesTest3 :Assets.imagesTest2
+            ),
             ),
           ),
           const SizedBox(),
@@ -50,7 +51,7 @@ class OfficeDataSection extends StatelessWidget {
             value:
             userType == 'company'
                 ? "شركة عقارات"
-                : userType == 'owner'
+                : userType == 'office'
                 ? "مكتب عقارات"
                 : "",
           ),

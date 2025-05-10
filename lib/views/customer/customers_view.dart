@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hagaar_trend_dashboard/components/app_colors.dart';
+import 'package:hagaar_trend_dashboard/generated/assets.dart';
 import '../../components/app_text_styles.dart';
 import '../../components/list_item.dart';
 import '../../constant.dart';
@@ -221,6 +222,230 @@ class _CustomersViewState extends State<CustomersView> {
       "image": "https://randomuser.me/api/portraits/men/11.jpg",
     },
   ];
+  final List<Map<String, String>> office = [
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+  ];
+  final List<Map<String, String>> company = [
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+  ];
   String type = 'customer';
 
   @override
@@ -350,13 +575,27 @@ class _CustomersViewState extends State<CustomersView> {
               crossAxisSpacing: 8,
               mainAxisSpacing: 8,
 
-              children: List.generate(users.length, (index) {
-                return InkWell(
-                  borderRadius: BorderRadius.circular(32),
-                  onTap: widget.onTapItem,
-                  child: ListViewItem(users: users[index]),
-                );
-              }),
+              children: List.generate(
+                userType == "office"
+                    ? office.length
+                    : userType == "company"
+                    ? company.length
+                    : users.length,
+                (index) {
+                  return InkWell(
+                    borderRadius: BorderRadius.circular(32),
+                    onTap: widget.onTapItem,
+                    child: ListViewItem(
+                      users:
+                          userType == "office"
+                              ? office[index]
+                              : userType == "company"
+                              ? company[index]
+                              : users[index],
+                    ),
+                  );
+                },
+              ),
             ),
           ),
         ),

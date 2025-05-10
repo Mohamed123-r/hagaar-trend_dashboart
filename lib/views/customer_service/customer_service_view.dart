@@ -7,6 +7,7 @@ import '../../components/app_text_styles.dart';
 import '../../components/list_item.dart';
 import '../../components/show_data_widget.dart';
 import '../../constant.dart';
+import '../../generated/assets.dart';
 
 class CustomerServiceView extends StatefulWidget {
   CustomerServiceView({super.key});
@@ -223,6 +224,230 @@ class _CustomerServiceViewState extends State<CustomerServiceView> {
       "image": "https://randomuser.me/api/portraits/men/11.jpg",
     },
   ];
+  final List<Map<String, String>> office = [
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+    {
+      "name": "مكتب عقارك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest2,
+    },
+  ];
+  final List<Map<String, String>> company = [
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+    {
+      "name": "شركة بيتك الامن",
+      "phone": "الرياض - م : الزهور",
+      "image": Assets.imagesTest3,
+    },
+  ];
   String type = 'all';
 
   @override
@@ -250,6 +475,7 @@ class _CustomerServiceViewState extends State<CustomerServiceView> {
             TextButton(
               onPressed: () {
                 customerType = 'owner';
+                userType = 'owner';
                 type = 'owner';
                 setState(() {});
               },
@@ -264,6 +490,7 @@ class _CustomerServiceViewState extends State<CustomerServiceView> {
             TextButton(
               onPressed: () {
                 customerType = 'office';
+                userType = 'office';
                 type = 'office';
                 setState(() {});
               },
@@ -278,6 +505,7 @@ class _CustomerServiceViewState extends State<CustomerServiceView> {
             TextButton(
               onPressed: () {
                 customerType = 'company';
+                userType = 'company';
                 type = 'company';
                 setState(() {});
               },
@@ -292,6 +520,7 @@ class _CustomerServiceViewState extends State<CustomerServiceView> {
             TextButton(
               onPressed: () {
                 customerType = 'agent';
+                userType = 'agent';
                 type = 'agent';
                 setState(() {});
               },
@@ -306,6 +535,7 @@ class _CustomerServiceViewState extends State<CustomerServiceView> {
             TextButton(
               onPressed: () {
                 customerType = 'bank';
+                userType = 'bank';
                 type = 'bank';
                 setState(() {});
               },
@@ -320,6 +550,7 @@ class _CustomerServiceViewState extends State<CustomerServiceView> {
             TextButton(
               onPressed: () {
                 customerType = 'customer';
+                userType = 'customer';
                 type = 'customer';
                 setState(() {});
               },
@@ -368,7 +599,11 @@ class _CustomerServiceViewState extends State<CustomerServiceView> {
               crossAxisSpacing: 8,
               mainAxisSpacing: 8,
 
-              children: List.generate(users.length, (index) {
+              children: List.generate(userType == "office"
+    ? office.length
+        : userType == "company"
+    ? company.length
+        : users.length, (index) {
                 return InkWell(
                   borderRadius: BorderRadius.circular(32),
                   onTap: () {
@@ -420,7 +655,17 @@ class _CustomerServiceViewState extends State<CustomerServiceView> {
                                           ).copyWith(color: AppColors.grey),
                                         ),
                                         Text(
-                                          "مستخدم للتطبيق",
+                                          customerType == 'owner'
+                                              ? "مالك عقارات"
+                                              : customerType == 'office'
+                                              ? "مكتب عقارات"
+                                              : customerType == 'company'
+                                              ? "شركة عقارات"
+                                              : customerType == 'agent'
+                                              ? "مسوق عقاري"
+                                              : customerType == 'bank'
+                                              ? "موظف بنكي"
+                                              : customerType == 'customer' ? "مستخدم للتطبيق":   "مستخدم للتطبيق",
                                           //ال case هنا بتتغير بناء علي مين اللي طلب هنا من العضويات
                                           style: AppTextStyles.style20W400(
                                             context,
@@ -450,7 +695,11 @@ class _CustomerServiceViewState extends State<CustomerServiceView> {
                           ),
                     );
                   },
-                  child: ListViewItem(users: users[index]),
+                  child: ListViewItem(users:     userType == "office"
+                      ? office[index]
+                      : userType == "company"
+                      ? company[index]
+                      : users[index],),
                 );
               }),
             ),

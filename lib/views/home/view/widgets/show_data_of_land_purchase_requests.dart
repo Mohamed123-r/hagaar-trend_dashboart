@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import '../../../../components/app_alert_dialog.dart';
 import '../../../../components/app_colors.dart';
 import '../../../../components/app_text_styles.dart';
 import '../../../../components/list_item.dart';
 import '../../../../components/list_item_hor.dart';
+import '../../../../components/show_data_widget.dart';
+import '../../../../constant.dart';
 import '../../../../generated/assets.dart';
 
 class ShowDataOfLandPurchaseRequests extends StatelessWidget {
@@ -178,7 +181,85 @@ class ShowDataOfLandPurchaseRequests extends StatelessWidget {
           Expanded(
             child: ListView.builder(
               padding: EdgeInsets.zero,
-              itemBuilder: (context, index) => ListItemHor(users: users[index]),
+              itemBuilder: (context, index) => InkWell(
+                  onTap: (){
+                    showDialog(
+                      context: context,
+                      builder: (context) => Directionality(
+                        textDirection: direction,
+                        child: AppAlertDialog(
+                          title: "",
+                          body: Padding(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 16,
+                              vertical: 32,
+                            ),
+                            child: SizedBox(
+                              height: 800,
+                              child: SingleChildScrollView(
+                                child: Column(
+                                  spacing: 16,
+                                  children: [
+                                    Container(
+                                      width: 230,
+                                      height: 230,
+                                      decoration: BoxDecoration(
+                                        color: Colors.red,
+                                        image: DecorationImage(
+                                          image: NetworkImage(
+                                            users[index]["image"].toString(),
+                                          ),
+                                          fit: BoxFit.cover,
+                                        ),
+                                        borderRadius: BorderRadius.circular(200),
+                                      ),
+                                    ),
+                                    Text(
+                                      users[index]["name"].toString(),
+                                      style: AppTextStyles.style24W400(
+                                        context,
+                                      ),
+                                    ),
+                                    Text(
+                                      "مستخدم للتطبيق",
+                                      //ال case هنا بتتغير بناء علي مين اللي طلب هنا من العضويات
+                                      style: AppTextStyles.style20W400(
+                                        context,
+                                      ).copyWith(color: AppColors.grey),
+                                    ),
+                                    ShowData(
+                                      title: "رقم الهاتف :",
+                                      value: "+20 0108376543222",
+                                    ),
+                                    ShowData(
+                                      title: "السعر :",
+                                      value: "132 الف ريال  :  300 ألف ريال",
+                                    ),
+                                    ShowData(
+                                      title: "نوع الأرض :",
+                                      value: "سكنية",
+                                    ),
+                                    ShowData(
+                                      title: "المدينة :",
+                                      value: "الرياض",
+                                    ),
+                                    ShowData(
+                                      title: "المنطقة :",
+                                      value: "الرياض",
+                                    ),
+                                    // Remove the Spacer() here
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    );
+                  } ,
+                  child
+
+                  : ListItemHor(users: users[index])),
             itemCount: users.length,
             ),
           ),

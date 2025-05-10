@@ -20,7 +20,7 @@ class DealDetailsDialog extends StatelessWidget {
         titlePadding: EdgeInsets.only(top: 12, right: 16, left: 16, bottom: 8),
         title: Row(
           children: [
-            Text("تفاصيل الصفقة:", style: AppTextStyles.style24W700(context)),
+            Text("بيانات العقار :", style: AppTextStyles.style24W700(context)),
             Spacer(),
             IconButton(
               onPressed: () => Navigator.of(context).pop(),

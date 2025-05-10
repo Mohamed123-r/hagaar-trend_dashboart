@@ -27,6 +27,8 @@ class Assets {
   static const String imagesLogoBackground = 'assets/images/logoBackground.png';
   static const String imagesNotePencil = 'assets/images/NotePencil.svg';
   static const String imagesTest = 'assets/images/test.png';
+  static const String imagesTest2 = 'assets/images/test2.png';
+  static const String imagesTest3 = 'assets/images/test3.png';
   static const String imagesTrash = 'assets/images/Trash.svg';
   static const String imagesTreePalm = 'assets/images/TreePalm.svg';
   static const String imagesUser = 'assets/images/User.svg';

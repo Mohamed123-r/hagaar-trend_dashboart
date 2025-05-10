@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hagaar_trend_dashboard/constant.dart';
 
 import 'app_colors.dart';
 import 'app_text_styles.dart';
@@ -37,7 +38,15 @@ class ListViewItem extends StatelessWidget {
               ),
             ),
             child: Center(
-              child: ClipRRect(
+              child:userType =="office" ||userType =="company" ?ClipRRect(
+                borderRadius: BorderRadius.circular(320),
+                child: Image.asset(
+                  users['image']!,
+                  width: 62,
+                  height: 62,
+                  fit: BoxFit.cover,
+                ),
+              ): ClipRRect(
                 borderRadius: BorderRadius.circular(320),
                 child: Image.network(
                   users['image']!,
