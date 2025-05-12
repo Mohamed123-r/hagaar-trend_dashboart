@@ -114,8 +114,8 @@ class PowersOfTheAgreementDialog extends StatelessWidget {
                     context: context,
                     builder:
                         (context) => AppSuccessAlertDialog(
-                      title: "تم إضافة الصلاحيات بنجاح",
-                    ),
+                          title: "تم إضافة الصلاحيات بنجاح",
+                        ),
                   );
                 },
                 child: Text(

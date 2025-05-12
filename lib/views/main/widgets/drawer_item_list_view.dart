@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'drawer_item_model.dart';
 
-
 class DrawerItemListView extends StatefulWidget {
   const DrawerItemListView({
     super.key,
@@ -10,7 +9,6 @@ class DrawerItemListView extends StatefulWidget {
     required this.drawerItems,
     required this.itemBuilder,
   });
-
 
   final List<DrawerItemModel> drawerItems;
   final NullableIndexedWidgetBuilder itemBuilder;

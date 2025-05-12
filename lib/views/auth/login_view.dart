@@ -17,10 +17,8 @@ class LoginView extends StatelessWidget {
     return Directionality(
       textDirection: direction,
       child: Scaffold(
-
         body: Row(
           children: [
-
             Expanded(
               flex: 5,
               child: Container(
@@ -100,15 +98,8 @@ class LoginView extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(
-                top: 24,
-                bottom: 24,
-                left: 24,
-              ),
-              child: Image.asset(
-                Assets.imagesLogoBackground,
-                fit: BoxFit.fill ,
-              ),
+              padding: const EdgeInsets.only(top: 24, bottom: 24, left: 24),
+              child: Image.asset(Assets.imagesLogoBackground, fit: BoxFit.fill),
             ),
           ],
         ),

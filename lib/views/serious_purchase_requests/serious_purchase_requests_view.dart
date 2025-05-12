@@ -4,12 +4,13 @@ import '../customer/widgets/deal_details_dialog.dart' show DealDetailsDialog;
 
 class SeriousPurchaseRequestsView extends StatelessWidget {
   const SeriousPurchaseRequestsView({super.key, required this.onTapItem});
+
   final Function() onTapItem;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 16.0,
-          left: 16, right: 16),
+      padding: const EdgeInsets.only(top: 16.0, left: 16, right: 16),
       child: GridView.builder(
         padding: EdgeInsets.zero,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

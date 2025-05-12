@@ -6,9 +6,7 @@ import '../../../components/app_text_styles.dart';
 import 'pinput.dart';
 
 class EnterPhoneSection extends StatelessWidget {
-  const EnterPhoneSection({
-    super.key,
-  });
+  const EnterPhoneSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,14 +21,13 @@ class EnterPhoneSection extends StatelessWidget {
         Text(
           'أدخل رقم الهاتف',
           style: AppTextStyles.style18W700(context).copyWith(
-              decoration: TextDecoration.underline,
-              decorationColor: AppColors.black),
+            decoration: TextDecoration.underline,
+            decorationColor: AppColors.black,
+          ),
         ),
         AppInputTextFormField(
           labelText: 'رقم الهاتف',
-          prefixIcon: Icon(
-            Icons.phone_outlined,
-          ),
+          prefixIcon: Icon(Icons.phone_outlined),
           keyboardType: TextInputType.emailAddress,
         ),
       ],
@@ -39,9 +36,7 @@ class EnterPhoneSection extends StatelessWidget {
 }
 
 class EnterCodeSection extends StatelessWidget {
-  const EnterCodeSection({
-    super.key,
-  });
+  const EnterCodeSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -56,8 +51,9 @@ class EnterCodeSection extends StatelessWidget {
         Text(
           'أدخل Pin للتأكيد',
           style: AppTextStyles.style18W700(context).copyWith(
-              decoration: TextDecoration.underline,
-              decorationColor: AppColors.black),
+            decoration: TextDecoration.underline,
+            decorationColor: AppColors.black,
+          ),
         ),
         PinInputStyles.buildPinInput(
           onCompleted: (pin) {
@@ -66,9 +62,9 @@ class EnterCodeSection extends StatelessWidget {
         ),
         Text(
           'إعادة إرسال الرمز',
-          style: AppTextStyles.style18W400(context).copyWith(
-            color: AppColors.accent,
-          ),
+          style: AppTextStyles.style18W400(
+            context,
+          ).copyWith(color: AppColors.accent),
         ),
       ],
     );
@@ -76,9 +72,7 @@ class EnterCodeSection extends StatelessWidget {
 }
 
 class EnterNewPassWordSection extends StatelessWidget {
-  const EnterNewPassWordSection({
-    super.key,
-  });
+  const EnterNewPassWordSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -93,15 +87,11 @@ class EnterNewPassWordSection extends StatelessWidget {
           const SizedBox(height: 40),
           AppPassInputTextFormField(
             labelText: 'كلمة المرور',
-            prefixIcon: Icon(
-              Icons.lock_outline,
-            ),
+            prefixIcon: Icon(Icons.lock_outline),
           ),
           AppPassInputTextFormField(
             labelText: 'أدخل كلمة المرور الجديدة',
-            prefixIcon: Icon(
-              Icons.lock_outline,
-            ),
+            prefixIcon: Icon(Icons.lock_outline),
           ),
         ],
       ),

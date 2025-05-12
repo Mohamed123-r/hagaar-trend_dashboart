@@ -7,8 +7,6 @@ import 'widgets/customer_section.dart';
 import 'widgets/customer_service_section.dart';
 import 'widgets/owner_section.dart';
 
-
-
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
 
@@ -25,22 +23,10 @@ class HomeView extends StatelessWidget {
             child: Row(
               spacing: 16,
               children: [
-                Expanded(
-                  flex: 2,
-                  child: CustomerSection(),
-                ),
-                Expanded(
-                  flex: 2,
-                  child: MarketersSection(),
-                ),
-                Expanded(
-                  flex: 2,
-                  child: OwnerSection(),
-                ),
-                Expanded(
-                  flex: 2,
-                  child: CustomerServiceSection(),
-                ),
+                Expanded(flex: 2, child: CustomerSection()),
+                Expanded(flex: 2, child: MarketersSection()),
+                Expanded(flex: 2, child: OwnerSection()),
+                Expanded(flex: 2, child: CustomerServiceSection()),
               ],
             ),
           ),
@@ -49,16 +35,8 @@ class HomeView extends StatelessWidget {
             child: Row(
               spacing: 16,
               children: [
-                Expanded(
-                  flex: 5,
-                  child: ShowDataOfSeriousPurchaseRequests(),
-                ),
-                Expanded(
-                  flex:3,
-                  child: ShowDataOfLandPurchaseRequests(),
-                ),
-
-
+                Expanded(flex: 5, child: ShowDataOfSeriousPurchaseRequests()),
+                Expanded(flex: 3, child: ShowDataOfLandPurchaseRequests()),
               ],
             ),
           ),
@@ -67,9 +45,3 @@ class HomeView extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-

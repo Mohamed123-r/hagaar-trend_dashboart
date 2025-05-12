@@ -1357,7 +1357,9 @@ class _SystemAdministrationViewState extends State<SystemAdministrationView> {
                                                                   fit:
                                                                       BoxFit
                                                                           .cover,
-                                                           Assets.imagesTest2  ),
+                                                                  Assets
+                                                                      .imagesTest2,
+                                                                ),
                                                               ),
                                                             ),
                                                             const SizedBox(),

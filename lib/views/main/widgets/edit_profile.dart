@@ -110,12 +110,12 @@ class _EditProfileState extends State<EditProfile> {
                                 ),
                                 SizedBox(height: 24),
                                 AppButton2(
-                                  text:"حفظ التعديل",
+                                  text: "حفظ التعديل",
                                   onPressed: () {
                                     showDialog(
                                       context: context,
-                                      builder: (context) =>
-                                          AppSuccessAlertDialog(
+                                      builder:
+                                          (context) => AppSuccessAlertDialog(
                                             title: "تم تغير كلمة المرور",
                                           ),
                                     );

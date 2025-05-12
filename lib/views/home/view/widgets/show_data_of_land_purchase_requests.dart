@@ -18,129 +18,151 @@ class ShowDataOfLandPurchaseRequests extends StatelessWidget {
       "name": "Mohammed Hassan",
       "phone": "+966 3245678129",
       "image": "https://randomuser.me/api/portraits/men/1.jpg",
-      "type":"مالك عقار"
+      "type": "مالك عقار",
     },
     {
       "name": "Ahmed Saleh",
       "phone": "+966 567123456",
-      "image": "https://randomuser.me/api/portraits/men/2.jpg",  "type":"مسوق عقار"
+      "image": "https://randomuser.me/api/portraits/men/2.jpg",
+      "type": "مسوق عقار",
     },
     {
       "name": "Omar Khaled",
       "phone": "+966 789345678",
-      "image": "https://randomuser.me/api/portraits/men/3.jpg",  "type":"مكتب عقار"
+      "image": "https://randomuser.me/api/portraits/men/3.jpg",
+      "type": "مكتب عقار",
     },
     {
       "name": "Hassan Mohammed",
       "phone": "+966 901567890",
-      "image": "https://randomuser.me/api/portraits/men/4.jpg", "type":"مكتب عقار"
+      "image": "https://randomuser.me/api/portraits/men/4.jpg",
+      "type": "مكتب عقار",
     },
     {
       "name": "Yousef Ali",
       "phone": "+966 234789012",
-      "image": "https://randomuser.me/api/portraits/men/5.jpg", "type":"مكتب عقار"
+      "image": "https://randomuser.me/api/portraits/men/5.jpg",
+      "type": "مكتب عقار",
     },
     {
       "name": "Khalid Noor",
       "phone": "+966 456901234",
-      "image": "https://randomuser.me/api/portraits/men/6.jpg", "type":"مكتب عقار"
+      "image": "https://randomuser.me/api/portraits/men/6.jpg",
+      "type": "مكتب عقار",
     },
     {
       "name": "Nasser Ibrahim",
       "phone": "+966 678123456",
-      "image": "https://randomuser.me/api/portraits/men/7.jpg", "type":"مكتب عقار"
+      "image": "https://randomuser.me/api/portraits/men/7.jpg",
+      "type": "مكتب عقار",
     },
     {
       "name": "Mohammed Hassan",
       "phone": "+966 3245678129",
-      "image": "https://randomuser.me/api/portraits/men/1.jpg", "type":"مكتب عقار"
+      "image": "https://randomuser.me/api/portraits/men/1.jpg",
+      "type": "مكتب عقار",
     },
     {
       "name": "Ahmed Saleh",
       "phone": "+966 567123456",
-      "image": "https://randomuser.me/api/portraits/men/2.jpg", "type":"مكتب عقار"
+      "image": "https://randomuser.me/api/portraits/men/2.jpg",
+      "type": "مكتب عقار",
     },
     {
       "name": "Omar Khaled",
       "phone": "+966 789345678",
-      "image": "https://randomuser.me/api/portraits/men/3.jpg", "type":"مكتب عقار"
+      "image": "https://randomuser.me/api/portraits/men/3.jpg",
+      "type": "مكتب عقار",
     },
     {
       "name": "Hassan Mohammed",
       "phone": "+966 901567890",
-      "image": "https://randomuser.me/api/portraits/men/4.jpg", "type":"مكتب عقار"
+      "image": "https://randomuser.me/api/portraits/men/4.jpg",
+      "type": "مكتب عقار",
     },
     {
       "name": "Yousef Ali",
       "phone": "+966 234789012",
-      "image": "https://randomuser.me/api/portraits/men/5.jpg", "type":"مكتب عقار"
+      "image": "https://randomuser.me/api/portraits/men/5.jpg",
+      "type": "مكتب عقار",
     },
     {
       "name": "Khalid Noor",
       "phone": "+966 456901234",
-      "image": "https://randomuser.me/api/portraits/men/6.jpg", "type":"مكتب عقار"
+      "image": "https://randomuser.me/api/portraits/men/6.jpg",
+      "type": "مكتب عقار",
     },
     {
       "name": "Nasser Ibrahim",
       "phone": "+966 678123456",
-      "image": "https://randomuser.me/api/portraits/men/7.jpg", "type":"مكتب عقار"
+      "image": "https://randomuser.me/api/portraits/men/7.jpg",
+      "type": "مكتب عقار",
     },
     {
       "name": "Mohammed Hassan",
       "phone": "+966 3245678129",
-      "image": "https://randomuser.me/api/portraits/men/1.jpg", "type":"مكتب عقار"
+      "image": "https://randomuser.me/api/portraits/men/1.jpg",
+      "type": "مكتب عقار",
     },
     {
       "name": "Ahmed Saleh",
       "phone": "+966 567123456",
-      "image": "https://randomuser.me/api/portraits/men/2.jpg", "type":"مكتب عقار"
+      "image": "https://randomuser.me/api/portraits/men/2.jpg",
+      "type": "مكتب عقار",
     },
     {
       "name": "Omar Khaled",
       "phone": "+966 789345678",
-      "image": "https://randomuser.me/api/portraits/men/3.jpg", "type":"مكتب عقار"
+      "image": "https://randomuser.me/api/portraits/men/3.jpg",
+      "type": "مكتب عقار",
     },
     {
       "name": "Hassan Mohammed",
       "phone": "+966 901567890",
-      "image": "https://randomuser.me/api/portraits/men/4.jpg", "type":"مكتب عقار"
+      "image": "https://randomuser.me/api/portraits/men/4.jpg",
+      "type": "مكتب عقار",
     },
     {
       "name": "Yousef Ali",
       "phone": "+966 234789012",
-      "image": "https://randomuser.me/api/portraits/men/5.jpg", "type":"مكتب عقار"
+      "image": "https://randomuser.me/api/portraits/men/5.jpg",
+      "type": "مكتب عقار",
     },
     {
       "name": "Khalid Noor",
       "phone": "+966 456901234",
-      "image": "https://randomuser.me/api/portraits/men/6.jpg", "type":"مكتب عقار"
+      "image": "https://randomuser.me/api/portraits/men/6.jpg",
+      "type": "مكتب عقار",
     },
     {
       "name": "Nasser Ibrahim",
       "phone": "+966 678123456",
-      "image": "https://randomuser.me/api/portraits/men/7.jpg", "type":"مكتب عقار"
+      "image": "https://randomuser.me/api/portraits/men/7.jpg",
+      "type": "مكتب عقار",
     },
     {
       "name": "Tariq Salman",
       "phone": "+966 890345678",
-      "image": "https://randomuser.me/api/portraits/men/8.jpg", "type":"مكتب عقار"
+      "image": "https://randomuser.me/api/portraits/men/8.jpg",
+      "type": "مكتب عقار",
     },
     {
       "name": "Adel Hussein",
       "phone": "+966 123567890",
-      "image": "https://randomuser.me/api/portraits/men/9.jpg", "type":"مكتب عقار"
+      "image": "https://randomuser.me/api/portraits/men/9.jpg",
+      "type": "مكتب عقار",
     },
     {
       "name": "Bashar Zaid",
       "phone": "+966 345789012",
-      "image": "https://randomuser.me/api/portraits/men/10.jpg", "type":"مكتب عقار"
-
+      "image": "https://randomuser.me/api/portraits/men/10.jpg",
+      "type": "مكتب عقار",
     },
     {
       "name": "Othman Sami",
       "phone": "+966 567901234",
-      "image": "https://randomuser.me/api/portraits/men/11.jpg", "type":"مكتب عقار"
-
+      "image": "https://randomuser.me/api/portraits/men/11.jpg",
+      "type": "مكتب عقار",
     },
   ];
 
@@ -181,86 +203,90 @@ class ShowDataOfLandPurchaseRequests extends StatelessWidget {
           Expanded(
             child: ListView.builder(
               padding: EdgeInsets.zero,
-              itemBuilder: (context, index) => InkWell(
-                  onTap: (){
-                    showDialog(
-                      context: context,
-                      builder: (context) => Directionality(
-                        textDirection: direction,
-                        child: AppAlertDialog(
-                          title: "",
-                          body: Padding(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 16,
-                              vertical: 32,
-                            ),
-                            child: SizedBox(
-                              height: 800,
-                              child: SingleChildScrollView(
-                                child: Column(
-                                  spacing: 16,
-                                  children: [
-                                    Container(
-                                      width: 230,
-                                      height: 230,
-                                      decoration: BoxDecoration(
-                                        color: Colors.red,
-                                        image: DecorationImage(
-                                          image: NetworkImage(
-                                            users[index]["image"].toString(),
+              itemBuilder:
+                  (context, index) => InkWell(
+                    onTap: () {
+                      showDialog(
+                        context: context,
+                        builder:
+                            (context) => Directionality(
+                              textDirection: direction,
+                              child: AppAlertDialog(
+                                title: "",
+                                body: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 16,
+                                    vertical: 32,
+                                  ),
+                                  child: SizedBox(
+                                    height: 800,
+                                    child: SingleChildScrollView(
+                                      child: Column(
+                                        spacing: 16,
+                                        children: [
+                                          Container(
+                                            width: 230,
+                                            height: 230,
+                                            decoration: BoxDecoration(
+                                              color: Colors.red,
+                                              image: DecorationImage(
+                                                image: NetworkImage(
+                                                  users[index]["image"]
+                                                      .toString(),
+                                                ),
+                                                fit: BoxFit.cover,
+                                              ),
+                                              borderRadius:
+                                                  BorderRadius.circular(200),
+                                            ),
                                           ),
-                                          fit: BoxFit.cover,
-                                        ),
-                                        borderRadius: BorderRadius.circular(200),
+                                          Text(
+                                            users[index]["name"].toString(),
+                                            style: AppTextStyles.style24W400(
+                                              context,
+                                            ),
+                                          ),
+                                          Text(
+                                            "مستخدم للتطبيق",
+                                            //ال case هنا بتتغير بناء علي مين اللي طلب هنا من العضويات
+                                            style: AppTextStyles.style20W400(
+                                              context,
+                                            ).copyWith(color: AppColors.grey),
+                                          ),
+                                          ShowData(
+                                            title: "رقم الهاتف :",
+                                            value: "+20 0108376543222",
+                                          ),
+                                          ShowData(
+                                            title: "السعر :",
+                                            value:
+                                                "132 الف ريال  :  300 ألف ريال",
+                                          ),
+                                          ShowData(
+                                            title: "نوع الأرض :",
+                                            value: "سكنية",
+                                          ),
+                                          ShowData(
+                                            title: "المدينة :",
+                                            value: "الرياض",
+                                          ),
+                                          ShowData(
+                                            title: "المنطقة :",
+                                            value: "الرياض",
+                                          ),
+                                          // Remove the Spacer() here
+                                        ],
                                       ),
                                     ),
-                                    Text(
-                                      users[index]["name"].toString(),
-                                      style: AppTextStyles.style24W400(
-                                        context,
-                                      ),
-                                    ),
-                                    Text(
-                                      "مستخدم للتطبيق",
-                                      //ال case هنا بتتغير بناء علي مين اللي طلب هنا من العضويات
-                                      style: AppTextStyles.style20W400(
-                                        context,
-                                      ).copyWith(color: AppColors.grey),
-                                    ),
-                                    ShowData(
-                                      title: "رقم الهاتف :",
-                                      value: "+20 0108376543222",
-                                    ),
-                                    ShowData(
-                                      title: "السعر :",
-                                      value: "132 الف ريال  :  300 ألف ريال",
-                                    ),
-                                    ShowData(
-                                      title: "نوع الأرض :",
-                                      value: "سكنية",
-                                    ),
-                                    ShowData(
-                                      title: "المدينة :",
-                                      value: "الرياض",
-                                    ),
-                                    ShowData(
-                                      title: "المنطقة :",
-                                      value: "الرياض",
-                                    ),
-                                    // Remove the Spacer() here
-                                  ],
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                        ),
-                      ),
-                    );
-                  } ,
-                  child
-
-                  : ListItemHor(users: users[index])),
-            itemCount: users.length,
+                      );
+                    },
+                    child: ListItemHor(users: users[index]),
+                  ),
+              itemCount: users.length,
             ),
           ),
         ],
@@ -268,4 +294,3 @@ class ShowDataOfLandPurchaseRequests extends StatelessWidget {
     );
   }
 }
-

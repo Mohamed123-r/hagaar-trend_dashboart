@@ -599,109 +599,116 @@ class _CustomerServiceViewState extends State<CustomerServiceView> {
               crossAxisSpacing: 8,
               mainAxisSpacing: 8,
 
-              children: List.generate(userType == "office"
-    ? office.length
-        : userType == "company"
-    ? company.length
-        : users.length, (index) {
-                return InkWell(
-                  borderRadius: BorderRadius.circular(32),
-                  onTap: () {
-                    showDialog(
-                      context: context,
-                      builder:
-                          (context) => Directionality(
-                            textDirection: direction,
-                            child: AppAlertDialog(
-                              title: "",
-                              body: Padding(
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 16,
-                                  vertical: 32,
-                                ),
-                                child: SizedBox(
-                                  height: 800,
-                                  child: SingleChildScrollView(
-                                    child: Column(
-                                      spacing: 8,
-                                      children: [
-                                        Container(
-                                          width: 230,
-                                          height: 230,
-                                          decoration: BoxDecoration(
-                                            color: Colors.red,
-                                            image: DecorationImage(
-                                              image: NetworkImage(
-                                                users[index]["image"]
-                                                    .toString(),
+              children: List.generate(
+                userType == "office"
+                    ? office.length
+                    : userType == "company"
+                    ? company.length
+                    : users.length,
+                (index) {
+                  return InkWell(
+                    borderRadius: BorderRadius.circular(32),
+                    onTap: () {
+                      showDialog(
+                        context: context,
+                        builder:
+                            (context) => Directionality(
+                              textDirection: direction,
+                              child: AppAlertDialog(
+                                title: "",
+                                body: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 16,
+                                    vertical: 32,
+                                  ),
+                                  child: SizedBox(
+                                    height: 800,
+                                    child: SingleChildScrollView(
+                                      child: Column(
+                                        spacing: 8,
+                                        children: [
+                                          Container(
+                                            width: 230,
+                                            height: 230,
+                                            decoration: BoxDecoration(
+                                              color: Colors.red,
+                                              image: DecorationImage(
+                                                image: NetworkImage(
+                                                  users[index]["image"]
+                                                      .toString(),
+                                                ),
+                                                fit: BoxFit.cover,
                                               ),
-                                              fit: BoxFit.cover,
-                                            ),
-                                            borderRadius: BorderRadius.circular(
-                                              200,
+                                              borderRadius:
+                                                  BorderRadius.circular(200),
                                             ),
                                           ),
-                                        ),
-                                        Text(
-                                          users[index]["name"].toString(),
-                                          style: AppTextStyles.style24W400(
-                                            context,
+                                          Text(
+                                            users[index]["name"].toString(),
+                                            style: AppTextStyles.style24W400(
+                                              context,
+                                            ),
                                           ),
-                                        ),
-                                        Text(
-                                          "+20 0108765434567",
-                                          style: AppTextStyles.style20W400(
-                                            context,
-                                          ).copyWith(color: AppColors.grey),
-                                        ),
-                                        Text(
-                                          customerType == 'owner'
-                                              ? "مالك عقارات"
-                                              : customerType == 'office'
-                                              ? "مكتب عقارات"
-                                              : customerType == 'company'
-                                              ? "شركة عقارات"
-                                              : customerType == 'agent'
-                                              ? "مسوق عقاري"
-                                              : customerType == 'bank'
-                                              ? "موظف بنكي"
-                                              : customerType == 'customer' ? "مستخدم للتطبيق":   "مستخدم للتطبيق",
-                                          //ال case هنا بتتغير بناء علي مين اللي طلب هنا من العضويات
-                                          style: AppTextStyles.style20W400(
-                                            context,
-                                          ).copyWith(color: AppColors.grey),
-                                        ),
+                                          Text(
+                                            "+20 0108765434567",
+                                            style: AppTextStyles.style20W400(
+                                              context,
+                                            ).copyWith(color: AppColors.grey),
+                                          ),
+                                          Text(
+                                            customerType == 'owner'
+                                                ? "مالك عقارات"
+                                                : customerType == 'office'
+                                                ? "مكتب عقارات"
+                                                : customerType == 'company'
+                                                ? "شركة عقارات"
+                                                : customerType == 'agent'
+                                                ? "مسوق عقاري"
+                                                : customerType == 'bank'
+                                                ? "موظف بنكي"
+                                                : customerType == 'customer'
+                                                ? "مستخدم للتطبيق"
+                                                : "مستخدم للتطبيق",
+                                            //ال case هنا بتتغير بناء علي مين اللي طلب هنا من العضويات
+                                            style: AppTextStyles.style20W400(
+                                              context,
+                                            ).copyWith(color: AppColors.grey),
+                                          ),
 
-                                        ShowData2(
-                                          title: "الشكوي :",
-                                          value:
-                                              "أواجه مشكلة في إضافة العقار نظرا لعدم حصولي علي رخصة نفاذ",
-                                        ),
-                                        AppInputTextFormField(
-                                          maxLines: 5,
-                                          labelText: "أرسل ردا :",
-                                        ),
-                                        SizedBox(),
-                                        AppButton2(
-                                          text: "إرسال الرد",
-                                          onPressed: () {},
-                                        ),
-                                      ],
+                                          ShowData2(
+                                            title: "الشكوي :",
+                                            value:
+                                                "أواجه مشكلة في إضافة العقار نظرا لعدم حصولي علي رخصة نفاذ",
+                                          ),
+                                          AppInputTextFormField(
+                                            maxLines: 5,
+                                            labelText: "أرسل ردا :",
+                                          ),
+                                          SizedBox(),
+                                          AppButton2(
+                                            text: "إرسال الرد",
+                                            onPressed: () {},
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 ),
                               ),
                             ),
-                          ),
-                    );
-                  },
-                  child: ListViewItem(users:     userType == "office"
-                      ? office[index]
-                      : userType == "company"
-                      ? company[index]
-                      : users[index],),
-                );
-              }),
+                      );
+                    },
+                    child: ListViewItem(
+                      users:
+                          userType == "office"
+                              ? office[index]
+                              : userType == "company"
+                              ? company[index]
+                              : users[index],
+                    ),
+                  );
+                },
+              ),
             ),
           ),
         ),

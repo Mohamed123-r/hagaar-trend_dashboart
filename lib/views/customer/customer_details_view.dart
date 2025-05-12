@@ -25,14 +25,14 @@ class CustomerDetailsView extends StatelessWidget {
           children: [
             Expanded(
               flex: 1,
-              child: userType=="office" || userType=="company"? OfficeDataSection():CustomerDataSection(),
+              child:
+                  userType == "office" || userType == "company"
+                      ? OfficeDataSection()
+                      : CustomerDataSection(),
             ),
             // Left: Deals
             const SizedBox(width: 24),
-            Expanded(
-              flex: 2,
-              child: CustomerDealsSection(),
-            ),
+            Expanded(flex: 2, child: CustomerDealsSection()),
 
             // Right: Customer Info
           ],
@@ -41,6 +41,3 @@ class CustomerDetailsView extends StatelessWidget {
     );
   }
 }
-
-
-

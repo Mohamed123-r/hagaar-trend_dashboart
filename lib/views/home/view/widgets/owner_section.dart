@@ -1,34 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-
 import '../../../../components/app_colors.dart';
 import '../../../../components/app_text_styles.dart';
 import '../../../../generated/assets.dart';
 
 class OwnerSection extends StatelessWidget {
-  const OwnerSection({
-    super.key,
-  });
+  const OwnerSection({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Color(0xffF8F4FF) ,
+        color: Color(0xffF8F4FF),
         borderRadius: BorderRadius.circular(32),
-        border: Border.all(
-          width: 1,
-          color: AppColors.border,
-        ),
+        border: Border.all(width: 1, color: AppColors.border),
       ),
       child: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 24.0,
-              vertical: 16,
-            ),
+            padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 16),
             child: Row(
               children: [
                 Container(
@@ -54,14 +45,8 @@ class OwnerSection extends StatelessWidget {
               ],
             ),
           ),
-          Text(
-            '232',
-            style: AppTextStyles.style48W400(context),
-          ),
-          Text(
-            'مالك / مكتب عقاري',
-            style: AppTextStyles.style18W400(context),
-          ),
+          Text('232', style: AppTextStyles.style48W400(context)),
+          Text('مالك / مكتب عقاري', style: AppTextStyles.style18W400(context)),
         ],
       ),
     );

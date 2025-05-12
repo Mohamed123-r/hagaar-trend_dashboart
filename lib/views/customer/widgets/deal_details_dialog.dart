@@ -91,7 +91,8 @@ class DealDetailsDialog extends StatelessWidget {
                       ),
                       const SizedBox(height: 32),
                       Text(
-                        " البائع : مالك عقارات",//دي  بتتغير علي حسب اللي راجه من الباك المالك ولا المكتب ولا الشركه
+                        " البائع : مالك عقارات",
+                        //دي  بتتغير علي حسب اللي راجه من الباك المالك ولا المكتب ولا الشركه
                         style: AppTextStyles.style20W400(context),
                       ),
                       const SizedBox(height: 8),

@@ -49,8 +49,3 @@ class CustomerDealsSection extends StatelessWidget {
     );
   }
 }
-
-
-
-
-

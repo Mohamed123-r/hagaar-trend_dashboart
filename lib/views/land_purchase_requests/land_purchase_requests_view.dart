@@ -8,7 +8,7 @@ import '../../components/show_data_widget.dart';
 import '../../constant.dart';
 
 class LandPurchaseRequestsView extends StatelessWidget {
-   LandPurchaseRequestsView({super.key});
+  LandPurchaseRequestsView({super.key});
 
   final List<Map<String, String>> users = [
     {
@@ -217,6 +217,7 @@ class LandPurchaseRequestsView extends StatelessWidget {
       "image": "https://randomuser.me/api/portraits/men/11.jpg",
     },
   ];
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -233,76 +234,69 @@ class LandPurchaseRequestsView extends StatelessWidget {
             onTap: () {
               showDialog(
                 context: context,
-                builder: (context) => Directionality(
-                  textDirection: direction,
-                  child: AppAlertDialog(
-                    title: "",
-                    body: Padding(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 16,
-                        vertical: 32,
-                      ),
-                      child: SizedBox(
-                        height: 800,
-                        child: SingleChildScrollView(
-                          child: Column(
-                            spacing: 16,
-                            children: [
-                              Container(
-                                width: 230,
-                                height: 230,
-                                decoration: BoxDecoration(
-                                  color: Colors.red,
-                                  image: DecorationImage(
-                                    image: NetworkImage(
-                                      users[index]["image"].toString(),
+                builder:
+                    (context) => Directionality(
+                      textDirection: direction,
+                      child: AppAlertDialog(
+                        title: "",
+                        body: Padding(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 16,
+                            vertical: 32,
+                          ),
+                          child: SizedBox(
+                            height: 800,
+                            child: SingleChildScrollView(
+                              child: Column(
+                                spacing: 16,
+                                children: [
+                                  Container(
+                                    width: 230,
+                                    height: 230,
+                                    decoration: BoxDecoration(
+                                      color: Colors.red,
+                                      image: DecorationImage(
+                                        image: NetworkImage(
+                                          users[index]["image"].toString(),
+                                        ),
+                                        fit: BoxFit.cover,
+                                      ),
+                                      borderRadius: BorderRadius.circular(200),
                                     ),
-                                    fit: BoxFit.cover,
                                   ),
-                                  borderRadius: BorderRadius.circular(200),
-                                ),
+                                  Text(
+                                    users[index]["name"].toString(),
+                                    style: AppTextStyles.style24W400(context),
+                                  ),
+                                  Text(
+                                    "مستخدم للتطبيق",
+                                    //ال case هنا بتتغير بناء علي مين اللي طلب هنا من العضويات
+                                    style: AppTextStyles.style20W400(
+                                      context,
+                                    ).copyWith(color: AppColors.grey),
+                                  ),
+                                  ShowData(
+                                    title: "رقم الهاتف :",
+                                    value: "+20 0108376543222",
+                                  ),
+                                  ShowData(
+                                    title: "السعر :",
+                                    value: "132 الف ريال  :  300 ألف ريال",
+                                  ),
+                                  ShowData(
+                                    title: "نوع الأرض :",
+                                    value: "سكنية",
+                                  ),
+                                  ShowData(title: "المدينة :", value: "الرياض"),
+                                  ShowData(title: "المنطقة :", value: "الرياض"),
+                                  // Remove the Spacer() here
+                                ],
                               ),
-                              Text(
-                                users[index]["name"].toString(),
-                                style: AppTextStyles.style24W400(
-                                  context,
-                                ),
-                              ),
-                              Text(
-                                "مستخدم للتطبيق",
-                                //ال case هنا بتتغير بناء علي مين اللي طلب هنا من العضويات
-                                style: AppTextStyles.style20W400(
-                                  context,
-                                ).copyWith(color: AppColors.grey),
-                              ),
-                              ShowData(
-                                title: "رقم الهاتف :",
-                                value: "+20 0108376543222",
-                              ),
-                              ShowData(
-                                title: "السعر :",
-                                value: "132 الف ريال  :  300 ألف ريال",
-                              ),
-                              ShowData(
-                                title: "نوع الأرض :",
-                                value: "سكنية",
-                              ),
-                              ShowData(
-                                title: "المدينة :",
-                                value: "الرياض",
-                              ),
-                              ShowData(
-                                title: "المنطقة :",
-                                value: "الرياض",
-                              ),
-                              // Remove the Spacer() here
-                            ],
+                            ),
                           ),
                         ),
                       ),
                     ),
-                  ),
-                ),
               );
             },
             child: ListViewItem(users: users[index]),

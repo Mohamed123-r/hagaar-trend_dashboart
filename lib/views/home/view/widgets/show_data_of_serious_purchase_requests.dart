@@ -186,8 +186,7 @@ class ShowDataOfSeriousPurchaseRequests extends StatelessWidget {
                   onTap: () {
                     showDialog(
                       context: context,
-                      builder:
-                          (context) => DealDetailsDialog(),
+                      builder: (context) => DealDetailsDialog(),
                     );
                   },
                   child: Container(

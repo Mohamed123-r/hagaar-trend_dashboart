@@ -34,7 +34,10 @@ class CustomerDataSection extends StatelessWidget {
             ),
           ),
           const SizedBox(),
-          Text("Mohammed Hassan Ali", style: AppTextStyles.style24W400(context)),
+          Text(
+            "Mohammed Hassan Ali",
+            style: AppTextStyles.style24W400(context),
+          ),
           Text(
             userType == 'customer'
                 ? "مستخدم للتطبيق"

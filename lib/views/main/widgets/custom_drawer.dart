@@ -27,12 +27,14 @@ class CustomDrawer extends StatelessWidget {
       width: width,
       decoration: BoxDecoration(
         border: Border(
-          right: direction == TextDirection.ltr
-              ? BorderSide(color: AppColors.border, width: 1)
-              : BorderSide(color: AppColors.white, width: 1),
-          left: direction == TextDirection.rtl
-              ? BorderSide(color: AppColors.border, width: 1)
-              : BorderSide(color: AppColors.white, width: 1),
+          right:
+              direction == TextDirection.ltr
+                  ? BorderSide(color: AppColors.border, width: 1)
+                  : BorderSide(color: AppColors.white, width: 1),
+          left:
+              direction == TextDirection.rtl
+                  ? BorderSide(color: AppColors.border, width: 1)
+                  : BorderSide(color: AppColors.white, width: 1),
         ),
       ),
       child: CustomScrollView(
@@ -42,18 +44,12 @@ class CustomDrawer extends StatelessWidget {
               padding: const EdgeInsets.only(top: 16.0),
               child: Row(
                 children: [
-                  Image.asset(
-                    Assets.imagesLogo,
-                    height: 54,
-                    width: 64,
-                  ),
-                  SizedBox(
-                    width: 24,
-                  ),
+                  Image.asset(Assets.imagesLogo, height: 54, width: 64),
+                  SizedBox(width: 24),
                   Text(
                     "ترند العقار",
                     style: AppTextStyles.style24W700(context),
-                  )
+                  ),
                 ],
               ),
             ),
@@ -62,9 +58,7 @@ class CustomDrawer extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(
-                  height: MediaQuery.of(context).size.height / 65,
-                ),
+                SizedBox(height: MediaQuery.of(context).size.height / 65),
                 Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: Text(
@@ -100,9 +94,7 @@ class CustomDrawer extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Icon(Icons.logout_outlined),
-                      SizedBox(
-                        width: 16,
-                      ),
+                      SizedBox(width: 16),
                       Text(
                         "تسجيل الخروج",
                         style: AppTextStyles.style18W400(context),
@@ -110,9 +102,7 @@ class CustomDrawer extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(
-                  height: 24,
-                ),
+                SizedBox(height: 24),
               ],
             ),
           ),
@@ -121,4 +111,3 @@ class CustomDrawer extends StatelessWidget {
     );
   }
 }
-

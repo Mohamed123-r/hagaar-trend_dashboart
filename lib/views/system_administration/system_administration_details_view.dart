@@ -130,16 +130,15 @@ class _SystemAdministrationDetailsViewState
                         height: 56,
                         color: AppColors.greenDark,
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(
-                            1600,
-                          ),
+                          borderRadius: BorderRadius.circular(1600),
                         ),
                         onPressed: () {
                           showDialog(
                             context: context,
                             builder:
-                                (context) =>
-                               AppSuccessAlertDialog(title: "تم دفع قيمة الإتفاق للنظام"),
+                                (context) => AppSuccessAlertDialog(
+                                  title: "تم دفع قيمة الإتفاق للنظام",
+                                ),
                           );
                         },
                         child: Text(
