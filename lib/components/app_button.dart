@@ -39,7 +39,7 @@ class AppButton2 extends StatelessWidget {
     super.key,
     required this.text,
     required this.onPressed,
-    this.color,
+    this.color,  this.isMinWidth = false,
   });
 
   final String text;
@@ -47,7 +47,7 @@ class AppButton2 extends StatelessWidget {
   final VoidCallback onPressed;
 
   final Color? color;
-
+final bool isMinWidth;
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
@@ -55,7 +55,7 @@ class AppButton2 extends StatelessWidget {
       color: color ?? AppColors.black,
       padding: EdgeInsets.symmetric(horizontal: 32),
       height: 56,
-      minWidth: 200,
+      minWidth: isMinWidth ? 0 : 100,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       child: Text(
         text,

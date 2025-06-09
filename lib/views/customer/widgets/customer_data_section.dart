@@ -39,6 +39,9 @@ class CustomerDataSection extends StatelessWidget {
             style: AppTextStyles.style24W400(context),
           ),
           Text(
+            userType == "bank"
+                ? "موظف بنك"
+                :
             userType == 'customer'
                 ? "مستخدم للتطبيق"
                 : userType == 'owner'
@@ -55,6 +58,9 @@ class CustomerDataSection extends StatelessWidget {
           ShowData(
             title: "نوع العضوية :",
             value:
+                userType == 'bank'
+                    ? "موظف بنك"
+                    :
                 userType == 'customer'
                     ? "مستخدم للتطبيق"
                     : userType == 'owner'
@@ -66,7 +72,12 @@ class CustomerDataSection extends StatelessWidget {
           ShowData(title: "المدينة :", value: "الرياض"),
           ShowData(title: "المنطقة :", value: "الرياض"),
           ShowData(title: "الحي :", value: "الرياض"),
-        ],
+          if (userType == 'bank'  )
+            ShowData(
+              title: "البنك التابع له :",
+              value: "بنك STC السعودي",
+            ),
+    ]
       ),
     );
   }
