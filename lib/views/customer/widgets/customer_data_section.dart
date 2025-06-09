@@ -51,9 +51,9 @@ class CustomerDataSection extends StatelessWidget {
             ).copyWith(color: AppColors.grey),
           ),
           const SizedBox(height: 8),
-          ShowData(title: "رقم الهاتف", value: "+20 010837654322"),
+          ShowData(title: "رقم الهاتف :", value: "+20 010837654322"),
           ShowData(
-            title: "نوع العضوية",
+            title: "نوع العضوية :",
             value:
                 userType == 'customer'
                     ? "مستخدم للتطبيق"
@@ -63,8 +63,9 @@ class CustomerDataSection extends StatelessWidget {
                     ? "مسوق عقاري"
                     : "",
           ),
-          ShowData(title: "المدينة", value: "الرياض"),
-          ShowData(title: "المنطقة", value: "الرياض"),
+          ShowData(title: "المدينة :", value: "الرياض"),
+          ShowData(title: "المنطقة :", value: "الرياض"),
+          ShowData(title: "الحي :", value: "الرياض"),
         ],
       ),
     );

@@ -4,12 +4,8 @@ import 'package:hagaar_trend_dashboard/constant.dart';
 import 'app_colors.dart';
 import 'app_text_styles.dart';
 
-
 class ListViewItem extends StatelessWidget {
-  const ListViewItem({
-    super.key,
-    required this.users,
-  });
+  const ListViewItem({super.key, required this.users});
 
   final Map<String, String> users;
 
@@ -18,10 +14,7 @@ class ListViewItem extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(32),
-        border: Border.all(
-          width: 1,
-          color: AppColors.border,
-        ),
+        border: Border.all(width: 1, color: AppColors.border),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -33,42 +26,40 @@ class ListViewItem extends StatelessWidget {
             decoration: BoxDecoration(
               color: AppColors.white,
               shape: BoxShape.circle,
-              border: Border.all(
-                color: AppColors.border,
-              ),
+              border: Border.all(color: AppColors.border),
             ),
             child: Center(
-              child:userType =="office" ||userType =="company" ?ClipRRect(
-                borderRadius: BorderRadius.circular(320),
-                child: Image.asset(
-                  users['image']!,
-                  width: 62,
-                  height: 62,
-                  fit: BoxFit.cover,
-                ),
-              ): ClipRRect(
-                borderRadius: BorderRadius.circular(320),
-                child: Image.network(
-                  users['image']!,
-                  width: 62,
-                  height: 62,
-                  fit: BoxFit.cover,
-                ),
-              ),
+              child:
+                  userType == "office" ||
+                          userType == "company" ||
+                          userType == "bank"
+                      ? ClipRRect(
+                        borderRadius: BorderRadius.circular(320),
+                        child: Image.asset(
+                          users['image']!,
+                          width: 62,
+                          height: 62,
+                          fit: BoxFit.cover,
+                        ),
+                      )
+                      : ClipRRect(
+                        borderRadius: BorderRadius.circular(320),
+                        child: Image.network(
+                          users['image']!,
+                          width: 62,
+                          height: 62,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
             ),
           ),
-          Text(
-            users['name']!,
-            style: AppTextStyles.style16W400(context),
-          ),
-          SizedBox(
-            height: 4,
-          ),
+          Text(users['name']!, style: AppTextStyles.style16W400(context)),
+          SizedBox(height: 4),
           Text(
             users['phone']!,
-            style: AppTextStyles.style16W400(context).copyWith(
-              color: AppColors.grey,
-            ),
+            style: AppTextStyles.style16W400(
+              context,
+            ).copyWith(color: AppColors.grey),
           ),
         ],
       ),
