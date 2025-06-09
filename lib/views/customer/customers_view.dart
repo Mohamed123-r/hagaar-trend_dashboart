@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:hagaar_trend_dashboard/components/app_alert_dialog.dart';
+import 'package:hagaar_trend_dashboard/components/app_button.dart';
 import 'package:hagaar_trend_dashboard/components/app_colors.dart';
+import 'package:hagaar_trend_dashboard/components/app_form_filed.dart';
 import 'package:hagaar_trend_dashboard/generated/assets.dart';
 import '../../components/app_text_styles.dart';
 import '../../components/list_item.dart';
@@ -446,6 +450,48 @@ class _CustomersViewState extends State<CustomersView> {
       "image": Assets.imagesTest3,
     },
   ];
+  final List<Map<String, String>> banker = [
+    {
+      "name": "بنك أبو ظبي الإسلامي",
+      "phone": "الرياض",
+      "image": Assets.imagesTest4,
+    },
+    {
+      "name": "بنك أبو ظبي الإسلامي",
+      "phone": "الرياض",
+      "image": Assets.imagesTest4,
+    },
+    {
+      "name": "بنك أبو ظبي الإسلامي",
+      "phone": "الرياض",
+      "image": Assets.imagesTest4,
+    },
+    {
+      "name": "بنك أبو ظبي الإسلامي",
+      "phone": "الرياض",
+      "image": Assets.imagesTest4,
+    },
+    {
+      "name": "بنك أبو ظبي الإسلامي",
+      "phone": "الرياض",
+      "image": Assets.imagesTest4,
+    },
+    {
+      "name": "بنك أبو ظبي الإسلامي",
+      "phone": "الرياض",
+      "image": Assets.imagesTest4,
+    },
+    {
+      "name": "بنك أبو ظبي الإسلامي",
+      "phone": "الرياض",
+      "image": Assets.imagesTest4,
+    },
+    {
+      "name": "بنك أبو ظبي الإسلامي",
+      "phone": "الرياض",
+      "image": Assets.imagesTest4,
+    },
+  ];
   String type = 'customer';
 
   @override
@@ -569,33 +615,142 @@ class _CustomersViewState extends State<CustomersView> {
         Expanded(
           child: Padding(
             padding: EdgeInsets.only(top: 16, right: 16, left: 16),
-            child: GridView.count(
-              padding: EdgeInsets.zero,
-              crossAxisCount: 7,
-              crossAxisSpacing: 8,
-              mainAxisSpacing: 8,
+            child: Stack(
+              children: [
+                GridView.count(
+                  padding: EdgeInsets.zero,
+                  crossAxisCount: 7,
+                  crossAxisSpacing: 8,
+                  mainAxisSpacing: 8,
 
-              children: List.generate(
-                userType == "office"
-                    ? office.length
-                    : userType == "company"
-                    ? company.length
-                    : users.length,
-                (index) {
-                  return InkWell(
-                    borderRadius: BorderRadius.circular(32),
-                    onTap: widget.onTapItem,
-                    child: ListViewItem(
-                      users:
-                          userType == "office"
-                              ? office[index]
-                              : userType == "company"
-                              ? company[index]
-                              : users[index],
+                  children: List.generate(
+                    userType == "bank"
+                        ? banker.length
+                        : userType == "owner"
+                        ? users.length
+                        : userType == "office"
+                        ? office.length
+                        : userType == "company"
+                        ? company.length
+                        : users.length,
+                    (index) {
+                      return InkWell(
+                        borderRadius: BorderRadius.circular(32),
+                        onTap: widget.onTapItem,
+                        child: ListViewItem(
+                          users:
+                              userType == "bank"
+                                  ? banker[index]
+                                  : userType == "owner"
+                                  ? users[index]
+                                  : userType == "office"
+                                  ? office[index]
+                                  : userType == "company"
+                                  ? company[index]
+                                  : users[index],
+                        ),
+                      );
+                    },
+                  ),
+                ),
+                if (userType == "bank")
+                  Positioned(
+                    bottom: 16,
+                    right: 0,
+                    child: AppButton2(
+                      text: "إضافة بنك للنظام",
+                      onPressed: () {
+                        showDialog(
+                          context: context,
+                          builder: (context) {
+                            return AppAlertDialog(
+                              title: "إضافة بنك",
+                              body: Padding(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 16,
+                                  vertical: 24,
+                                ),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    SizedBox(height: 16),
+                                    Stack(
+                                      children: [
+                                        Container(
+                                          width: 164,
+                                          height: 164,
+                                          decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                            color: AppColors.border,
+                                          ),
+                                          child: Center(
+                                            child: SvgPicture.asset(
+                                              Assets.imagesBuildings,
+                                              fit: BoxFit.scaleDown,
+                                            ),
+                                          ),
+                                        ),
+                                        Positioned(
+                                          bottom: 8,
+                                          right: 8,
+                                          child: Container(
+                                            width: 32,
+                                            height: 32,
+                                            decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                              color: AppColors.white,
+                                              border: Border.all(
+                                                width: 1,
+                                                color: AppColors.border,
+                                              ),
+                                            ),
+                                            child: Center(
+                                              child: SvgPicture.asset(
+                                                Assets.imagesCamera,
+                                                fit: BoxFit.scaleDown,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+
+                                    SizedBox(height: 16),
+                                    AppInputTextFormField(
+                                      labelText: "إسم البنك",
+                                    ),
+                                    SizedBox(height: 16),
+                                    AppInputTextFormField(
+                                      labelText: "المدينة التابع لها",
+                                      keyboardType: TextInputType.phone,
+                                    ),
+                                    SizedBox(height: 32),
+                                    AppButton2(
+                                      text: "إضافة البنك",
+                                      onPressed: () {
+                                        showDialog(
+                                          context: context,
+                                          builder:
+                                              (context) => AppAlertDialog2(
+                                                title: "تم إضافة البنك للنظام",
+                                                onPressedOk: () {
+                                                  Navigator.pop(context);
+                                                  Navigator.pop(context);
+                                                },
+                                              ),
+                                        );
+                                      },
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            );
+                          },
+                        );
+                      },
                     ),
-                  );
-                },
-              ),
+                  ),
+              ],
             ),
           ),
         ),

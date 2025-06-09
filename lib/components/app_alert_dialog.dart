@@ -101,14 +101,10 @@ class AppAlertDialog2 extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: AppTextStyles.style20W400(context),
                 ),
-                // AppButton(
-                //   body: Text(
-                //     "موافق",
-                //     style: AppTextStyles.style18W700(context)
-                //         .copyWith(color: AppColors.white),
-                //   ),
-                //   onPressed: onPressedOk,
-                // ),
+                AppButton2(
+
+                  onPressed: onPressedOk, text: "موافق",
+                ),
               ],
             ),
           ),
