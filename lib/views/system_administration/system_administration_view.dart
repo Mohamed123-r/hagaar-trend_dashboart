@@ -470,6 +470,48 @@ class _SystemAdministrationViewState extends State<SystemAdministrationView> {
     {'name': 'مستودعات', 'amount': 'أربال 3000'},
     {'name': 'معارض', 'amount': 'أربال 3000'},
   ];
+  final List<Map<String, String>> banker = [
+    {
+      "name": "بنك أبو ظبي الإسلامي",
+      "phone": "الرياض",
+      "image": Assets.imagesTest4,
+    },
+    {
+      "name": "بنك أبو ظبي الإسلامي",
+      "phone": "الرياض",
+      "image": Assets.imagesTest4,
+    },
+    {
+      "name": "بنك أبو ظبي الإسلامي",
+      "phone": "الرياض",
+      "image": Assets.imagesTest4,
+    },
+    {
+      "name": "بنك أبو ظبي الإسلامي",
+      "phone": "الرياض",
+      "image": Assets.imagesTest4,
+    },
+    {
+      "name": "بنك أبو ظبي الإسلامي",
+      "phone": "الرياض",
+      "image": Assets.imagesTest4,
+    },
+    {
+      "name": "بنك أبو ظبي الإسلامي",
+      "phone": "الرياض",
+      "image": Assets.imagesTest4,
+    },
+    {
+      "name": "بنك أبو ظبي الإسلامي",
+      "phone": "الرياض",
+      "image": Assets.imagesTest4,
+    },
+    {
+      "name": "بنك أبو ظبي الإسلامي",
+      "phone": "الرياض",
+      "image": Assets.imagesTest4,
+    },
+  ];
   String type = 'agreements';
   String subType = 'owners';
 
@@ -1299,7 +1341,9 @@ class _SystemAdministrationViewState extends State<SystemAdministrationView> {
                     mainAxisSpacing: 8,
 
                     children: List.generate(
-                      userType == "office"
+                      userType == "bank"
+                          ? banker.length
+                          : userType == "office"
                           ? office.length
                           : userType == "company"
                           ? company.length
@@ -1308,7 +1352,9 @@ class _SystemAdministrationViewState extends State<SystemAdministrationView> {
                         return InkWell(
                           borderRadius: BorderRadius.circular(32),
                           onTap:
-                              systemType == 'subscriptions'
+                              userType == "bank"
+                                  ? widget.onTapItem
+                                  : systemType == 'subscriptions'
                                   ? () {
                                     showDialog(
                                       context: context,
@@ -1635,7 +1681,9 @@ class _SystemAdministrationViewState extends State<SystemAdministrationView> {
                                   : widget.onTapItem,
                           child: ListViewItem(
                             users:
-                                userType == "office"
+                                userType == "bank"
+                                    ? banker[index]
+                                    : userType == "office"
                                     ? office[index]
                                     : userType == "company"
                                     ? company[index]

@@ -30,6 +30,7 @@ class MainView extends StatefulWidget {
 
 class _MainViewState extends State<MainView> {
   num activeIndex = 0.0;
+  bool isBanker = false;
   final List<DrawerItemModel> drawerItems = [
     DrawerItemModel(title: 'الصفحة الرئيسية', image: Assets.imagesHouse),
     DrawerItemModel(title: 'عملاء النظام', image: Assets.imagesUser),
@@ -74,7 +75,12 @@ class _MainViewState extends State<MainView> {
                       userType = 'customer';
                       if (activeIndex == 1.2) {
                         userType = 'bank';
-                        activeIndex = 1.1;
+                        if (isBanker) {
+                          activeIndex = 5;
+                          isBanker = false;
+                        } else {
+                          activeIndex = 1.1;
+                        }
                       } else if (activeIndex == 1.3) {
                         activeIndex = 1.2;
                       } else {
@@ -167,7 +173,13 @@ class _MainViewState extends State<MainView> {
                             : activeIndex == 5
                             ? SystemAdministrationView(
                               onTapItem: () {
-                                activeIndex = activeIndex + 0.1;
+                                if (userType == 'bank') {
+                                  activeIndex = 1.2;
+                                  isBanker = true;
+                                } else {
+                                  activeIndex = activeIndex + 0.1;
+                                }
+
                                 setState(() {});
                               },
                             )
