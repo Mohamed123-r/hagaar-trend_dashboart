@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../components/app_colors.dart';
 import '../../../components/app_form_filed.dart';
 import '../../../components/app_text_styles.dart';
@@ -28,7 +27,7 @@ class EnterPhoneSection extends StatelessWidget {
         AppInputTextFormField(
           labelText: 'رقم الهاتف',
           prefixIcon: Icon(Icons.phone_outlined),
-          keyboardType: TextInputType.emailAddress,
+          keyboardType: TextInputType.phone,
         ),
       ],
     );
@@ -60,12 +59,12 @@ class EnterCodeSection extends StatelessWidget {
             print("User entered PIN: $pin");
           },
         ),
-        Text(
-          'إعادة إرسال الرمز',
-          style: AppTextStyles.style18W400(
-            context,
-          ).copyWith(color: AppColors.accent),
-        ),
+        // Text(
+        //   'إعادة إرسال الرمز',
+        //   style: AppTextStyles.style18W400(
+        //     context,
+        //   ).copyWith(color: AppColors.accent),
+        // ),
       ],
     );
   }
